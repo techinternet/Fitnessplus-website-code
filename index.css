@@ -33,7 +33,7 @@ body {
         color: #f4ebeb;
         font-family: 'League Gothic';
         }
-    .nosotros {
+    .headernosotros {
     position: relative;
     }
     .hovering-titles {
@@ -138,4 +138,254 @@ body {
     color: #f4ebeb;
     font-family: 'League Gothic';
     }
-    
+    /*----------------------------------NOSOTROS-----------------------------------*/
+
+    .nosotros1 {
+        align-self: stretch;
+        position: relative;
+        text-transform: uppercase;
+  }
+  .f {
+        text-transform: capitalize;
+  }
+  .itnessplus-es-mucho {
+        text-transform: lowercase;
+  }
+  .fitnessplus-es-mucho-ms-que-u {
+        margin: 0;
+  }
+  .blank-line {
+        margin: 0;
+        text-transform: capitalize;
+  }
+  .fitnessplus-es-mucho-container {
+        align-self: stretch;
+        position: relative;
+        font-size: 30px;
+        font-family: Abel;
+        color: #fff;
+  }
+  .info {
+        width: 611px;
+        height: 998px;
+        overflow: hidden;
+        flex-shrink: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        padding: 0px 24px;
+        box-sizing: border-box;
+        gap: 4px;
+  }
+  .poster-icon {
+        width: 400px;
+        position: relative;
+        height: 1049px;
+        overflow: hidden;
+        flex-shrink: 0;
+  }
+  .nosotros {
+        width: 100%;
+        position: relative;
+        background-color: #171721;
+        overflow: hidden;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        padding: 67px 23px 67px 125px;
+        box-sizing: border-box;
+        gap: 19px;
+        text-align: left;
+        font-size: 100px;
+        color: #edefe2;
+        font-family: 'League Gothic';
+  }
+  
+  /*----------------------------------NOSOTROS-----------------------------------*/
+
+  .evento-child {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    border-radius: 20px;
+    background-color: #d1de83;
+    width: 1092px;
+    height: 501px;
+}
+.evento1 {
+    position: absolute;
+    top: 122px;
+    left: 93px;
+    text-transform: uppercase;
+}
+.evento-en-el {
+    position: absolute;
+    top: 302px;
+    left: 93px;
+    font-size: 64px;
+    text-transform: uppercase;
+    color: #0c0c1f;
+}
+.evento-item {
+    position: absolute;
+    top: -170px;
+    left: 500px;
+    width: 715px;
+    height: 723.5px;
+    object-fit: contain;
+}
+.evento-inner {
+    position: absolute;
+    top: -13px;
+    left: 857px;
+    width: 272px;
+    height: 272px;
+}
+.vector-icon {
+    position: absolute;
+    height: 18.46%;
+    width: 8.53%;
+    top: 33.13%;
+    right: 49.99%;
+    bottom: 48.4%;
+    left: 41.48%;
+    max-width: 100%;
+    overflow: hidden;
+    max-height: 100%;
+}
+.evento {
+    width: 1092px;
+    position: relative;
+    height: 501px;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+.evento-child1 {
+    width: 805px;
+    position: relative;
+    height: 788.2px;
+    object-fit: contain;
+    z-index: 0;
+}
+.rectangle-div {
+    width: 1092px;
+    position: relative;
+    border-radius: 20px;
+    background-color: #bcd933;
+    height: 501px;
+    z-index: 1;
+}
+.evento3 {
+    width: 316px;
+    position: absolute;
+    margin: 0 !important;
+    top: 122px;
+    left: 93px;
+    text-transform: uppercase;
+    display: inline-block;
+    z-index: 2;
+}
+.evento-en-el1 {
+    width: 827px;
+    position: absolute;
+    margin: 0 !important;
+    top: 302px;
+    left: 93px;
+    font-size: 64px;
+    text-transform: uppercase;
+    color: #0c0c1f;
+    display: inline-block;
+    z-index: 3;
+}
+.star-icon {
+    width: 272px;
+    position: absolute;
+    margin: 0 !important;
+    top: -13px;
+    left: 857px;
+    height: 272px;
+    z-index: 4;
+}
+.vector-icon1 {
+    width: 8.53%;
+    position: absolute;
+    margin: 0 !important;
+    height: 18.46%;
+    top: 33.13%;
+    right: 49.99%;
+    bottom: 48.4%;
+    left: 41.48%;
+    max-width: 100%;
+    overflow: hidden;
+    max-height: 100%;
+    z-index: 5;
+}
+.evento2 {
+    border-radius: 26px;
+    background-color: #bcd933;
+    height: 501px;
+    overflow: hidden;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    position: relative;
+}
+.evento-child2 {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    border-radius: 20px;
+    background-color: #0e0e19;
+    width: 1092px;
+    height: 501px;
+}
+.evento-en-el2 {
+    position: absolute;
+    top: 302px;
+    left: 93px;
+    font-size: 64px;
+    text-transform: uppercase;
+}
+.evento4 {
+    width: 1092px;
+    position: relative;
+    height: 501px;
+    overflow: hidden;
+    flex-shrink: 0;
+    color: #eee;
+}
+.scroll-eventos {
+    width: 3652px;
+    overflow-x: scroll;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 46px 94px;
+    box-sizing: border-box;
+}
+.eventos {
+    width: 100%;
+    position: relative;
+    background-color: #171721;
+    height: 633px;
+    overflow-x: auto;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 86px 0px;
+    box-sizing: border-box;
+    text-align: center;
+    font-size: 150px;
+    color: #171721;
+    font-family: 'League Gothic';
+}
+
+
