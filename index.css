@@ -1,3 +1,12 @@
+/*-----------------------------------GLOBAL------------------------------------*/
+
+body {
+    margin: 0;
+    line-height: normal;
+    }
+
+/*-----------------------------------HEADER------------------------------------*/
+
 /*.logo-icon {
     width: 84px;
     position: relative;
@@ -5,6 +14,25 @@
     overflow: hidden;
     flex-shrink: 0;
     }*/
+    .header {
+        width: 100%;
+        position: sticky; /* Aquí tengo un problema, porque el sticky, no se stickea */
+        top:0;
+        background-color: #171721;
+        height: 100px;
+        overflow: hidden;
+        flex-shrink: 0;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding: 15px 125px 15px 126px;
+        box-sizing: border-box;
+        text-align: left;
+        font-size: 27px;
+        color: #f4ebeb;
+        font-family: 'League Gothic';
+        }
     .nosotros {
     position: relative;
     }
@@ -46,21 +74,67 @@
     justify-content: space-between;
     font-size: 30px;
     }
-    .header {
+    
+/*----------------------------------PRINCIPAL NOMBRE-----------------------------------*/
+
+.imagen {
+    width: 1280px;
+    margin: 0 !important;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 624px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    background-image: url('gym-equipment.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top;
+    z-index: 0;
+    }
+    .fitnessplus {
+    width: 501px;
+    position: relative;
+    text-transform: uppercase;
+    display: inline-block;
+    }
+    .slogan {
+    width: 501px;
+    position: relative;
+    font-size: 48px;
+    text-transform: uppercase;
+    color: #bcd933;
+    display: inline-block;
+    }
+    .nombre-y-slogen {
+    width: 609px;
+    background-color: rgba(136, 136, 136, 0.5);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 0px 0px 10px 13px;
+    box-sizing: border-box;
+    z-index: 1;
+    }
+    .principal-nombre {
     width: 100%;
     position: relative;
     background-color: #171721;
-    height: 100px;
+    height: 624px;
     overflow: hidden;
     flex-shrink: 0;
     display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    padding: 15px 125px 15px 126px;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 289px 119px 145px 126px;
     box-sizing: border-box;
+    gap: 5px;
     text-align: left;
-    font-size: 27px;
+    font-size: 128px;
     color: #f4ebeb;
     font-family: 'League Gothic';
     }
