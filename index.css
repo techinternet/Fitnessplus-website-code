@@ -47,6 +47,9 @@ body {
     .headernosotros:hover{
         color: #D1DE83;
     }
+    .botn-sencillo-iniciar-sesi:hover{
+        background-color: #1E1E36;
+    }
     .hovering-titles {
     display: flex;
     flex-direction: row;
@@ -74,6 +77,7 @@ body {
     align-items: center;
     justify-content: center;
     padding: 9px 20px;
+    transition: background-color 500ms ease;
     }
     .botones-header {
     width: 293px;
@@ -443,6 +447,10 @@ body {
     top: 0%;
     left: 0%;
     display: inline-block;
+    transition: color 500ms ease;
+}
+.correodelgymgmailcom1:hover{
+    color: #D1DE83;
 }
 .correodelgymgmailcom {
     align-self: stretch;
