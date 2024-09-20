@@ -1,0 +1,67 @@
+/*.logo-icon {
+    width: 84px;
+    position: relative;
+    height: 84px;
+    overflow: hidden;
+    flex-shrink: 0;
+    }*/
+    .nosotros {
+    position: relative;
+    }
+    .hovering-titles {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    }
+    .nav {
+    width: 608px;
+    height: 61px;
+    overflow: hidden;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 62px;
+    box-sizing: border-box;
+    }
+    .botn-sencillo-iniciar-sesi {
+    border-radius: 5px;
+    background-color: #111121;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 9px 20px;
+    }
+    .botones-header {
+    width: 293px;
+    overflow: hidden;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 30px;
+    }
+    .header {
+    width: 100%;
+    position: relative;
+    background-color: #171721;
+    height: 100px;
+    overflow: hidden;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 125px 15px 126px;
+    box-sizing: border-box;
+    text-align: left;
+    font-size: 27px;
+    color: #f4ebeb;
+    font-family: 'League Gothic';
+    }
+    
