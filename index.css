@@ -7,34 +7,45 @@ body {
 
 /*-----------------------------------HEADER------------------------------------*/
 
-.logo-icon {
+    .header {
+    width: 100%;
+    position: sticky; /* Aquí tengo un problema, porque el sticky, no se stickea */
+    top:0;
+    background-color: #171721;
+    height: 100px;
+    overflow: hidden;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 125px 15px 126px;
+    box-sizing: border-box;
+    text-align: left;
+    font-size: 27px;
+    color: #f4ebeb;
+    font-family: 'League Gothic';
+    }
+    .logo-icon {
     width: 84px;
     position: relative;
     height: 84px;
     overflow: hidden;
     flex-shrink: 0;
     }
-    .header {
-        width: 100%;
-        position: sticky; /* Aquí tengo un problema, porque el sticky, no se stickea */
-        top:0;
-        background-color: #171721;
-        height: 100px;
-        overflow: hidden;
-        flex-shrink: 0;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-between;
-        padding: 15px 125px 15px 126px;
-        box-sizing: border-box;
-        text-align: left;
-        font-size: 27px;
-        color: #f4ebeb;
-        font-family: 'League Gothic';
-        }
     .headernosotros {
-    position: relative;
+        position: relative;
+        font-size: 27px;
+        font-family: 'League Gothic';
+        color: #f4ebeb;
+        text-align: left;
+        transition: color 500ms ease;
+    }
+    .headernosotros1 {
+        position: relative;
+    }
+    .headernosotros:hover{
+        color: #D1DE83;
     }
     .hovering-titles {
     display: flex;
@@ -73,6 +84,8 @@ body {
     align-items: center;
     justify-content: space-between;
     font-size: 30px;
+    color: #f4ebeb;
+    font-family: 'League Gothic';
     }
     
 /*----------------------------------TÍTULO-----------------------------------*/
