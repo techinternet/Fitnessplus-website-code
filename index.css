@@ -7,13 +7,13 @@ body {
 
 /*-----------------------------------HEADER------------------------------------*/
 
-/*.logo-icon {
+.logo-icon {
     width: 84px;
     position: relative;
     height: 84px;
     overflow: hidden;
     flex-shrink: 0;
-    }*/
+    }
     .header {
         width: 100%;
         position: sticky; /* Aquí tengo un problema, porque el sticky, no se stickea */
