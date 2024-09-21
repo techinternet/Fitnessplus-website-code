@@ -5,6 +5,10 @@ body {
     line-height: normal;
     background-color: #171721;
     }
+a {
+    text-decoration: none;
+    display : inline-block;
+}
 
 /*-----------------------------------HEADER------------------------------------*/
 

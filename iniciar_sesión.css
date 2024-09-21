@@ -71,7 +71,7 @@ body {
     font-family: 'League Gothic';
 }
 
-/*-----------------------------------CREAR CUENTA-----------------------------------*/
+/*---------------------------------CREAR CUENTA-----------------------------------*/
 
 .vector-icon {
     width: 30px;
@@ -87,6 +87,12 @@ body {
     justify-content: flex-start;
     gap: 56px;
 }
+.nombre:hover{
+    background-color: #D1DE83;
+}
+.nombre:active{
+    color: #D1DE83;
+}
 .nombre {
     width: 492px;
     border-radius: 10px;
@@ -100,6 +106,8 @@ body {
     justify-content: flex-start;
     padding: 0px 29px;
     box-sizing: border-box;
+    transition: background-color 500ms ease;
+    transform: color;
 }
 .fecha-de-nacimineto {
     position: relative;
@@ -134,6 +142,12 @@ body {
 .jjsjsjsjsjs {
     color: rgba(255, 255, 255, 0);
 }
+.casilla-datos:hover{
+    background-color: #D1DE83;
+}
+.casilla-datos:active{
+    color: #D1DE83;
+}
 .casilla-datos {
     border-radius: 10px;
     background-color: #51515b;
@@ -145,6 +159,8 @@ body {
     justify-content: flex-start;
     padding: 0px 29px;
     box-sizing: border-box;
+    transition: background-color 500ms ease;
+    transform: color;
 }
 .datos-documento {
     width: 490px;
@@ -216,3 +232,271 @@ body {
     font-family: 'League Gothic';
 }
 
+/*---------------------------------LISTA 1 / TIPO DE DOCUMENTO-----------------------------------*/
+
+.tipos-de-documentos-child {
+    width: 174px;
+    position: absolute;
+    margin: 0 !important;
+    top: calc(50% - 248.5px);
+    left: calc(50% - 87.5px);
+    border-radius: 10px;
+    background-color: #3f3f48;
+    height: 498px;
+    z-index: 0;
+}
+.tipo {
+    position: relative;
+}
+.contenido {
+    border-radius: 10px;
+    background-color: #3f3f48;
+    height: 63px;
+    overflow: hidden;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1px 22px;
+    box-sizing: border-box;
+    z-index: 1;
+}
+.contenido1 {
+    border-radius: 10px;
+    background-color: #3f3f48;
+    height: 63px;
+    overflow: hidden;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1px 22px;
+    box-sizing: border-box;
+    z-index: 2;
+}
+.contenido2 {
+    border-radius: 10px;
+    background-color: #3f3f48;
+    height: 63px;
+    overflow: hidden;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1px 22px;
+    box-sizing: border-box;
+    z-index: 3;
+}
+.contenido3 {
+    border-radius: 10px;
+    background-color: #3f3f48;
+    height: 63px;
+    overflow: hidden;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1px 22px;
+    box-sizing: border-box;
+    z-index: 4;
+}
+.tipos-de-documentos {
+    width: 100%;
+    position: relative;
+    border-radius: 10px;
+    height: 498px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 11px;
+    box-sizing: border-box;
+    text-align: left;
+    font-size: 32px;
+    color: #fff;
+    font-family: Abel;
+}
+
+/*---------------------------------LISTA 2 / CIUDADES-----------------------------------*/
+
+.ciudades-child {
+    width: 174px;
+    position: absolute;
+    margin: 0 !important;
+    top: calc(50% - 248.5px);
+    left: calc(50% - 87px);
+    border-radius: 10px;
+    background-color: #3f3f48;
+    height: 498px;
+    z-index: 0;
+}
+
+.C_contenido {
+    border-radius: 10px;
+    background-color: #3f3f48;
+    height: 63px;
+    overflow: hidden;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1px 22px;
+    box-sizing: border-box;
+    z-index: 1;
+}
+.C_contenido1 {
+    border-radius: 10px;
+    background-color: #3f3f48;
+    height: 63px;
+    overflow: hidden;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1px 22px;
+    box-sizing: border-box;
+    z-index: 2;
+}
+.C_contenido2 {
+    border-radius: 10px;
+    background-color: #3f3f48;
+    height: 63px;
+    overflow: hidden;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1px 22px;
+    box-sizing: border-box;
+    z-index: 3;
+}
+.C_contenido3 {
+    border-radius: 10px;
+    background-color: #3f3f48;
+    height: 63px;
+    overflow: hidden;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1px 22px;
+    box-sizing: border-box;
+    z-index: 4;
+}
+.C_contenido4 {
+    border-radius: 10px;
+    background-color: #3f3f48;
+    height: 63px;
+    overflow: hidden;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1px 22px;
+    box-sizing: border-box;
+    z-index: 5;
+}
+.C_contenido5 {
+    border-radius: 10px;
+    background-color: #3f3f48;
+    height: 63px;
+    overflow: hidden;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1px 22px;
+    box-sizing: border-box;
+    z-index: 6;
+}
+.ciudades {
+    position: relative;
+    border-radius: 10px;
+    width: 100%;
+    height: 498px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 11px;
+    box-sizing: border-box;
+    text-align: left;
+    font-size: 32px;
+    color: #fff;
+    font-family: Abel;
+}
+
+/*---------------------------------LISTA 3 / ROLES-----------------------------------*/
+
+.desplegable-rol-child {
+    width: 174px;
+    position: absolute;
+    margin: 0 !important;
+    top: calc(50% - 248px);
+    left: calc(50% - 87.5px);
+    border-radius: 10px;
+    background-color: #3f3f48;
+    height: 498px;
+    z-index: 0;
+}
+.tipo {
+    position: relative;
+}
+.R_contenido {
+    border-radius: 10px;
+    background-color: #3f3f48;
+    height: 63px;
+    overflow: hidden;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1px 22px;
+    box-sizing: border-box;
+    z-index: 1;
+}
+.R_contenido1 {
+    border-radius: 10px;
+    background-color: #3f3f48;
+    height: 63px;
+    overflow: hidden;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1px 22px;
+    box-sizing: border-box;
+    z-index: 2;
+}
+.desplegable-rol {
+    width: 100%;
+    position: relative;
+    border-radius: 10px;
+    height: 149px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 10px 11px;
+    box-sizing: border-box;
+    gap: 20px;
+    text-align: left;
+    font-size: 32px;
+    color: #fff;
+    font-family: Abel;
+}
