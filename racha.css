@@ -87,7 +87,6 @@ body {
 
 .headernosotros_2{
     font-size: 38px;
-    text-align: center;
 }
 
 .part_1{
@@ -123,4 +122,22 @@ body {
     justify-content: space-between; /* Distribuye los elementos uniformemente con espacio entre ellos */
     align-items: center; /* Centra los elementos verticalmente */
     padding: 0px 10px;
+}
+
+.part_3{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+}
+
+.part_4 {
+    display: flex;
+    width: 100%;
+    justify-content: flex-start; /* Alinea el contenido a la izquierda */
+    padding: 15px 0px;
+}
+
+.part_4 > * {
+    margin-left: 10%; /* Añade un espacio de 20px desde el borde izquierdo */
 }
