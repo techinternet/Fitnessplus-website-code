@@ -18,20 +18,7 @@ body {
     flex-shrink: 0; /* Evita que la barra se reduzca */
 }
 
-.content {
-    display: flex;
-    flex-direction: column; /* Organiza las partes de arriba a abajo */
-    width: 70%; /* El contenido ocupará el 70% */
-    height: 100vh;
-    padding: 75px 100px 65px 100px;
-    justify-content: flex-start;
-    align-items: flex-start;
-    row-gap: 30px;
-    background: #171721;
-    overflow: auto; /* Añade scroll si el contenido es muy grande */
-}
-
-.headernosotros {
+.headernosotros, .headernosotros_2 {
     font-size: 27px;
     font-family: 'League Gothic';
     color: #f4ebeb;
@@ -46,6 +33,7 @@ body {
     text-align: left;
     transition: color 500ms ease;
 }
+
 .headernosotros:hover , .headernosotros_1:hover{
     color: #D1DE83;
 }
@@ -82,4 +70,57 @@ body {
     flex-direction: column;
     gap: 30px;
     width: 100%; /* Ajusta para ocupar el ancho disponible */
+}
+
+.content {
+    display: flex;
+    flex-direction: column; /* Organiza las partes de arriba a abajo */
+    width: 70%; /* El contenido ocupará el 70% */
+    height: 100vh;
+    padding: 70px 5px;
+    justify-content: flex-start;
+    align-items: flex-start;
+    row-gap: 30px;
+    background: #171721;
+    overflow: auto; /* Añade scroll si el contenido es muy grande */
+}
+
+.headernosotros_2{
+    font-size: 38px;
+    text-align: center;
+}
+
+.part_1{
+    display: flex;
+    width: 100%; /* Ocupa todo el ancho */
+    justify-content: flex-start;
+    align-items: center;
+    gap: 5%;
+    padding: 0px 20px;
+}
+
+
+.atras-icon {
+    width: 30px;
+    height: 30px;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.part_2{
+    display: flex;
+    width: 100%; /* Ocupa todo el ancho */
+    justify-content: flex-start;
+    align-items: center;
+    gap: 50px;
+    padding: 15px 0px;
+    flex-direction: column;
+}
+
+.dias{
+    display: flex;
+    width: 75%; /* Asegura que ocupe todo el ancho disponible */
+    justify-content: space-between; /* Distribuye los elementos uniformemente con espacio entre ellos */
+    align-items: center; /* Centra los elementos verticalmente */
+    padding: 0px 10px;
 }
