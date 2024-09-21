@@ -1,10 +1,9 @@
 body {
-    margin: 0;
-    line-height: normal;
     display: flex;
+    justify-content: space-between;
     width: 100%;
     height: 100vh;
-    align-items: center;
+    margin: 0;
 }
 
 .nav{
@@ -13,7 +12,7 @@ body {
     height: 100vh;
     flex-direction: column;
     align-items: flex-start;
-    gap: 180px;
+    gap: 35%;
     flex-shrink: 0;
     background: #0E0E19;
     align-self: stretch;
@@ -21,9 +20,9 @@ body {
 
 .content{
     display: flex;
-    width: 70%;
+    width: auto;
     height: 100%;
-    padding: 75px 124px 65px 116px;
+    padding: 75px 100px 65px 100px;
     justify-content: space-between;
     align-items: flex-start;
     align-content: flex-start;
@@ -80,4 +79,21 @@ body {
     align-items: flex-start;
     gap: 30px;
     align-self: stretch;
+}
+
+.part_1{
+    display: flex;
+    width: 469px;
+    height: 551px;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 18px;
+    flex-shrink: 0;
+}
+
+.hercules_image{
+    height: 428px;
+    flex-shrink: 0;
+    align-self: stretch;
+    background-color: aquamarine;
 }
