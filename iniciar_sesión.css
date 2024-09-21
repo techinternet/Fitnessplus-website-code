@@ -19,10 +19,20 @@ body {
 .iniciar-sesin {
     position: relative;
 }
-.botn-sencillo-iniciar-sesi:hover{
-    background-color: #1E1E36;
-}
 .botn-sencillo-iniciar-sesi {
+    border-radius: 5px;
+    background-color: #1e1e36;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 9px 20px;
+}
+.botn-sencillo-registrar:hover{
+    background-color: #1e1e36;
+}
+.botn-sencillo-registrar {
     border-radius: 5px;
     background-color: #111121;
     overflow: hidden;
@@ -32,16 +42,6 @@ body {
     justify-content: center;
     padding: 9px 20px;
     transition: background-color 500ms ease;
-}
-.botn-sencillo-registrar {
-    border-radius: 5px;
-    background-color: #1e1e36;
-    overflow: hidden;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    padding: 9px 20px;
 }
 .botones-header {
     width: 293px;
@@ -71,21 +71,68 @@ body {
     font-family: 'League Gothic';
 }
 
-/*-----------------------------------CREAR CUENTA-----------------------------------*/
+/*-----------------------------------INICIO DE SESIÓN------------------------------------*/
 
 .vector-icon {
     width: 30px;
     position: relative;
     height: 51px;
 }
+.iniciar-sesin {
+    position: relative;
+}
 .crear-cuenta {
-    align-self: stretch;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 816px;
     overflow: hidden;
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: flex-start;
-    gap: 56px;
+    justify-content: space-between;
+}
+.correodelgymgmailcom1 {
+    position: absolute;
+    width: 118.47%;
+    top: 0%;
+    left: 0%;
+    display: inline-block;
+
+}
+.correodelgymgmailcom {
+    width: 150px;
+    position: relative;
+    height: 34px;
+    transition: color 500ms ease;
+}
+.correodelgymgmailcom:hover{
+    color: #D1DE83;
+}
+.no-tens-cuenta {
+    position: absolute;
+    top: 101px;
+    left: 0px;
+    width: 816px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 32px;
+    font-family: Abel;
+}
+.conjunto-arriba {
+    align-self: stretch;
+    position: relative;
+    height: 157px;
+    font-size: 64px;
+}
+.nombre:hover{
+    background-color: #D1DE83;
+}
+.nombre:active{
+    color: #D1DE83;
 }
 .nombre {
     width: 492px;
@@ -100,89 +147,12 @@ body {
     justify-content: flex-start;
     padding: 0px 29px;
     box-sizing: border-box;
-}
-.fecha-de-nacimineto {
-    position: relative;
-}
-.vector-icon1 {
-    width: 28px;
-    position: relative;
-    height: 16px;
-    object-fit: contain;
-}
-.cosas-deplegable {
-    overflow: hidden;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: flex-start;
-    padding: 0px 6px;
-    gap: 3px;
-}
-.desplegable {
-    border-radius: 10px;
-    background-color: #51515b;
-    height: 40px;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    padding: 1px 10px;
-    box-sizing: border-box;
-}
-.jjsjsjsjsjs {
-    color: rgba(255, 255, 255, 0);
-}
-.casilla-datos {
-    border-radius: 10px;
-    background-color: #51515b;
-    height: 40px;
-    overflow: hidden;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: flex-start;
-    padding: 0px 29px;
-    box-sizing: border-box;
-}
-.datos-documento {
-    width: 490px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-}
-.sjjsjjsssjjsjsjsj {
-    color: rgba(81, 81, 91, 0);
-}
-.ciudad {
-    border-radius: 10px;
-    background-color: #51515b;
-    height: 40px;
-    overflow: hidden;
-    flex-shrink: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    padding: 1px 10px;
-    box-sizing: border-box;
-}
-.span {
-    color: #51515b;
-}
-.lista-de-contendido-datos {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 31px;
-    font-size: 32px;
     font-family: Abel;
+    transition: background-color 500ms ease;
+    transform: color;
 }
 .botn-sencillo:hover{
-    background-color: #1E1E36;
+    background-color: #1e1e36;
 }
 .botn-sencillo {
     border-radius: 5px;
@@ -195,23 +165,24 @@ body {
     padding: 9px 20px;
     font-size: 30px;
     color: #f4ebeb;
+    transition: background-color 500ms ease;
 }
-.lista-de-datos {
+.datos-inicio-de-sesin {
     width: 100%;
     position: relative;
     background-color: #171721;
-    height: 1030px;
+    height: 732px;
     overflow: hidden;
     flex-shrink: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    padding: 0px 336px;
+    justify-content: flex-start;
+    padding: 109px 231px 78px 233px;
     box-sizing: border-box;
-    gap: 62px;
+    gap: 69px;
     text-align: left;
-    font-size: 64px;
+    font-size: 32px;
     color: #fff;
     font-family: 'League Gothic';
 }
