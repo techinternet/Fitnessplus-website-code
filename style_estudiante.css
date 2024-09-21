@@ -5,11 +5,11 @@ body {
 
 .nav{
     display: flex;
-    width: 33%;
-    height: 100%;
+    width: 30%;
+    height: 100vh;
     flex-direction: column;
     align-items: flex-start;
-    gap: 250px;
+    gap: 180px;
     flex-shrink: 0;
     background: #0E0E19;
     align-self: stretch;
@@ -25,13 +25,41 @@ body {
 
 .arriba{
     display: flex;
-    /*height: 118px;*/
-    padding: 10px 20px;
+    height: 118px;
+    margin: 10px 20px;
     justify-content: space-between;
     align-items: center;
     align-self: stretch;
 }
+.headernosotros {
+    position: relative;
+    font-size: 27px;
+    font-family: 'League Gothic';
+    color: #f4ebeb;
+    text-align: left;
+    transition: color 500ms ease;
+}
+.headernosotros1 {
+    position: relative;
+}
+.headernosotros:hover{
+    color: #D1DE83;
+}
 
-h1, h6{
-    color: aliceblue;
+.perfil_1{
+    display: flex;
+    width: 176px;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.abajo{
+    display: flex;
+    height: 432px;
+    padding: 35px 98px 35px 35px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 30px;
+    align-self: stretch;
 }
