@@ -13,7 +13,7 @@ body {
     height: 100vh; /* Altura de toda la pantalla */
     flex-direction: column;
     align-items: flex-start;
-    gap: 35%;
+    gap: 30%;
     background: #0E0E19;
     flex-shrink: 0; /* Evita que la barra se reduzca */
 }
@@ -43,10 +43,11 @@ body {
 .arriba {
     display: flex;
     height: 118px;
-    margin: 10px 20px;
+    width: 100%; /* Ajusta el ancho para que ocupe el espacio disponible */
+    padding: 10px 20px;
     justify-content: space-between;
     align-items: center;
-    width: 100%; /* Ajusta el ancho para que ocupe el espacio disponible */
+    
 }
 
 .headernosotros {
@@ -64,6 +65,7 @@ body {
 .perfil_1 {
     display: flex;
     width: 176px;
+    padding: 20px;
     justify-content: center;
     align-items: center;
     gap: 20px;
@@ -86,9 +88,9 @@ body {
 }
 
 .hercules_image {
-    height: 100px;
+    height: 20%;
     flex-shrink: 0;
-    background-color: aquamarine;
+    align-self: stretch;
 }
 
 .boton {
