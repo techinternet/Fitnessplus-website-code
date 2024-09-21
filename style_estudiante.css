@@ -20,12 +20,12 @@ body {
 
 .content{
     display: flex;
-    width: auto;
-    height: 100%;
+    width: 70%;
     padding: 75px 100px 65px 100px;
     justify-content: space-between;
     align-items: flex-start;
     align-content: flex-start;
+    column-gap: 10px;
     row-gap: 30px;
     flex-shrink: 0;
     flex-wrap: wrap;
@@ -84,7 +84,7 @@ body {
 .part_1{
     display: flex;
     width: 469px;
-    height: 551px;
+    height: 300px;
     flex-direction: column;
     align-items: flex-end;
     gap: 18px;
@@ -92,8 +92,50 @@ body {
 }
 
 .hercules_image{
-    height: 428px;
+    height: 100px;
     flex-shrink: 0;
     align-self: stretch;
     background-color: aquamarine;
+}
+
+.boton{
+    display: flex;
+    padding: 9px 20px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 5px;
+    background-color: #BCD933;
+    transition: background-color 500ms ease;
+}
+
+.boton:hover{
+    background: #1E1E36;
+}
+
+.part_2{
+    display: flex;
+    width: 141px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+part_2.headernosotros{
+    font-size: 20px;
+}
+
+.part3{
+    display: flex;
+    width: 100%;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+part_3.headernosotros{
+    color: #BCD933;
+    font-size: 148px;
 }
