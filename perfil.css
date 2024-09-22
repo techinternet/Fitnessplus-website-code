@@ -1,0 +1,217 @@
+/*-----------------------------------GLOBAL------------------------------------*/
+
+body {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100vh; /* Ocupa toda la altura de la ventana */
+    margin: 0;
+    overflow: hidden; /* Evita el desbordamiento */
+}
+
+a{
+    text-decoration: none;
+}
+
+/*-----------------------------------HEADER LATERAL------------------------------------*/
+
+.nav {
+    display: flex;
+    width: 30%; /* La barra de navegación ocupará el 30% */
+    height: 100vh; /* Altura de toda la pantalla */
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 30%;
+    background: #0E0E19;
+    flex-shrink: 0; /* Evita que la barra se reduzca */
+}
+
+.headernosotros, .headernosotros_2 , .headernosotros_3{
+    font-size: 27px;
+    font-family: 'League Gothic';
+    color: #f4ebeb;
+    text-align: left;
+    transition: color 500ms ease;
+}
+
+.headernosotros_1 {
+    font-size: 27px;
+    font-family: 'League Gothic';
+    color: #aac432;
+    text-align: left;
+    transition: color 500ms ease;
+}
+
+.headernosotros_2{
+    font-size: 54px;
+}
+
+.headernosotros:hover , .headernosotros_1:hover{
+    color: #D1DE83;
+}
+
+.logo-icon {
+    width: 60px;
+    height: 60px;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.arriba {
+    display: flex;
+    height: 118px;
+    width: 100%; /* Ajusta el ancho para que ocupe el espacio disponible */
+    padding: 10px 20px;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+.perfil_1 {
+    display: flex;
+    width: 176px;
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.abajo {
+    display: flex;
+    padding: 35px;
+    flex-direction: column;
+    gap: 30px;
+    width: 100%; /* Ajusta para ocupar el ancho disponible */
+}
+
+/*-----------------------------------CONTENIDO: PERFIL USUARIO------------------------------------*/
+
+.vector-icon {
+    width: 30px;
+    position: relative;
+    height: 51px;
+}
+.crear-cuenta {
+    display: flex;
+    width: 100%; /* Ocupa todo el ancho */
+    justify-content: flex-start;
+    align-items: center;
+    gap: 5%;
+    padding: 0px 20px;
+}
+.perfil-icon {
+    width: 215px;
+    position: relative;
+    height: 221px;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+.fitnessplus {
+    position: relative;
+    text-transform: uppercase;
+}
+.slogan {
+    position: relative;
+    font-size: 48px;
+    text-transform: uppercase;
+    color: #bcd933;
+}
+.nombre-y-slogen {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 5px;
+}
+.perfil-parent {
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 0px 101px;
+    gap: 20px;
+    font-size: 96px;
+    color: #f4ebeb;
+}
+.nombre {
+    position: left;
+}
+.casilla-datos {
+    width: 492px;
+    border-radius: 10px;
+    background-color: #51515b;
+    height: 40px;
+    overflow: hidden;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0px 29px;
+    box-sizing: border-box;
+}
+.botn-sencillo:hover{
+    background: #1E1E36;
+}
+.botn-sencillo {
+    width: 491px;
+    border-radius: 5px;
+    background-color: #bcd933;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 9px 21px;
+    box-sizing: border-box;
+    font-size: 30px;
+    color: #171721;
+    font-family: 'League Gothic';
+    transition: background-color 500ms ease;
+}
+.botn-sencillo1:hover{
+    background: #1E1E36;
+}
+.botn-sencillo1 {
+    border-radius: 5px;
+    background-color: #111121;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 9px 20px;
+    font-size: 30px;
+    color: #f4ebeb;
+    font-family: 'League Gothic';
+    transition: background-color 500ms ease;
+}
+.casilla-datos-parent {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    font-size: 32px;
+    font-family: Abel;
+}
+.perfil {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    height: 100vh;
+    padding: 3% 22px;
+    justify-content: flex-start;
+    align-items: center;
+    overflow: hidden;
+    flex-shrink: 0;   
+    row-gap: 4%;
+    text-align: left;
+    background-color: #171721;
+    font-size: 48px;
+    color: #fff;
+    font-family: 'League Gothic';
+}
+

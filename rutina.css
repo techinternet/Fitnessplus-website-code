@@ -1,3 +1,5 @@
+/*-----------------------------------GLOBAL------------------------------------*/
+
 body {
     display: flex;
     flex-direction: row;
@@ -6,6 +8,12 @@ body {
     margin: 0;
     overflow: hidden; /* Evita el desbordamiento */
 }
+
+a{
+    text-decoration: none;
+}
+
+/*-----------------------------------HEADER LATERAL------------------------------------*/
 
 .nav {
     display: flex;
