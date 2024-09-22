@@ -97,55 +97,6 @@ body {
     width: 100%; /* Ocupa todo el ancho */
     justify-content: flex-start;
     align-items: center;
-    gap: 5%;
+    gap: 85%;
     padding: 0px 20px;
-}
-
-.headernosotros_2 {
-    font-size: 38px;
-}
-    
-.part_2 {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around; /* Espacia los logros para que queden en columnas */
-    width: 90%; /* Ocupa todo el ancho */
-    gap: 20px; /* Espacio entre las cajas de logros */
-    padding: 0px 20px;
-}
-    
-.logro, .logro_1 {
-    width: 30%; /* Ajusta el tamaño para que quepan 2 logros por fila */
-    height: auto;
-    padding: 10%;
-    margin: 10px 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    border-radius: 25px;
-    background: #BCD933;
-    box-sizing: border-box; /* Asegura que padding y border se incluyan en el width */
-    
-}
-
-.logro_1{
-    background: #D1DE83;
-}
-    
-.headernosotros_3 {
-    color: #171721;
-    font-size: 64px;
-    text-align: center;
-    transform: rotate(-45deg);
-}
-    
-.part_3{
-    display: flex;
-    width: 100%; /* Ocupa todo el ancho */
-    justify-content: flex-start;
-    align-items: center;
-    gap: 5%;
-    padding: 0px 20px;
-    text-align: left;
-    margin-left: 10%;
 }
