@@ -80,13 +80,9 @@ body {
     padding: 70px 5px;
     justify-content: flex-start;
     align-items: flex-start;
-    row-gap: 30px;
+    row-gap: 20%;
     background: #171721;
     overflow: auto; /* Añade scroll si el contenido es muy grande */
-}
-
-.headernosotros_2{
-    font-size: 38px;
 }
 
 .part_1{
@@ -98,9 +94,42 @@ body {
     padding: 0px 20px;
 }
 
-.atras-icon {
-    width: 30px;
-    height: 30px;
-    overflow: hidden;
-    flex-shrink: 0;
+.headernosotros_2 {
+    font-size: 38px;
+}
+    
+.part_2 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around; /* Espacia los logros para que queden en columnas */
+    width: 90%; /* Ocupa todo el ancho */
+    gap: 20px; /* Espacio entre las cajas de logros */
+    padding: 0px 20px;
+}
+    
+.logro {
+    width: 48%; /* Ajusta el tamaño para que quepan 2 logros por fila */
+    padding: 20px;
+    margin: 10px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 25px;
+    background: #BCD933;
+    box-sizing: border-box; /* Asegura que padding y border se incluyan en el width */
+}
+    
+.headernosotros_3 {
+    color: #171721;
+    font-size: 64px;
+}
+    
+.part_3{
+    display: flex;
+    width: 100%; /* Ocupa todo el ancho */
+    justify-content: flex-start;
+    align-items: center;
+    gap: 5%;
+    padding: 0px 20px;
+    text-align: left;
 }
