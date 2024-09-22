@@ -1,3 +1,5 @@
+/*-----------------------------------GLOBAL------------------------------------*/
+
 body {
     display: flex;
     flex-direction: row;
@@ -6,6 +8,8 @@ body {
     margin: 0;
     overflow: hidden; /* Evita el desbordamiento */
 }
+
+/*-----------------------------------HEADER LATERAL------------------------------------*/
 
 .nav {
     display: flex;
@@ -88,6 +92,8 @@ body {
 .headernosotros_2{
     font-size: 38px;
 }
+
+/*-----------------------------------CONTENIDO: RACHA------------------------------------*/
 
 .part_1{
     display: flex;

@@ -1,3 +1,5 @@
+/*-----------------------------------GLOBAL------------------------------------*/
+
 body {
     display: flex;
     flex-direction: row;
@@ -6,6 +8,8 @@ body {
     margin: 0;
     overflow: hidden; /* Evita el desbordamiento */
 }
+
+/*-----------------------------------HEADER LATERAL------------------------------------*/
 
 .nav {
     display: flex;
@@ -104,3 +108,123 @@ body {
 .headernosotros_2 {
     font-size: 38px;
 }
+
+/*-----------------------------------CONTENIDO: ENTRENADORES------------------------------------*/
+
+.vector-icon {
+    width: 30px;
+    position: relative;
+    height: 51px;
+}
+.crear-cuenta {
+    align-self: stretch;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 56px;
+    font-size: 48px;
+}
+.pepito-perz1 {
+    position: absolute;
+    width: 100%;
+    top: 0%;
+    left: 0%;
+    display: inline-block;
+}
+.pepito-perz {
+    align-self: stretch;
+    position: relative;
+    height: 60px;
+    font-size: 50px;
+    color: #bcd933;
+}
+.entrenador-de-danza {
+    align-self: stretch;
+    position: relative;
+}
+.datos-entrenador {
+    align-self: stretch;
+    height: 247px;
+    overflow: hidden;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 0px 10px;
+    box-sizing: border-box;
+    gap: 5px;
+}
+.iniciar-sesin {
+    position: relative;
+}
+.botn-sencillo {
+    border-radius: 5px;
+    background-color: #111121;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 9px 20px;
+    font-size: 30px;
+    color: #f4ebeb;
+}
+.con-el-inscribirse {
+    width: 317px;
+    height: 310px;
+    overflow: hidden;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+.image-icon {
+    width: 210px;
+    position: relative;
+    height: 204px;
+    object-fit: cover;
+}
+.inscribirse-con-el-entrenador {
+    width: 840px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 80px;
+}
+.image-icon1 {
+    width: 211px;
+    position: relative;
+    height: 206px;
+    object-fit: cover;
+}
+.inscribirse-con-el-entrenador3 {
+    width: 832px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 80px;
+}
+.contenido-entrenadores {
+    display: flex;
+    flex-direction: column; /* Organiza las partes de arriba a abajo */
+    width: 70%; /* El contenido ocupará el 70% */
+    height: 100vh;
+    padding: 70px 5px;
+    justify-content: flex-start;
+    align-items: flex-start;
+    row-gap: 30px;
+    background: #171721;
+    overflow: auto; /* Añade scroll si el contenido es muy grande */
+    font-size: 36px;
+    color: #fff;
+    font-family: 'League Gothic';
+}
+
