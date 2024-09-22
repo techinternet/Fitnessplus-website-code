@@ -18,7 +18,7 @@ body {
     flex-shrink: 0; /* Evita que la barra se reduzca */
 }
 
-.headernosotros, .headernosotros_2 {
+.headernosotros, .headernosotros_2 , .headernosotros_3{
     font-size: 27px;
     font-family: 'League Gothic';
     color: #f4ebeb;
@@ -140,4 +140,40 @@ body {
 
 .part_4 > * {
     margin-left: 10%; /* Añade un espacio de 20px desde el borde izquierdo */
+}
+
+.part_5 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-start; /* Ajustar las cajas al inicio del eje vertical */
+    width: 90%;
+    padding: 39px 38px;
+    row-gap: auto;
+    margin-bottom: 10%;
+}
+
+.headernosotros_3{
+    color: #171721;
+    font-size: 64px;
+}
+
+.logro {
+    width: 35%; /* Ajustar el tamaño para que quepan 2 por fila */
+    padding: 20px;
+    margin: 10px 0; /* Añadir margen para evitar que se salgan del contenedor */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 25px;
+    background: #BCD933;
+    box-sizing: border-box; /* Asegura que padding y border se incluyan en el width */
+}
+
+h6 {
+    color: #0C0C1F;
+    text-align: center;
+    font-family: "League Gothic";
+    font-size: 24px;
+    text-transform: uppercase;
 }
