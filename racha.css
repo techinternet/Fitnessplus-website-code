@@ -76,6 +76,8 @@ body {
     width: 100%; /* Ajusta para ocupar el ancho disponible */
 }
 
+/*-----------------------------------CONTENIDO: RACHA------------------------------------*/
+
 .content {
     display: flex;
     flex-direction: column; /* Organiza las partes de arriba a abajo */
@@ -92,8 +94,6 @@ body {
 .headernosotros_2{
     font-size: 38px;
 }
-
-/*-----------------------------------CONTENIDO: RACHA------------------------------------*/
 
 .part_1{
     display: flex;

@@ -160,6 +160,9 @@ body {
 .iniciar-sesin {
     position: relative;
 }
+.botn-sencillo:hover{
+    background-color: #1E1E36
+}
 .botn-sencillo {
     border-radius: 5px;
     background-color: #111121;
@@ -171,6 +174,7 @@ body {
     padding: 9px 20px;
     font-size: 30px;
     color: #f4ebeb;
+    transition: background-color 500ms ease;
 }
 .con-el-inscribirse {
     width: 317px;
@@ -204,22 +208,21 @@ body {
     object-fit: cover;
 }
 .inscribirse-con-el-entrenador3 {
-    width: 832px;
+    width: 100%;
     overflow: hidden;
     display: flex;
     flex-direction: row;
     align-items: flex-start;
-    justify-content: center;
     gap: 80px;
 }
 .contenido-entrenadores {
     display: flex;
     flex-direction: column; /* Organiza las partes de arriba a abajo */
     width: 70%; /* El contenido ocupará el 70% */
-    height: 100vh;
+    height: 1785px;
     padding: 70px 5px;
     justify-content: flex-start;
-    align-items: flex-start;
+    align-items: center;
     row-gap: 30px;
     background: #171721;
     overflow: auto; /* Añade scroll si el contenido es muy grande */
