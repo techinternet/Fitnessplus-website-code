@@ -202,11 +202,10 @@ a{
     flex-direction: column;
     width: 70%;
     height: 100vh;
-    padding: 3% 22px;
+    padding: 1% 22px;
     justify-content: flex-start;
     align-items: center;
-    overflow: hidden;
-    flex-shrink: 0;   
+    overflow: auto;  
     row-gap: 4%;
     text-align: left;
     background-color: #171721;
