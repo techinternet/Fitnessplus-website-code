@@ -7,14 +7,17 @@ body {
     background-color: #171721;
 }
 
+a {
+    text-decoration: none;
+}
+
 /*-----------------------------------HEADER------------------------------------*/
 
 .logo-icon {
-    width: 84px;
+    width: 23%;
     position: relative;
-    height: 84px;
+    height: 100%;
     overflow: hidden;
-    flex-shrink: 0;
 }
 .iniciar-sesin {
     position: relative;
@@ -44,32 +47,34 @@ body {
     padding: 9px 20px;
 }
 .botones-header {
-    width: 293px;
+    width: 50%;
     overflow: hidden;
-    flex-shrink: 0;
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-between;
-}
-.header {
-    width: 100%;
-    position: relative;
-    background-color: #14141d;
-    height: 100px;
-    overflow: hidden;
-    flex-shrink: 0;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    padding: 15px 125px 15px 126px;
-    box-sizing: border-box;
-    text-align: left;
+    justify-content: flex-end;
     font-size: 30px;
     color: #f4ebeb;
+    padding: 1%;
+    gap: 7%;
     font-family: 'League Gothic';
-}
+    }
+.header {
+    width: 100%;
+    position: sticky; /* Aquí tengo un problema, porque el sticky, no se stickea */
+    background-color: #0E0E19;
+    height: 20%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    text-align: center;
+    font-size: 27px;
+    padding: 1%;
+    color: #f4ebeb;
+    font-family: 'League Gothic';
+    }
 
 /*---------------------------------CREAR CUENTA-----------------------------------*/
 
@@ -79,13 +84,12 @@ body {
     height: 51px;
 }
 .crear-cuenta {
-    align-self: stretch;
+    width:45%;
     overflow: hidden;
     display: flex;
     flex-direction: row;
-    align-items: center;
-    justify-content: flex-start;
-    gap: 56px;
+    align-items: flex-start;
+    justify-content: space-between;
 }
 .nombre:hover{
     background-color: #D1DE83;
@@ -163,7 +167,7 @@ body {
     transform: color;
 }
 .datos-documento {
-    width: 490px;
+    width: 100%;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -173,16 +177,15 @@ body {
     color: rgba(81, 81, 91, 0);
 }
 .ciudad {
+    width: 100%;
     border-radius: 10px;
     background-color: #51515b;
     height: 40px;
     overflow: hidden;
-    flex-shrink: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    padding: 1px 10px;
     box-sizing: border-box;
 }
 .span {
@@ -214,18 +217,15 @@ body {
 }
 .lista-de-datos {
     width: 100%;
-    position: relative;
     background-color: #171721;
-    height: 1030px;
+    height: 100%;
     overflow: hidden;
-    flex-shrink: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 0px 336px;
-    box-sizing: border-box;
-    gap: 62px;
+    padding: 2% 3%;
+    gap: 40px;
     text-align: left;
     font-size: 64px;
     color: #fff;
@@ -315,7 +315,6 @@ body {
     align-items: center;
     justify-content: space-between;
     padding: 10px 11px;
-    box-sizing: border-box;
     text-align: left;
     font-size: 32px;
     color: #fff;
