@@ -14,7 +14,6 @@ a {
     .header {
     width: 100%;
     position: sticky; /* Aquí tengo un problema, porque el sticky, no se stickea */
-    top:0;
     background-color: #0E0E19;
     height: 100px;
     overflow: hidden;
