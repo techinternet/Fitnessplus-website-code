@@ -1,3 +1,6 @@
+/*-----------------------------------GLOBAL------------------------------------*/
+
+
 body {
     display: flex;
     flex-direction: row;
@@ -6,6 +9,11 @@ body {
     margin: 0;
     overflow: hidden; /* Evita el desbordamiento */
 }
+a{
+    text-decoration: none;
+}
+
+/*-----------------------------------HEADER LATERAL------------------------------------*/
 
 .nav {
     display: flex;
@@ -43,8 +51,15 @@ body {
     transition: color 500ms ease;
 }
 
-.headernosotros:hover {
+.headernosotros:hover , .headernosotros_1:hover{
     color: #D1DE83;
+}
+.headernosotros_1 {
+    font-size: 27px;
+    font-family: 'League Gothic';
+    color: #aac432;
+    text-align: left;
+    transition: color 500ms ease;
 }
 
 .perfil_1 {
