@@ -4,6 +4,7 @@ body {
     margin: 0;
     line-height: normal;
     background-color: #171721;
+    overflow-x: hidden;
     }
 a {
     text-decoration: none;
@@ -410,22 +411,21 @@ a {
  /*----------------------------------SERVICIOS-----------------------------------*/
 
  .servicios-neu-icon {
-    width: 35%;
+    width: 25%;
     position: relative;
-    height: 45%;
+    height: 30%;
     overflow: hidden;
 }
 .sevicios {
     width: 100%;
     background-color: #171721;
-    height: 1046px;
+    height: 100%;
     overflow: hidden;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-    align-content: center;
     padding: 3% 10%;
     gap: 10% 5%
 }
