@@ -115,7 +115,7 @@ a {
     transform: color;
 }
 .fecha-de-nacimineto {
-    position: relative;
+    /*position: relative;*/
 }
 .vector-icon1 {
     width: 28px;
@@ -124,13 +124,14 @@ a {
     object-fit: contain;
 }
 .cosas-deplegable {
-    overflow: hidden;
+    /*overflow: hidden;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: flex-start;
+    
+    gap: 3px;*/
     padding: 0px 6px;
-    gap: 3px;
 }
 .desplegable {
     border-radius: 10px;
