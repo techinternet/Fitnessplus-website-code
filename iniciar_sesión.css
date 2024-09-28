@@ -6,6 +6,7 @@ body {
     margin: 0;
     line-height: normal;
     background-color: #171721;
+    overflow-x: hidden;
 }
 
 a {
@@ -37,6 +38,7 @@ a {
     background-color: #1e1e36;
 }
 .botn-sencillo-registrar {
+    color: #f4ebeb;
     border-radius: 5px;
     background-color: #111121;
     overflow: hidden;
