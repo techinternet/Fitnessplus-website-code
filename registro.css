@@ -60,7 +60,7 @@ a {
     gap: 7%;
     font-family: 'League Gothic';
     }
-.header {
+header {
     width: 100%;
     position: sticky; /* Aquí tengo un problema, porque el sticky, no se stickea */
     background-color: #0E0E19;

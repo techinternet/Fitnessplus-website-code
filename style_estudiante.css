@@ -15,7 +15,7 @@ a{
 
 /*-----------------------------------HEADER LATERAL------------------------------------*/
 
-.nav {
+nav {
     display: flex;
     width: 30%; /* La barra de navegación ocupará el 30% */
     height: 100vh; /* Altura de toda la pantalla */
@@ -40,6 +40,15 @@ a{
 .logo-icon-1:hover{
     content: url(img/Imagen\ Perfil_Variante\ Hover.png);
 }
+
+.fuego-icon {
+    width: 60px;
+    height: 60px;
+    overflow: hidden;
+    flex-shrink: 0;
+    transition: 3s ease-in-out;
+}
+
 .logo-icon-1 {
     width: 60px;
     height: 60px;

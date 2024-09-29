@@ -15,7 +15,7 @@ a{
 
 /*-----------------------------------HEADER LATERAL------------------------------------*/
 
-.nav {
+nav {
     display: flex;
     width: 30%; /* La barra de navegación ocupará el 30% */
     height: 100vh; /* Altura de toda la pantalla */
