@@ -1,0 +1,177 @@
+/*-----------------------------------GLOBAL------------------------------------*/
+
+
+body {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100vh; /* Ocupa toda la altura de la ventana */
+    margin: 0;
+    overflow: hidden; /* Evita el desbordamiento */
+}
+a{
+    text-decoration: none;
+}
+
+/*-----------------------------------HEADER LATERAL------------------------------------*/
+
+nav {
+    display: flex;
+    width: 30%; /* La barra de navegación ocupará el 30% */
+    height: 100vh; /* Altura de toda la pantalla */
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 30%;
+    background: #0E0E19;
+    flex-shrink: 0; /* Evita que la barra se reduzca */
+}
+
+.logo-icon:hover{
+    opacity: 0.5;
+}
+
+.logo-icon {
+    width: 60px;
+    height: 60px;
+    overflow: hidden;
+    flex-shrink: 0;
+    transition: 500ms ease-in-out;
+}
+
+.logo-icon-1:hover{
+    opacity: 0.5;
+}
+.logo-icon-1 {
+    width: 60px;
+    height: 60px;
+    overflow: hidden;
+    flex-shrink: 0;
+    transition: 500ms ease-in-out;
+}
+
+.fuego-icon {
+    width: 60px;
+    height: 60px;
+    overflow: hidden;
+    flex-shrink: 0;
+    transition: 3s ease-in-out;
+}
+
+.logo-icon-1 {
+    width: 60px;
+    height: 60px;
+    overflow: hidden;
+    flex-shrink: 0;
+    transition: 3s ease-in-out;
+}
+
+.arriba {
+    display: flex;
+    height: 118px;
+    width: 100%; /* Ajusta el ancho para que ocupe el espacio disponible */
+    padding: 10px 20px;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+.headernosotros, .headernosotros_2 , .headernosotros_3 {
+    font-size: 27px;
+    font-family: 'League Gothic';
+    color: #f4ebeb;
+    text-align: left;
+    transition: color 500ms ease;
+}
+
+.headernosotros:hover , .headernosotros_1:hover{
+    color: #D1DE83;
+}
+.headernosotros_1 {
+    font-size: 27px;
+    font-family: 'League Gothic';
+    color: #aac432;
+    text-align: left;
+    transition: color 500ms ease;
+}
+
+.perfil_1 {
+    display: flex;
+    width: 176px;
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.abajo {
+    display: flex;
+    padding: 35px;
+    flex-direction: column;
+    gap: 30px;
+    width: 100%; /* Ajusta para ocupar el ancho disponible */
+}
+
+/*-----------------------------------CONTENT------------------------------------*/
+
+.content {
+    display: flex;
+    flex-direction: column; /* Organiza las partes de arriba a abajo */
+    width: 70%; /* El contenido ocupará el 70% */
+    height: 100vh;
+    padding: 75px 100px 65px 100px;
+    justify-content: flex-start;
+    align-items: center;
+    row-gap: 30px;
+    background: #171721;
+    overflow: auto; /* Añade scroll si el contenido es muy grande */
+}
+
+.headernosotros_2{
+    font-size: 38px;
+}
+
+.part_1{
+    display: flex;
+    width: 100%; /* Ocupa todo el ancho */
+    justify-content: flex-start;
+    align-items: center;
+    gap: 5%;
+    padding: 0px 20px;
+}
+
+.estudiantes {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    padding: 30px 21px;
+    align-items: center; /* Alinea el contenido al inicio en lugar de al centro */
+    gap: 5px; /* Reduce el espacio entre cada estudiante */
+    background: #3F3F48;
+    margin-bottom: 10%;
+}
+
+h2 {
+    color: #FFF;
+    font-family: Abel;
+    font-size: 32px;
+    font-weight: 400;
+    margin-bottom: 10px; /* Añade espacio debajo del título */
+    margin-top: 10px;
+}
+
+.linea {
+    width: 90%;
+    height: 1px;
+    background: #FFF;
+    margin-bottom: 10px; /* Espacio entre la línea y la lista */
+}
+
+h3 {
+    color: #FFF;
+    font-family: Abel;
+    font-size: 20px; /* Ajusta el tamaño de la fuente para parecer más a una lista */
+    font-weight: 400;
+    margin: 2px 0; /* Reduce el espacio vertical entre los elementos */
+    line-height: 1.2; /* Controla la altura de línea para reducir el espacio */
+    text-transform: capitalize;
+}
