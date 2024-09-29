@@ -130,11 +130,34 @@ nav {
     font-size: 38px;
 }
 
-.part_1{
+.part_1 {
     display: flex;
     width: 100%; /* Ocupa todo el ancho */
     justify-content: flex-start;
     align-items: center;
-    gap: 5%;
+    gap: 20px; /* Espacio entre el icono de atrás y la derecha */
 }
 
+.derecha {
+    display: flex;
+    align-items: center; /* Alinea la imagen con el texto verticalmente */
+    gap: 15px; /* Espacio entre la imagen y el texto */
+}
+
+.img-estudiante {
+    width: 80px; /* Ajusta el tamaño de la imagen */
+    height: 80px;
+    border-radius: 50%; /* Hace que la imagen sea circular */
+    object-fit: cover; /* Asegura que la imagen se ajuste correctamente */
+}
+
+.texto {
+    display: flex;
+    flex-direction: column; /* Coloca el nombre y el correo uno debajo del otro */
+    justify-content: center; /* Centra verticalmente el contenido dentro de la columna */
+}
+h6 {
+    font-size: 14px;
+    margin: 5px 0 0 0; /* Añade un pequeño margen superior entre el nombre y el correo */
+    color: #555;
+}
