@@ -136,8 +136,19 @@ nav {
     justify-content: flex-start;
     align-items: center;
     gap: 5%;
-    padding: 0px 20px;
 }
+
+.atras-icon:hover{
+    opacity: 0.5;
+}
+.atras-icon {
+    width: 30px;
+    height: 30px;
+    overflow: hidden;
+    flex-shrink: 0;
+    transition: 500ms ease-in-out;
+}
+
 
 .estudiantes {
     display: flex;
