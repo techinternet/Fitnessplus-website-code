@@ -112,14 +112,14 @@ nav {
 }
 
 .atras-icon:hover{
-    content: url(img/Mítica\ Flecha_Varinate\ Hover.png);
+    opacity: 0.5;
 }
 .atras-icon {
     width: 50px;
     height: 50px;
     overflow: hidden;
     flex-shrink: 0;
-    transition: 3s ease-in-out;
+    transition: 500ms ease-in-out;
 }
 
 .part_1{
