@@ -139,8 +139,7 @@ nav {
     justify-content: flex-start;
     align-items: flex-start; /* Ajustar las cajas al inicio del eje vertical */
     width: 90%;
-    padding: 10px 38px;
-    background-color: aqua;
+    padding: 0px 38px;
 }
 .clase_prog{
     width: 30%; /* Ajusta el tamaño para que quepan 2 logros por fila */
@@ -156,7 +155,7 @@ nav {
 }
 .headernosotros_3 {
     color: #171721;
-    font-size: 64px;
+    font-size: 56px;
     text-align: center;
     transform: rotate(-45deg);
 }
@@ -167,10 +166,9 @@ nav {
     justify-content: space-around;
     align-items: flex-start; /* Ajustar las cajas al inicio del eje vertical */
     width: 90%;
-    padding: 10px 38px;
+    padding: 0px 38px;
     row-gap: auto;
-    background-color: aquamarine;
-
+    margin-bottom: 10%;
 }
 .logro{
     width: 35%; /* Ajustar el tamaño para que quepan 2 por fila */
@@ -191,7 +189,7 @@ h6 {
     color: #FFF;
     text-align: center;
     font-family: "League Gothic";
-    font-size: 18px;
+    font-size: 16px;
     text-transform: uppercase;
     margin-top: 5px; /* Reduce el margen superior */
     margin-bottom: 5px;
