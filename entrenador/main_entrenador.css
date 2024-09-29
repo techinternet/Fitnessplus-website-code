@@ -124,4 +124,75 @@ nav {
     overflow: auto; /* Añade scroll si el contenido es muy grande */
 }
 
+.boton, .boton_2 {
+    display: flex;
+    padding: 9px 20px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 5px;
+    background-color: #BCD933;
+    transition: background-color 500ms ease;
+}
+.boton_2{
+    background: #D1DE83;
+}
+.boton:hover {
+    background: #1E1E36;
+}
 
+.part_2{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-start; /* Ajustar las cajas al inicio del eje vertical */
+    width: 90%;
+    padding: 39px 38px;
+    row-gap: 20%;
+    margin-bottom: 10%;
+}
+
+.headernosotros_3{
+    color: #171721;
+    font-family: "League Gothic";
+    font-size: 27px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.logro {
+    width: 45%; /* Mantiene el tamaño del contenedor */
+    padding: 10px; /* Reduce el padding interno */
+    margin: 5px 0; /* Reduce el margen entre los contenedores de logro */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px; /* Reduce el espacio entre la imagen, el texto y el botón */
+    border-radius: 25px;
+    box-sizing: border-box;
+}
+
+.img-estudiante {
+    max-width: 100%; /* Asegura que la imagen no se salga del contenedor */
+    height: auto;
+}
+
+h6 {
+    color: #F4EBEB;
+    font-family: "League Gothic";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin: 5px 0; /* Reduce el margen entre el título y los otros elementos */
+}
+
+.boton_2 {
+    border-radius: 5px;
+    background: #D1DE83;
+}
+
+.boton_2:hover {
+    background-color: #1E1E36;
+}
