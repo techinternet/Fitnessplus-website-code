@@ -139,6 +139,9 @@ nav {
     width: 90%;
     padding: 39px 38px;
     row-gap: auto;
+}
+
+.part_2:last-child{
     margin-bottom: 10%;
 }
 
@@ -171,4 +174,15 @@ h6 {
     color: #BCD933;
     font-size: 50px;
     margin-bottom: 10px; /* Reduce el margen inferior */
+}
+
+.boton {
+    display: flex;
+    padding: 9px 20px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 5px;
+    background-color: #111121;
+    transition: background-color 500ms ease;
 }
