@@ -100,13 +100,13 @@ nav {
     display: flex;
     flex-direction: column; /* Organiza las partes de arriba a abajo */
     width: 70%; /* El contenido ocupará el 70% */
-    height: 100vh;
+    height: 90vh;
     padding: 70px 5px;
     justify-content: flex-start;
     align-items: flex-start;
     row-gap: 9%;
     background: #171721;
-    overflow: auto; /* Añade scroll si el contenido es muy grande */
+    
 }
 
 .atras-icon:hover{
@@ -127,9 +127,43 @@ nav {
     align-items: center;
     gap: 5%;
     padding: 0px 20px;
+    flex-shrink: 0; /* Evita que se reduzca */
 }
 
 .headernosotros_2 {
     font-size: 38px;
 }
     
+.part_2 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around; /* Espacia los logros para que queden en columnas */
+    width: 90%; /* Ocupa todo el ancho */
+    flex-grow: 1;
+    gap: 20px; /* Espacio entre las cajas*/
+    padding: 0px 20px;
+    overflow: hidden;
+    align-content: flex-end;
+    margin-bottom: 10%;
+}
+
+.hercules_image {
+    height: 100%;
+    flex-shrink: 0;
+    align-self: stretch;
+}
+
+.boton:hover{
+    background-color: #1E1E36;
+}
+.boton {
+    display: flex;
+    padding: 9px 20px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 5px;
+    background-color:#0E0E19;
+
+    transition: background-color 500ms ease;
+}
