@@ -146,8 +146,8 @@ nav {
     opacity: 0.5;
 }
 .socialmedia {
-    width: 100%; /* Ajusta el tamaño según tu preferencia */
-    height: 100%; /* Ajusta el tamaño según tu preferencia */
+    width: 50%; /* Ajusta el tamaño según tu preferencia */
+    height: 50%; /* Ajusta el tamaño según tu preferencia */
     transition: 500ms ease-in-out;
 }
 
