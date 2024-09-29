@@ -137,8 +137,9 @@ header {
     justify-content: flex-start;
     padding: 1px 10px;
     box-sizing: border-box;
-    font-family: 'League Gothic';
-
+    font-size: 32px;
+    color: #f4ebeb;
+    font-family: Abel;
 }
 .jjsjsjsjsjs {
     color: rgba(255, 255, 255, 0);
