@@ -186,3 +186,50 @@ h3 {
     line-height: 1.2; /* Controla la altura de línea para reducir el espacio */
     text-transform: capitalize;
 }
+
+.nombre {
+    position: left;
+}
+.casilla-datos {
+    width: 492px;
+    border-radius: 10px;
+    background-color: #51515b;
+    height: 40px;
+    overflow: hidden;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0px 29px;
+    box-sizing: border-box;
+}
+.casilla-datos-parent {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    font-size: 32px;
+    font-family: Abel;
+    margin-bottom: 20%;
+}
+
+.botn-sencillo1:hover{
+    background: #1E1E36;
+}
+.botn-sencillo1 {
+    border-radius: 5px;
+    background-color: #AAC432;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 9px 20px;
+    font-size: 30px;
+    color: #f4ebeb;
+    font-family: 'League Gothic';
+    transition: background-color 500ms ease;
+}
