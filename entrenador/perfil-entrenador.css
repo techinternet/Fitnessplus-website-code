@@ -51,7 +51,7 @@ nav {
 }
 
 .logo-icon:hover{
-    opacity: 0.5;
+    content: url(../img/Logo\ Hover.svg);
 }
 .logo-icon {
     width: 60px;
@@ -101,13 +101,13 @@ nav {
 
 /*-----------------------------------CONTENIDO: PERFIL USUARIO------------------------------------*/
 .vector-icon:hover{
-    content: url(img/Mítica\ Flecha_Varinate\ Hover.png);
+    opacity: 0.5;
 }
 .vector-icon {
     width: 30px;
     position: relative;
     height: 51px;
-    transition: 3s ease-in-out;
+    transition: 500ms ease-in-out;
 }
 .crear-cuenta {
     display: flex;
