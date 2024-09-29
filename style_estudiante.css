@@ -26,11 +26,26 @@ a{
     flex-shrink: 0; /* Evita que la barra se reduzca */
 }
 
+.logo-icon:hover{
+    content: url(img/Logo_Variente\ Hover.png);
+}
 .logo-icon {
     width: 60px;
     height: 60px;
     overflow: hidden;
     flex-shrink: 0;
+    transition: 3s ease-in-out;
+}
+
+.logo-icon-1:hover{
+    content: url(img/Imagen\ Perfil_Variante\ Hover.png);
+}
+.logo-icon-1 {
+    width: 60px;
+    height: 60px;
+    overflow: hidden;
+    flex-shrink: 0;
+    transition: 3s ease-in-out;
 }
 
 .arriba {
