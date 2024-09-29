@@ -43,6 +43,9 @@ a {
     font-size: 27px;
     transition: background-color 500ms ease;
 }
+.botn-sencillo-iniciar-sesi{
+    background-color: #1e1e36;
+}
 .botones-header {
     width: 20%;
     overflow: hidden;

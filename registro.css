@@ -13,19 +13,25 @@ a {
 
 /*-----------------------------------HEADER------------------------------------*/
 
+.logo-icon:hover{
+    content: url(img/Logo\ Hover.svg);
+}
 .logo-icon {
-    width: 23%;
+    width: 25%;
     position: relative;
+    height: 80%;
     height: 100%;
     overflow: hidden;
+    transition: 3s ease-in-out;
 }
 .iniciar-sesin {
     position: relative;
 }
 .botn-sencillo-iniciar-sesi:hover{
-    background-color: #1E1E36;
+    background-color: #1e1e36;
 }
-.botn-sencillo-iniciar-sesi {
+.botn-sencillo-iniciar-sesi, .botn-sencillo-registrar {
+    color: #f4ebeb;
     border-radius: 5px;
     background-color: #111121;
     overflow: hidden;
@@ -34,21 +40,15 @@ a {
     align-items: center;
     justify-content: center;
     padding: 9px 20px;
-    color: #f4ebeb;
+    font-size: 27px;
     transition: background-color 500ms ease;
 }
-.botn-sencillo-registrar {
-    border-radius: 5px;
+.botn-sencillo-registrar{
     background-color: #1e1e36;
-    overflow: hidden;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    padding: 9px 20px;
 }
+
 .botones-header {
-    width: 50%;
+    width: 20%;
     overflow: hidden;
     display: flex;
     flex-direction: row;
@@ -56,7 +56,7 @@ a {
     justify-content: flex-end;
     font-size: 30px;
     color: #f4ebeb;
-    padding: 1%;
+    padding: 1% 2%;
     gap: 7%;
     font-family: 'League Gothic';
     }
@@ -64,25 +64,27 @@ header {
     width: 100%;
     position: sticky; /* Aquí tengo un problema, porque el sticky, no se stickea */
     background-color: #0E0E19;
-    height: 20%;
+    height: 100px;
     overflow: hidden;
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
     text-align: center;
     font-size: 27px;
-    padding: 1%;
     color: #f4ebeb;
     font-family: 'League Gothic';
     }
 
 /*---------------------------------CREAR CUENTA-----------------------------------*/
-
+.vector-icon:hover{
+    opacity: 0.5;
+}
 .vector-icon {
     width: 30px;
     position: relative;
     height: 51px;
+    transition: 500ms ease-in-out;
 }
 .crear-cuenta {
     width:45%;
