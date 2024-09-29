@@ -46,11 +46,27 @@ a{
     color: #D1DE83;
 }
 
+.logo-icon:hover{
+    content: url(img/Logo_Variente\ Hover.png);
+}
+
 .logo-icon {
     width: 60px;
     height: 60px;
     overflow: hidden;
     flex-shrink: 0;
+    transition: 3s ease-in-out;
+}
+
+.logo-icon-1:hover{
+    content: url(img/Imagen\ Perfil_Variante\ Hover.png);
+}
+.logo-icon-1 {
+    width: 60px;
+    height: 60px;
+    overflow: hidden;
+    flex-shrink: 0;
+    transition: 3s ease-in-out;
 }
 
 .arriba {
@@ -93,11 +109,15 @@ a{
     overflow: auto; /* Añade scroll si el contenido es muy grande */
 }
 
+.atras-icon:hover{
+    content: url(img/Mítica\ Flecha_Varinate\ Hover.png);
+}
 .atras-icon {
     width: 30px;
     height: 30px;
     overflow: hidden;
     flex-shrink: 0;
+    transition: 3s ease-in-out;
 }
 
 .part_1{
