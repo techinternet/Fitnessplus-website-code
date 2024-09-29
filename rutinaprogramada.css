@@ -47,7 +47,7 @@ nav {
 }
 
 .logo-icon:hover{
-    content: url(img/Logo_Variente\ Hover.png);
+    content: url(img/Logo\ Hover.svg);
 }
 
 .logo-icon {
@@ -110,14 +110,14 @@ nav {
 }
 
 .atras-icon:hover{
-    content: url(img/Mítica\ Flecha_Varinate\ Hover.png);
+    opacity: 0.5;;
 }
 .atras-icon {
     width: 30px;
     height: 30px;
     overflow: hidden;
     flex-shrink: 0;
-    transition: 3s ease-in-out;
+    transition: opacity 3s ease-in-out;
 }
 
 .part_1{

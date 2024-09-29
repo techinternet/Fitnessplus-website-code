@@ -47,7 +47,7 @@ nav {
 }
 
 .logo-icon:hover{
-    content: url(img/Logo_Variente\ Hover.png);
+    opacity: 0.5;
 }
 
 .logo-icon {
@@ -55,18 +55,18 @@ nav {
     height: 60px;
     overflow: hidden;
     flex-shrink: 0;
-    transition: 3s ease-in-out;
+    transition: 500ms ease-in-out;
 }
 
 .logo-icon-1:hover{
-    content: url(img/Imagen\ Perfil_Variante\ Hover.png);
+    opacity: 0.5;
 }
 .logo-icon-1 {
     width: 60px;
     height: 60px;
     overflow: hidden;
     flex-shrink: 0;
-    transition: 3s ease-in-out;
+    transition: 500ms ease-in-out;
 }
 
 .arriba {
@@ -110,14 +110,14 @@ nav {
 }
 
 .atras-icon:hover{
-    content: url(img/Mítica\ Flecha_Varinate\ Hover.png);
+    opacity: 0.5;
 }
 .atras-icon {
     width: 30px;
     height: 30px;
     overflow: hidden;
     flex-shrink: 0;
-    transition: 3s ease-in-out;
+    transition: 500ms ease-in-out;
 }
 
 .part_1{
@@ -141,8 +141,9 @@ nav {
     gap: 20px; /* Espacio entre las cajas de logros */
     padding: 0px 20px;
 }
-    
+
 .logro, .logro_1 {
+    color: #0E0E19;
     width: 30%; /* Ajusta el tamaño para que quepan 2 logros por fila */
     height: auto;
     padding: 10%;
@@ -153,11 +154,14 @@ nav {
     border-radius: 25px;
     background: #BCD933;
     box-sizing: border-box; /* Asegura que padding y border se incluyan en el width */
-    
 }
 
 .logro_1{
     background: #D1DE83;
+    transition: background-color 500ms ease-in-out;
+}
+.logro_1:hover{
+    background-color: #BCD933;
 }
     
 .headernosotros_3 {
