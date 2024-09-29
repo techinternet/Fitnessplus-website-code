@@ -106,7 +106,6 @@ nav {
     align-items: flex-start;
     row-gap: 9%;
     background: #171721;
-    overflow: auto; /* Añade scroll si el contenido es muy grande */
 }
 
 .atras-icon:hover{
@@ -188,7 +187,7 @@ nav {
     width: 80%; /* Ajusta el ancho para que se adapte al contenedor */
     border-radius: 10px;
     background-color: #51515b;
-    height: 40px;
+    height: 30px;
     display: flex;
     align-items: center;
     justify-content: flex-start;
@@ -201,5 +200,5 @@ nav {
 }
 
 .headernosotros_4{
-    font-size: 45px;
+    font-size: 40px;
 }
