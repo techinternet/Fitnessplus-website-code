@@ -182,41 +182,36 @@ html{
         text-transform: capitalize;
   }
   .fitnessplus-es-mucho-container {
-        align-self: stretch;
-        position: relative;
+    position: relative;
         font-size: 30px;
         font-family: Abel;
         color: #fff;
   }
   .info {
-        width: 611px;
-        height: 998px;
+        width: 45%;
+        height: 100%;
         overflow: hidden;
         flex-shrink: 0;
         display: flex;
         flex-direction: column;
-        align-items: flex-start;
-        justify-content: center;
-        padding: 0px 24px;
-        box-sizing: border-box;
         gap: 4px;
   }
   .poster-icon {
-        width: 100%;
+        width: 45%;
         position: relative;
-        height: 100%;
+        height: 1049px;
         overflow: hidden;
   }
   .nosotros {
-        width: 50%;
+        width: 80%;
         position: relative;
         background-color: #171721;
         overflow: hidden;
         display: flex;
         flex-direction: row;
         align-items: flex-start;
-        justify-content: flex-start;
-        padding: 10% 25%;
+        justify-content: space-around;
+        padding: 5% 10%;
         gap: 20px;
         text-align: left;
         font-size: 80px;
