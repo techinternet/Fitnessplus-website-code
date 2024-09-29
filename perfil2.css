@@ -152,14 +152,26 @@ nav {
     flex-basis: 30%; 
 }
 
+.nombre:active{
+    color: #aac432;
+}
+.nombre {
+    align-items: center;
+    justify-content: flex-start;
+    padding: 1%;
+    box-sizing: border-box;
+    color :#f4ebeb;
+    transform: color 500ms ease;
+    font-size: 32px;
+    font-family: Abel;
+}
 .part_3 {
+    color: #f4ebeb;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 20px;
-    font-size: 32px;
-    font-family: Abel;
     flex-basis: 65%; 
 }
 
@@ -169,6 +181,7 @@ nav {
 }
 
 .boton, .boton_2  {
+    color: #f4ebeb;
     display: inline-flex; /* Permite que el botón se ajuste al tamaño del contenido (texto) */
     padding: 5px 10px; /* Ajusta el espacio alrededor del texto, pero mantiene el botón compacto */
     justify-content: center;
@@ -182,6 +195,15 @@ nav {
 .boton:hover {
     background-color: #1E1E36;
 }
+.boton_2{
+    background-color: #aac432;
+}
+.boton_2 :hover{
+    color: #0E0E19;
+}
+.casilla-datos:hover{
+    background-color: #aac432;
+}
 
 .casilla-datos {
     width: 80%; /* Ajusta el ancho para que se adapte al contenedor */
@@ -193,10 +215,6 @@ nav {
     justify-content: flex-start;
     padding: 0px 29px;
     box-sizing: border-box;
-}
-
-.boton_2{
-    background-color: #aac432;
 }
 
 .headernosotros_4{
