@@ -47,7 +47,7 @@ nav {
 }
 
 .logo-icon:hover{
-    content: url(img/Logo\ Hover.svg);
+    opacity: 0.5;
 }
 
 .logo-icon {
@@ -55,18 +55,18 @@ nav {
     height: 60px;
     overflow: hidden;
     flex-shrink: 0;
-    transition: 3s ease-in-out;
+    transition: 500ms ease-in-out;
 }
 
 .logo-icon-1:hover{
-    content: url(img/Imagen\ Perfil_Variante\ Hover.png);
+    opacity: 0.5;
 }
 .logo-icon-1 {
     width: 60px;
     height: 60px;
     overflow: hidden;
     flex-shrink: 0;
-    transition: 3s ease-in-out;
+    transition: 500ms ease-in-out;
 }
 
 .arriba {

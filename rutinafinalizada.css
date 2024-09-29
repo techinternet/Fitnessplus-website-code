@@ -8,6 +8,7 @@ body {
     margin: 0;
     overflow: hidden; /* Evita el desbordamiento */
 }
+
 a{
     text-decoration: none;
 }
@@ -33,7 +34,15 @@ nav {
     transition: color 500ms ease;
 }
 
-.headernosotros:hover{
+.headernosotros_1 {
+    font-size: 27px;
+    font-family: 'League Gothic';
+    color: #aac432;
+    text-align: left;
+    transition: color 500ms ease;
+}
+
+.headernosotros:hover , .headernosotros_1:hover{
     color: #D1DE83;
 }
 
@@ -87,32 +96,17 @@ nav {
     width: 100%; /* Ajusta para ocupar el ancho disponible */
 }
 
-/*-----------------------------------CONTENIDO: RACHA------------------------------------*/
-
 .content {
     display: flex;
     flex-direction: column; /* Organiza las partes de arriba a abajo */
     width: 70%; /* El contenido ocupará el 70% */
-    height: 100vh;
+    height: 90vh;
     padding: 70px 5px;
     justify-content: flex-start;
     align-items: flex-start;
-    row-gap: 30px;
+    row-gap: 9%;
     background: #171721;
-    overflow: auto; /* Añade scroll si el contenido es muy grande */
-}
-
-.headernosotros_2{
-    font-size: 38px;
-}
-
-.part_1{
-    display: flex;
-    width: 100%; /* Ocupa todo el ancho */
-    justify-content: flex-start;
-    align-items: center;
-    gap: 5%;
-    padding: 0px 20px;
+    
 }
 
 .atras-icon:hover{
@@ -126,51 +120,42 @@ nav {
     transition: 500ms ease-in-out;
 }
 
-.part_2{
+.part_1{
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: flex-start; /* Ajustar las cajas al inicio del eje vertical */
-    width: 90%;
-    padding: 39px 38px;
-    row-gap: auto;
+    width: 100%; /* Ocupa todo el ancho */
+    justify-content: flex-start;
+    align-items: center;
+    gap: 5%;
+    padding: 0px 20px;
+    flex-shrink: 0; /* Evita que se reduzca */
 }
 
-.part_2:last-child{
+.headernosotros_2 {
+    font-size: 38px;
+}
+    
+.part_2 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around; /* Espacia los logros para que queden en columnas */
+    width: 90%; /* Ocupa todo el ancho */
+    flex-grow: 1;
+    gap: 20px; /* Espacio entre las cajas*/
+    padding: 0px 20px;
+    overflow: hidden;
+    align-content: flex-end;
     margin-bottom: 10%;
 }
 
-.logro, .img_entrenador {
-    width: 35%; /* Ajustar el tamaño para que quepan 2 por fila */
-    padding: 20px;
-    margin: 10px 0; /* Añadir margen para evitar que se salgan del contenedor */
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    border-radius: 25px;
-    box-sizing: border-box; /* Asegura que padding y border se incluyan en el width */
+.hercules_image {
+    height: 100%;
+    flex-shrink: 0;
+    align-self: stretch;
 }
 
-.img_entrenador{
-    align-items: center;
+.boton:hover{
+    background-color: #1E1E36;
 }
-
-h6 {
-    color: #FFF;
-    text-align: center;
-    font-family: "League Gothic";
-    font-size: 24px;
-    text-transform: uppercase;
-    margin-top: 5px; /* Reduce el margen superior */
-    margin-bottom: 5px;
-}
-
-.headernosotros_3{
-    color: #BCD933;
-    font-size: 50px;
-    margin-bottom: 10px; /* Reduce el margen inferior */
-}
-
 .boton {
     display: flex;
     padding: 9px 20px;
@@ -178,6 +163,7 @@ h6 {
     align-items: center;
     gap: 10px;
     border-radius: 5px;
-    background-color: #111121;
+    background-color:#0E0E19;
+
     transition: background-color 500ms ease;
 }

@@ -49,6 +49,22 @@ nav {
     transition: 500ms ease-in-out;
 }
 
+.fuego-icon {
+    width: 60px;
+    height: 60px;
+    overflow: hidden;
+    flex-shrink: 0;
+    transition: 3s ease-in-out;
+}
+
+.logo-icon-1 {
+    width: 60px;
+    height: 60px;
+    overflow: hidden;
+    flex-shrink: 0;
+    transition: 3s ease-in-out;
+}
+
 .arriba {
     display: flex;
     height: 118px;
@@ -108,64 +124,4 @@ nav {
     overflow: auto; /* Añade scroll si el contenido es muy grande */
 }
 
-.arriba_1{
-    display: flex;
-    width: 100%; /* Ocupa todo el ancho */
-    justify-content: space-around;
-    align-items: center;
-}
 
-.part_1 {
-    display: flex;
-    width: 50%; /* Ajusta para ocupar la mitad del contenedor */
-    flex-direction: column;
-    align-items: flex-end;
-}
-
-.hercules_image {
-    height: 5%;
-    flex-shrink: 0;
-    align-self: stretch;
-}
-
-.boton {
-    display: flex;
-    padding: 9px 20px;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    border-radius: 5px;
-    background-color: #BCD933;
-    transition: background-color 500ms ease;
-}
-
-.boton:hover {
-    background: #1E1E36;
-}
-
-.part_2 {
-    display: flex;
-    width: 50%; /* Ajusta para ocupar la mitad del contenedor */
-    flex-direction: column;
-    align-items: flex-end;
-    align-content: flex-start;
-    justify-content: center;
-}
-
-part_2.logo-icon{
-    width: 180px;
-    height: 180px;
-}
-
-.part_3 {
-    display: flex;
-    width: 100%; /* Ocupa todo el ancho */
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-}
-
-.part_3 .headernosotros {
-    color: #BCD933;
-    font-size: 48px;
-}

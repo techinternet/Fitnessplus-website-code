@@ -8,6 +8,7 @@ body {
     margin: 0;
     overflow: hidden; /* Evita el desbordamiento */
 }
+
 a{
     text-decoration: none;
 }
@@ -25,7 +26,7 @@ nav {
     flex-shrink: 0; /* Evita que la barra se reduzca */
 }
 
-.headernosotros, .headernosotros_2 , .headernosotros_3{
+.headernosotros, .headernosotros_2 , .headernosotros_3, .headernosotros_4{
     font-size: 27px;
     font-family: 'League Gothic';
     color: #f4ebeb;
@@ -33,7 +34,15 @@ nav {
     transition: color 500ms ease;
 }
 
-.headernosotros:hover{
+.headernosotros_1 {
+    font-size: 27px;
+    font-family: 'League Gothic';
+    color: #aac432;
+    text-align: left;
+    transition: color 500ms ease;
+}
+
+.headernosotros:hover , .headernosotros_1:hover{
     color: #D1DE83;
 }
 
@@ -87,8 +96,6 @@ nav {
     width: 100%; /* Ajusta para ocupar el ancho disponible */
 }
 
-/*-----------------------------------CONTENIDO: RACHA------------------------------------*/
-
 .content {
     display: flex;
     flex-direction: column; /* Organiza las partes de arriba a abajo */
@@ -97,22 +104,8 @@ nav {
     padding: 70px 5px;
     justify-content: flex-start;
     align-items: flex-start;
-    row-gap: 30px;
+    row-gap: 9%;
     background: #171721;
-    overflow: auto; /* Añade scroll si el contenido es muy grande */
-}
-
-.headernosotros_2{
-    font-size: 38px;
-}
-
-.part_1{
-    display: flex;
-    width: 100%; /* Ocupa todo el ancho */
-    justify-content: flex-start;
-    align-items: center;
-    gap: 5%;
-    padding: 0px 20px;
 }
 
 .atras-icon:hover{
@@ -126,58 +119,86 @@ nav {
     transition: 500ms ease-in-out;
 }
 
-.part_2{
+.part_1{
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: flex-start; /* Ajustar las cajas al inicio del eje vertical */
-    width: 90%;
-    padding: 39px 38px;
-    row-gap: auto;
+    width: 100%; /* Ocupa todo el ancho */
+    justify-content: flex-start;
+    align-items: center;
+    gap: 5%;
+    padding: 0px 20px;
 }
 
-.part_2:last-child{
+.headernosotros_2 {
+    font-size: 38px;
+}
+    
+.division {
+    display: flex;
+    align-content: flex-start;
+    justify-content: space-between; /* Distribuye el espacio entre los elementos */
+    width: 100%; /* Ocupa todo el ancho */
+    gap: 20px; /* Espacio entre las cajas */
+    padding: 0px 30px;
+
     margin-bottom: 10%;
 }
 
-.logro, .img_entrenador {
-    width: 35%; /* Ajustar el tamaño para que quepan 2 por fila */
-    padding: 20px;
-    margin: 10px 0; /* Añadir margen para evitar que se salgan del contenedor */
+.part_2 {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    border-radius: 25px;
-    box-sizing: border-box; /* Asegura que padding y border se incluyan en el width */
-}
-
-.img_entrenador{
+    justify-content: flex-start;
     align-items: center;
+    gap: 10px;
+    flex-basis: 30%; 
 }
 
-h6 {
-    color: #FFF;
-    text-align: center;
-    font-family: "League Gothic";
-    font-size: 24px;
-    text-transform: uppercase;
-    margin-top: 5px; /* Reduce el margen superior */
-    margin-bottom: 5px;
-}
-
-.headernosotros_3{
-    color: #BCD933;
-    font-size: 50px;
-    margin-bottom: 10px; /* Reduce el margen inferior */
-}
-
-.boton {
+.part_3 {
     display: flex;
-    padding: 9px 20px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    font-size: 32px;
+    font-family: Abel;
+    flex-basis: 65%; 
+}
+
+.perfil_image {
+    height: 30%;
+    align-self: stretch;
+}
+
+.boton, .boton_2  {
+    display: inline-flex; /* Permite que el botón se ajuste al tamaño del contenido (texto) */
+    padding: 5px 10px; /* Ajusta el espacio alrededor del texto, pero mantiene el botón compacto */
     justify-content: center;
     align-items: center;
     gap: 10px;
     border-radius: 5px;
-    background-color: #111121;
+    background-color: #0E0E19;
     transition: background-color 500ms ease;
+}
+
+.boton:hover {
+    background-color: #1E1E36;
+}
+
+.casilla-datos {
+    width: 80%; /* Ajusta el ancho para que se adapte al contenedor */
+    border-radius: 10px;
+    background-color: #51515b;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0px 29px;
+    box-sizing: border-box;
+}
+
+.boton_2{
+    background-color: #aac432;
+}
+
+.headernosotros_4{
+    font-size: 40px;
 }
