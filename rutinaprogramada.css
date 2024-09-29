@@ -110,14 +110,14 @@ nav {
 }
 
 .atras-icon:hover{
-    opacity: 0.5;;
+    opacity: 0.5;
 }
 .atras-icon {
     width: 30px;
     height: 30px;
     overflow: hidden;
     flex-shrink: 0;
-    transition: opacity 3s ease-in-out;
+    transition: opacity 500ms ease-in-out;
 }
 
 .part_1{
@@ -201,6 +201,9 @@ h6 {
     margin-bottom: 10px; /* Reduce el margen inferior */
 }
 
+.boton:hover{
+    background-color: #1E1E36;
+}
 .boton {
     display: flex;
     padding: 9px 20px;
@@ -208,6 +211,6 @@ h6 {
     align-items: center;
     gap: 10px;
     border-radius: 5px;
-    background-color: #111121;
+    background-color:#0E0E19;
     transition: background-color 500ms ease;
 }
