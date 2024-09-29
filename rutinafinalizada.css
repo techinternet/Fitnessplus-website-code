@@ -136,7 +136,6 @@ nav {
     
 .part_2 {
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-around; /* Espacia los logros para que queden en columnas */
     width: 90%; /* Ocupa todo el ancho */
     flex-grow: 1;
@@ -164,6 +163,5 @@ nav {
     gap: 10px;
     border-radius: 5px;
     background-color:#0E0E19;
-
     transition: background-color 500ms ease;
 }
