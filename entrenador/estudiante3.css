@@ -27,7 +27,7 @@ nav {
 }
 
 .logo-icon:hover{
-    opacity: 0.5;
+    content: url(../img/Logo\ Hover.svg);
 }
 
 .logo-icon {
@@ -116,35 +116,41 @@ nav {
 .tipo {
   	position: relative;
 }
+.contenido:hover{
+    background-color: #3f3f48;
+}
 .contenido {
-  	position: absolute;
-  	top: 424px;
-  	left: 310px;
+    height: 50%;
+    width: auto;
   	border-radius: 10px;
-  	background-color: rgba(188, 217, 51, 0.6);
-  	height: 40px;
+  	background-color: #aac432;
   	overflow: hidden;
   	display: flex;
-  	flex-direction: column;
   	align-items: center;
-  	justify-content: flex-start;
+  	justify-content: center;
   	padding: 1px 22px;
   	box-sizing: border-box;
+    transition: backgroung-color 500ms ease-in-out;
+}
+
+.contenido1:hover{
+    background-color: #3f3f48;
 }
 .contenido1 {
-  	position: absolute;
-  	top: 173px;
-  	left: 83px;
+    width: 15%;
+    height: 1%;
   	border-radius: 10px;
-  	background-color: rgba(188, 217, 51, 0.8);
+  	background-color: #aac432;
   	height: 40px;
   	overflow: hidden;
   	display: flex;
-  	flex-direction: column;
   	align-items: center;
-  	justify-content: flex-start;
-  	padding: 1px 22px;
-  	box-sizing: border-box;
+  	justify-content: center;
+    transition: backgroung-color 500ms ease-in-out;
+}
+
+.vector-icon:hover {
+    opacity: 0.5;
 }
 .vector-icon {
   	width: 30px;
@@ -152,18 +158,17 @@ nav {
   	height: 59.3px;
   	object-fit: contain;
   	cursor: pointer;
+    transition: 500ms ease-in-out;
 }
 .vector-parent {
-  	position: absolute;
-  	top: 43px;
-  	left: 28px;
-  	width: 795px;
+  	width: 90%;
+    height: 14%;
   	overflow: hidden;
   	display: flex;
   	flex-direction: row;
-  	align-items: center;
+  	align-items: flex-start;
   	justify-content: flex-start;
-  	padding: 10px 11px;
+  	padding: 1% 0%;
   	box-sizing: border-box;
   	gap: 35px;
   	font-size: 48px;
@@ -171,161 +176,47 @@ nav {
   	font-family: 'League Gothic';
 }
 .contenido2 {
-  	position: absolute;
-  	top: 17px;
-  	left: 35px;
+    position: relative;
+    width: 20%;
+    height: 27%;
   	border-radius: 10px;
   	background-color: #3f3f48;
-  	width: 192px;
-  	height: 40px;
   	overflow: hidden;
   	display: flex;
-  	flex-direction: column;
-  	align-items: center;
-  	justify-content: flex-start;
+  	align-items: flex-start;
+  	justify-content: center;
   	padding: 1px 22px;
-  	box-sizing: border-box;
-}
-.contenido3 {
-  	position: absolute;
-  	top: 17px;
-  	left: 505px;
-  	border-radius: 10px;
-  	background-color: #3f3f48;
-  	width: 192px;
-  	height: 40px;
-  	overflow: hidden;
-  	display: flex;
-  	flex-direction: column;
-  	align-items: center;
-  	justify-content: flex-start;
-  	padding: 1px 22px;
-  	box-sizing: border-box;
-}
-.contenido4 {
-  	position: absolute;
-  	top: 17px;
-  	left: 270px;
-  	border-radius: 10px;
-  	background-color: #3f3f48;
-  	width: 192px;
-  	height: 40px;
-  	overflow: hidden;
-  	display: flex;
-  	flex-direction: column;
-  	align-items: center;
-  	justify-content: flex-start;
-  	padding: 1px 22px;
-  	box-sizing: border-box;
-}
-.contenido5 {
-  	position: absolute;
-  	top: 93px;
-  	left: 35px;
-  	border-radius: 10px;
-  	background-color: #3f3f48;
-  	width: 192px;
-  	height: 40px;
-  	overflow: hidden;
-  	display: flex;
-  	flex-direction: column;
-  	align-items: center;
-  	justify-content: flex-start;
-  	padding: 1px 22px;
-  	box-sizing: border-box;
-}
-.contenido6 {
-  	position: absolute;
-  	top: 93px;
-  	left: 505px;
-  	border-radius: 10px;
-  	background-color: #3f3f48;
-  	width: 192px;
-  	height: 40px;
-  	overflow: hidden;
-  	display: flex;
-  	flex-direction: column;
-  	align-items: center;
-  	justify-content: flex-start;
-  	padding: 1px 22px;
-  	box-sizing: border-box;
-}
-.contenido7 {
-  	position: absolute;
-  	top: 93px;
-  	left: 270px;
-  	border-radius: 10px;
-  	background-color: #3f3f48;
-  	width: 192px;
-  	height: 40px;
-  	overflow: hidden;
-  	display: flex;
-  	flex-direction: column;
-  	align-items: center;
-  	justify-content: flex-start;
-  	padding: 1px 22px;
-  	box-sizing: border-box;
 }
 .contenido-group {
-  	position: absolute;
-  	top: 232px;
-  	left: 39px;
-  	width: 784px;
-  	height: 150px;
-  	overflow: hidden;
-}
-.contenido8 {
-  	position: absolute;
-  	top: 22px;
-  	left: 444px;
-  	border-radius: 10px;
-  	background-color: rgba(188, 217, 51, 0.6);
-  	height: 40px;
-  	overflow: hidden;
-  	display: flex;
-  	flex-direction: column;
-  	align-items: center;
-  	justify-content: flex-start;
-  	padding: 1px 22px;
-  	box-sizing: border-box;
-}
-.contenido9 {
-  	position: absolute;
-  	top: 21px;
-  	left: 586px;
-  	border-radius: 10px;
-  	background-color: rgba(188, 217, 51, 0.6);
-  	height: 40px;
-  	overflow: hidden;
-  	display: flex;
-  	flex-direction: column;
-  	align-items: center;
-  	justify-content: flex-start;
-  	padding: 1px 22px;
-  	box-sizing: border-box;
-}
-.contenido10 {
-  	position: absolute;
-  	top: 21px;
-  	left: 45px;
-  	border-radius: 10px;
-  	background-color: rgba(188, 217, 51, 0.6);
-  	height: 40px;
-  	overflow: hidden;
-  	display: flex;
-  	flex-direction: column;
-  	align-items: center;
-  	justify-content: flex-start;
-  	padding: 1px 22px;
-  	box-sizing: border-box;
+  	width: 100%;
+  	height: 15%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    padding: 3% 0%;
+    gap: 10%;
 }
 .contenido-container {
-  	position: absolute;
-  	top: 482px;
-  	left: 38px;
-  	width: 784px;
-  	height: 83px;
-  	overflow: hidden;
+    width: 100%;
+    height: 10%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10%;
+}
+.contenido-container1 {
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    gap: 4%;
 }
 .contenido11 {
   	align-self: stretch;
@@ -342,59 +233,55 @@ nav {
   	box-sizing: border-box;
 }
 .frame-div {
-  	width: 395px;
+  	width: 45%;
+    height: 100%;
   	overflow: hidden;
   	flex-shrink: 0;
   	display: flex;
   	flex-direction: column;
   	align-items: flex-start;
   	justify-content: flex-start;
-  	padding: 16px 10px;
   	box-sizing: border-box;
+    padding: 1% 0%;
   	gap: 15px;
 }
 .cosas-1-icon {
-  	align-self: stretch;
-  	position: relative;
-  	max-width: 100%;
+    width: 100%;
+    height: 20%;
   	overflow: hidden;
-  	height: 48px;
   	flex-shrink: 0;
   	object-fit: cover;
 }
-.clases {
-  	width: 69px;
-  	height: 58px;
-}
 .cosas-1-parent {
-  	width: 305px;
-  	height: 238px;
+  	width: 45%;
+  	height: 100%;
   	overflow: hidden;
-  	flex-shrink: 0;
   	display: flex;
   	flex-direction: column;
   	align-items: flex-start;
   	justify-content: flex-start;
-  	padding: 0px 8px;
-  	box-sizing: border-box;
-  	gap: 11px;
+  	gap: 5%;
 }
 .frame-parent {
-  	position: absolute;
-  	top: 568px;
-  	left: 39px;
-  	width: 772px;
+  	position: relative;
+    height: 28%;
+  	width: 90%;
   	overflow: hidden;
   	display: flex;
-  	flex-direction: row;
-  	align-items: center;
+  	flex-direction: column;
+  	align-items: flex-start;
   	justify-content: flex-start;
-  	padding: 11px 4px;
-  	box-sizing: border-box;
   	gap: 40px;
 }
+
 .botn-sencillo {
-  	align-self: stretch;
+    background-color: #D1DE83;
+    color: #0E0E19;
+}
+.botn-sencillo {
+    color: #f4ebeb;
+  	width: 65%;
+    height: 100%;
   	border-radius: 5px;
   	background-color: #111121;
   	overflow: hidden;
@@ -402,31 +289,31 @@ nav {
   	flex-direction: row;
   	align-items: center;
   	justify-content: center;
-  	padding: 9px 20px;
+    transition: color 500ms ease-in-out;
+    transition: background-color 500ms ease-in-out;
+    font-size: 30px;
+    font-family: 'League Gothic';
 }
 .botn-sencillo-wrapper {
   	position: absolute;
-  	top: 844px;
-  	left: 38px;
-  	width: 773px;
+  	width: 92%;
+    height: 6%;
   	overflow: hidden;
   	display: flex;
-  	flex-direction: column;
-  	align-items: flex-end;
-  	justify-content: flex-start;
-  	padding: 0px 98px;
-  	box-sizing: border-box;
-  	font-size: 30px;
-  	color: #f4ebeb;
-  	font-family: 'League Gothic';
+  	flex-direction: row;
+  	align-items: center;
+  	justify-content: center;
 }
 .contenido-parent {
-  	width: 100%;
+  	width: 70%;
   	position: relative;
   	background-color: #171721;
-  	height: 944px;
+  	height: 100%;
   	overflow: hidden;
-  	text-align: left;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 2% 2.5%;
   	font-size: 32px;
   	color: #fff;
   	font-family: Abel;
