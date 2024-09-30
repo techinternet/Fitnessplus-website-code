@@ -113,52 +113,302 @@ nav {
 
 /*-----------------------------------CONTENT------------------------------------*/
 
-.content {
+.vector-icon:hover {
+    opacity: 0.5;
+}
+.vector-icon {
+    width: 30px;
+    position: relative;
+    height: 51px;
+}
+.image-icon {
+    width: 140px;
+    position: relative;
+    height: 140px;
+    object-fit: cover;
+}
+.nosotros {
+    position: relative;
+    flex-direction: column;
+    gap: 20px;
+}
+.hovering-titles {
     display: flex;
-    flex-direction: row; /* Mantiene los elementos en fila */
-    width: 100%; /* Ocupa todo el ancho de la página */
-    padding: 20px; /* Ajusta el padding */
-    justify-content: flex-start; /* Mantiene el icono y la derecha alineados hacia la izquierda */
-    align-items: flex-start; /* Alinea los elementos en la parte superior */
-    background: #171721;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.correodelgymgmailcom1 {
+    position: absolute;
+    width: 105.11%;
+    top: 0%;
+    left: 0%;
+    display: inline-block;
 }
 
-.atras-icon {
-    width: 40px; /* Tamaño del icono */
-    height: 40px;
-    margin-right: 20px; /* Espacio entre el icono y el contenido de la derecha */
-    align-self: flex-start; /* Asegura que el icono se alinee en la parte superior */
+.correodelgymgmailcom:hover {
+    color: #D1DE83 ;
 }
-
-.derecha {
+.correodelgymgmailcom {
+    width: 323px;
+    position: relative;
+    height: 34px;
+    font-size: 32px;
+    color: #fff;
+    font-family: Abel;
+    transition: 500ms ease-in-out;
+}
+.hovering-titles-parent {
+    width: 50%;
     display: flex;
-    flex-direction: row; /* Coloca la imagen y el texto en línea */
-    align-items: center; /* Alinea verticalmente la imagen con el texto */
-    gap: 15px; /* Espacio entre la imagen y el texto */
-    flex-grow: 1; /* La derecha ocupa el espacio restante */
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    gap: 10px;
+}
+.image-parent {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    gap: 50px;
+
 }
 
-.img-estudiante {
-    width: 80px; /* Ajusta el tamaño de la imagen */
+.botn-sencillo:hover {
+    background-color: #0c0c1f;
+    color: #f4ebeb;
+}
+.botn-sencillo {
+    border-radius: 5px;
+    background-color: #bcd933;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 9px 20px;
+    font-size: 30px;
+    color: #171721;
+    transition: color 500ms ease-in-out;
+    transition: background-color 500ms ease-in-out;
+}
+
+.blank-line {
+    margin: 0;
+}
+.hovering-titles1 {
+    width: 100%;
+    height: 30%;
+    display: flex;
+    flex-direction:column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 30px;
+}
+.l {
+    position: absolute;
+    width: 100%;
+    top: 0%;
+    left: 0%;
+    display: inline-block;
+}
+.das-semana {
+    width: 20.2px;
+    position: relative;
+    height: 58px;
+}
+.das-semana-parent {
+    width: 656px;
+    height: 78px;
+    overflow: hidden;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 10px;
+    box-sizing: border-box;
+    gap: 77px;
+    color: #fff;
+}
+.da-de-racha-child {
+    width: 80px;
+    position: relative;
+    border-radius: 50%;
+    background-color: #bcd933;
     height: 80px;
-    border-radius: 50%; /* Imagen circular */
-    object-fit: cover; /* Mantiene la proporción de la imagen */
 }
-
-.texto {
+.da-de-racha-child1 {
+    width: 80px;
+    position: relative;
+    border-radius: 50%;
+    background-color: #d1de83;
+    height: 80px;
+}
+.da-de-racha4 {
+    width: 80px;
     display: flex;
-    flex-direction: column; /* Coloca el nombre y el correo uno debajo del otro */
-    justify-content: center; /* Alinea el texto verticalmente */
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.da-de-racha-parent {
+    width: 661px;
+    height: 80px;
+    overflow: hidden;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 16px;
+}
+.rutina-preparada {
+    width: 95%;
+    height: 100%;
+    overflow: hidden;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    padding: 10px;
+    box-sizing: border-box;
+    gap: 10px;
+    font-size: 48px;
+
+}
+.evento {
+    align-self: stretch;
+    position: relative;
+    text-transform: uppercase;
+    z-index: 0;
+}
+.evento-en-el {
+    align-self: stretch;
+    position: relative;
+    text-transform: uppercase;
+    color: #0c0c1f;
+    z-index: 1;
+}
+.evento-chikito-child {
+    width: 217.8px;
+    position: absolute;
+    margin: 0 !important;
+    top: -30.72px;
+    left: 87.5px;
+    height: 213.2px;
+    object-fit: contain;
+    z-index: 2;
+}
+.evento-chikito {
+    width: 223px;
+    border-radius: 25px;
+    background-color: #bcd933;
+    height: 223px;
+    overflow: hidden;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 34px 10px;
+    box-sizing: border-box;
+    position: relative;
+    gap: 15px;
+}
+.evento-chikito1 {
+    width: 223px;
+    border-radius: 25px;
+    background-color: #d1de83;
+    height: 223px;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 34px 10px;
+    box-sizing: border-box;
+    position: relative;
+    gap: 15px;
+    cursor: pointer;
+}
+.evento-en-el2 {
+    align-self: stretch;
+    position: relative;
+    text-transform: uppercase;
+    white-space: pre-wrap;
+    z-index: 1;
+}
+.evento-chikito2 {
+    width: 223px;
+    border-radius: 25px;
+    background-color: #0e0e19;
+    height: 223px;
+    overflow: hidden;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 34px 10px;
+    box-sizing: border-box;
+    position: relative;
+    gap: 15px;
+    cursor: pointer;
+    color: #eee;
+}
+.scroll-event-chikito {
+    width: 667px;
+    height: 223px;
+    overflow-x: auto;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 20px;
+    text-align: center;
+    color: #171721;
+}
+.frame-parent {
+    width: 90%;
+    overflow: hidden;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-start;
+    padding: 0px 30px 0px 0px;
+    box-sizing: border-box;
+    gap: 13px;
+
+}
+.estudiante-2 {
+    width: 70%;
+    position: relative;
+    background-color: #171721;
+    height: 100%;
+    overflow-y: auto;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    align-content: flex-start;
+    padding: 3% 0%;
+    gap: 80px;
+    text-align: left;
+    font-size: 64px;
+    color: #f4ebeb;
+    font-family: 'League Gothic';
 }
 
-.headernosotros_2 {
-    font-size: 24px;
-    font-weight: bold;
-    color: #FFF; /* Asegura que el texto sea legible */
-}
-
-h6 {
-    font-size: 16px;
-    margin: 5px 0 0 0; /* Ajusta el margen entre el nombre y el correo */
-    color: #888;
-}
