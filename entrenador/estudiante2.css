@@ -115,49 +115,50 @@ nav {
 
 .content {
     display: flex;
-    flex-direction: column; /* Organiza las partes de arriba a abajo */
-    width: 70%; /* El contenido ocupará el 70% */
-    height: 100vh;
-    padding: 75px 100px 65px 100px;
-    justify-content: flex-start;
-    align-items: center;
-    row-gap: 30px;
+    flex-direction: row; /* Mantiene los elementos en fila */
+    width: 100%; /* Ocupa todo el ancho de la página */
+    padding: 20px; /* Ajusta el padding */
+    justify-content: flex-start; /* Mantiene el icono y la derecha alineados hacia la izquierda */
+    align-items: flex-start; /* Alinea los elementos en la parte superior */
     background: #171721;
-    overflow: auto; /* Añade scroll si el contenido es muy grande */
 }
 
-.headernosotros_2{
-    font-size: 38px;
-}
-
-.part_1 {
-    display: flex;
-    width: 100%; /* Ocupa todo el ancho */
-    justify-content: flex-start;
-    align-items: center;
-    gap: 20px; /* Espacio entre el icono de atrás y la derecha */
+.atras-icon {
+    width: 40px; /* Tamaño del icono */
+    height: 40px;
+    margin-right: 20px; /* Espacio entre el icono y el contenido de la derecha */
+    align-self: flex-start; /* Asegura que el icono se alinee en la parte superior */
 }
 
 .derecha {
     display: flex;
-    align-items: center; /* Alinea la imagen con el texto verticalmente */
+    flex-direction: row; /* Coloca la imagen y el texto en línea */
+    align-items: center; /* Alinea verticalmente la imagen con el texto */
     gap: 15px; /* Espacio entre la imagen y el texto */
+    flex-grow: 1; /* La derecha ocupa el espacio restante */
 }
 
 .img-estudiante {
     width: 80px; /* Ajusta el tamaño de la imagen */
     height: 80px;
-    border-radius: 50%; /* Hace que la imagen sea circular */
-    object-fit: cover; /* Asegura que la imagen se ajuste correctamente */
+    border-radius: 50%; /* Imagen circular */
+    object-fit: cover; /* Mantiene la proporción de la imagen */
 }
 
 .texto {
     display: flex;
     flex-direction: column; /* Coloca el nombre y el correo uno debajo del otro */
-    justify-content: center; /* Centra verticalmente el contenido dentro de la columna */
+    justify-content: center; /* Alinea el texto verticalmente */
 }
+
+.headernosotros_2 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #FFF; /* Asegura que el texto sea legible */
+}
+
 h6 {
-    font-size: 14px;
-    margin: 5px 0 0 0; /* Añade un pequeño margen superior entre el nombre y el correo */
-    color: #555;
+    font-size: 16px;
+    margin: 5px 0 0 0; /* Ajusta el margen entre el nombre y el correo */
+    color: #888;
 }
