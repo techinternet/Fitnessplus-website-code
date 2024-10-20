@@ -44,12 +44,8 @@
             </div>
         </div>
         <div class="conjunto-abajo">
-            <div class="nombre">
-                <div class="iniciar-sesin">Correo</div>
-            </div>
-            <div class="nombre">
-                <div class="iniciar-sesin">Contraseña</div>
-            </div>
+            <div class="nombre">Correo</div>
+            <div class="nombre2">Contraseña</div>
             <a href="main_estudiante.html">
                 <div class="botn-sencillo">
                     <div class="iniciar-sesin">Iniciar Sesión</div>
@@ -58,6 +54,27 @@
         </div>
 
     </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+          // Selecciona todos los elementos con la clase 'nombre'
+          const nombre = document.querySelectorAll('.nombre');
+          const nombre2 = document.querySelectorAll('.nombre2');
+          
+          // Agrega un event listener a cada uno
+          nombre.forEach(nombre => {
+            nombre.addEventListener('click', function() {
+              // Cambia el texto al hacer clic
+              this.textContent = "JohnDoe@gmail.com"; // Cambia "Texto cambiado" por lo que quieras que se muestre
+            });
+          });
+          nombre2.forEach(nombre2 => {
+            nombre2.addEventListener('click', function() {
+              // Cambia el texto al hacer clic
+              this.textContent = "*************"; // Cambia "Texto cambiado" por lo que quieras que se muestre
+            });
+          });
+        });
+      </script>
   	
 </body>
 </html>

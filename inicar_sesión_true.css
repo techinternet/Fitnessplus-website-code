@@ -146,10 +146,10 @@ a {
 .nombre:hover{
     background-color: #D1DE83;
 }
-.nombre:active{
-    color: #D1DE83;
+.nombre2:hover{
+    background-color: #D1DE83;
 }
-.nombre {
+.nombre, .nombre2 {
     width: 25%;
     border-radius: 10px;
     background-color: #51515b;
