@@ -37,8 +37,8 @@
         </div>
         <div class="lista-de-contendido-datos">
             <div class="nombre">Nombre</div>
-            <div class="nombre">Apellido</div>
-            <div class="nombre">Fecha de nacimineto</div>
+            <div class="nombre2">Apellido</div>
+            <div class="nombre3">Fecha de nacimineto</div>
             <div class="datos-documento"> 
                 <select class="desplegable" name="" id="">
                     <option value="disable">Tipo</option>
@@ -48,14 +48,14 @@
                     <option value="Cédula de Extranjería">CE</option>
                 </select>
                 <div class="casilla-datos">
-                        <span>N° Documento </span>
+                        <span class="docs">N° Documento </span>
                         <span class="jjsjsjsjsjs">jjsjsjsjsjs</span>
                 </div>
             </div>
-            <div class="nombre">Teléfono</div>
+            <div class="nombre4">Teléfono</div>
             <div class="ciudad">
                 <select class="desplegable">
-                    <option value="disable">Ciudad                              </option>
+                    <option value="disable">Ciudad</option>
                     <option value="Ciudad">Ciudad X</option>
                     <option value="Ciudad">Ciudad X</option>
                     <option value="Ciudad">Ciudad X</option>
@@ -63,12 +63,12 @@
                     <option value="Ciudad">Ciudad X</option>
                 </select>
             </div>
-            <div class="nombre">Dirección</div>
-            <div class="nombre">Correo</div>
-            <div class="nombre">Contraseña</div>
+            <div class="nombre5">Dirección</div>
+            <div class="nombre6">Correo</div>
+            <div class="nombre7">Contraseña</div>
             <div class="ciudad">
                 <select class="desplegable">
-                    <option value="disable">Rol                            </option>
+                    <option value="disable">Rol</option>
                     <option value="Ciudad">Usuario</option>
                 </select>
             </div>
@@ -80,6 +80,71 @@
         </a>
 
     </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+          // Selecciona todos los elementos con la clase 'nombre'
+          const nombre = document.querySelectorAll('.nombre');
+          const nombre1 = document.querySelectorAll('.nombre1');
+          const nombre2 = document.querySelectorAll('.nombre2');
+          const nombre3 = document.querySelectorAll('.nombre3');
+          const nombre4 = document.querySelectorAll('.nombre4');
+          const nombre5 = document.querySelectorAll('.nombre5');
+          const nombre6 = document.querySelectorAll('.nombre6');
+          const nombre7 = document.querySelectorAll('.nombre7');
+          const Doki = document.querySelectorAll('.docs');
+          
+          // Agrega un event listener a cada uno
+          nombre.forEach(nombre => {
+            nombre.addEventListener('click', function() {
+              // Cambia el texto al hacer clic
+              this.textContent = "John"; // Cambia "Texto cambiado" por lo que quieras que se muestre
+            });
+          });
+          nombre2.forEach(nombre2 => {
+            nombre2.addEventListener('click', function() {
+              // Cambia el texto al hacer clic
+              this.textContent = "Doe"; // Cambia "Texto cambiado" por lo que quieras que se muestre
+            });
+          });
+          nombre3.forEach(nombre3 => {
+            nombre3.addEventListener('click', function() {
+              // Cambia el texto al hacer clic
+              this.textContent = "22/09/2000"; // Cambia "Texto cambiado" por lo que quieras que se muestre
+            });
+          });
+          nombre4.forEach(nombre4 => {
+            nombre4.addEventListener('click', function() {
+              // Cambia el texto al hacer clic
+              this.textContent = "3408093229"; // Cambia "Texto cambiado" por lo que quieras que se muestre
+            });
+          });
+          nombre5.forEach(nombre5 => {
+            nombre5.addEventListener('click', function() {
+              // Cambia el texto al hacer clic
+              this.textContent = "Dirección X :D"; // Cambia "Texto cambiado" por lo que quieras que se muestre
+            });
+          });
+          nombre6.forEach(nombre6 => {
+            nombre6.addEventListener('click', function() {
+              // Cambia el texto al hacer clic
+              this.textContent = "JohnDoe@gmail.com"; // Cambia "Texto cambiado" por lo que quieras que se muestre
+            });
+          });
+          nombre7.forEach(nombre7 => {
+            nombre7.addEventListener('click', function() {
+              // Cambia el texto al hacer clic
+              this.textContent = "*************"; // Cambia "Texto cambiado" por lo que quieras que se muestre
+            });
+          });
+          Doki.forEach(Doki => {
+            Doki.addEventListener('click', function() {
+              // Cambia el texto al hacer clic
+              this.textContent = "0123456789"; // Cambia "Texto cambiado" por lo que quieras que se muestre
+            });
+          });
+        });
+      </script>
   	
 </body>
 </html>

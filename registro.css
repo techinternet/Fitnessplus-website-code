@@ -95,13 +95,29 @@ header {
     align-items: flex-start;
     justify-content: space-between;
 }
+
 .nombre:hover{
     background-color: #D1DE83;
 }
-.nombre:active{
-    color: #D1DE83;
+.nombre2:hover{
+    background-color: #D1DE83;
 }
-.nombre {
+.nombre3:hover{
+    background-color: #D1DE83;
+}
+.nombre4:hover{
+    background-color: #D1DE83;
+}
+.nombre5:hover{
+    background-color: #D1DE83;
+}
+.nombre6:hover{
+    background-color: #D1DE83;
+}
+.nombre7:hover{
+    background-color: #D1DE83;
+}
+.nombre, .nombre2, .nombre3, .nombre4, .nombre5, .nombre6, .nombre7 {
     width: 492px;
     border-radius: 10px;
     background-color: #51515b;
@@ -142,6 +158,9 @@ header {
 }
 .jjsjsjsjsjs {
     color: rgba(255, 255, 255, 0);
+}
+.docs {
+    color: #f4ebeb;
 }
 .casilla-datos:hover{
     background-color: #D1DE83;
