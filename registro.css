@@ -96,42 +96,49 @@ header {
     justify-content: space-between;
 }
 
-.nombre:hover{
-    background-color: #D1DE83;
-}
-.nombre2:hover{
-    background-color: #D1DE83;
-}
-.nombre3:hover{
-    background-color: #D1DE83;
-}
-.nombre4:hover{
-    background-color: #D1DE83;
-}
-.nombre5:hover{
-    background-color: #D1DE83;
-}
-.nombre6:hover{
-    background-color: #D1DE83;
-}
-.nombre7:hover{
-    background-color: #D1DE83;
-}
-.nombre, .nombre2, .nombre3, .nombre4, .nombre5, .nombre6, .nombre7 {
+/* Aplica este estilo a todos los campos de tipo input */
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+input[type="password"],
+input[type="date"] {
     width: 492px;
     border-radius: 10px;
     background-color: #51515b;
     height: 40px;
     overflow: hidden;
-    flex-shrink: 0;
     display: flex;
-    flex-direction: row;
     align-items: center;
     justify-content: flex-start;
-    padding: 0px 29px;
+    padding: 0 29px;
     box-sizing: border-box;
+    border: none;
+    color: #ffffff; /* Texto en blanco */
+    font-size: 32px;
+    font-family: Abel;
     transition: background-color 500ms ease;
-    transform: color;
+}
+
+/* Cambia el color de fondo al hacer hover */
+input[type="text"]:hover,
+input[type="tel"]:hover,
+input[type="email"]:hover,
+input[type="password"]:hover,
+input[type="date"]:hover {
+    background-color: #3d3d44;
+}
+
+/* Cambia el color de fondo cuando el campo está enfocado */
+input[type="text"]:focus,
+input[type="tel"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+input[type="date"]:focus {
+    background-color: #3a3a42;
+    outline: none; /* Quita el contorno predeterminado */
+}
+input::placeholder {
+    color: #f4ebeb;
 }
 
 .vector-icon1 {
@@ -156,42 +163,7 @@ header {
     color: #f4ebeb;
     font-family: Abel;
 }
-.jjsjsjsjsjs {
-    color: rgba(255, 255, 255, 0);
-}
-.docs {
-    color: #f4ebeb;
-}
-.casilla-datos:hover{
-    background-color: #D1DE83;
-}
-.casilla-datos:active{
-    color: #D1DE83;
-}
-.casilla-datos {
-    border-radius: 10px;
-    background-color: #51515b;
-    height: 40px;
-    overflow: hidden;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: flex-start;
-    padding: 0px 29px;
-    box-sizing: border-box;
-    transition: background-color 500ms ease;
-    transform: color;
-}
-.datos-documento {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-}
-.sjjsjjsssjjsjsjsj {
-    color: rgba(81, 81, 91, 0);
-}
+
 .ciudad {
     width: 100%;
     border-radius: 10px;
@@ -205,22 +177,17 @@ header {
     box-sizing: border-box;
     padding:0% 2.5% ;
 }
-.span {
-    color: #51515b;
-}
-.lista-de-contendido-datos {
+
+form.lista-de-contenido-datos {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     gap: 31px;
     font-size: 32px;
-    font-family: Abel;
+    font-family: 'Abel', sans-serif;
 }
-.botn-sencillo:hover{
-    background-color: #1E1E36;
-}
-.botn-sencillo {
+button {
     border-radius: 5px;
     background-color: #111121;
     overflow: hidden;
@@ -231,6 +198,13 @@ header {
     padding: 9px 20px;
     font-size: 30px;
     color: #f4ebeb;
+    border: none; /* Remueve el borde predeterminado del botón */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+    transition: background-color 0.3s ease; /* Añade una transición de color suave */
+    font-family: 'League Gothic';
+}
+button:hover {
+    background-color: #33334d; /* Cambia el color al pasar el cursor */
 }
 .lista-de-datos {
     width: 100%;
@@ -249,270 +223,3 @@ header {
     font-family: 'League Gothic';
 }
 
-/*---------------------------------LISTA 1 / TIPO DE DOCUMENTO-----------------------------------*/
-
-.tipos-de-documentos-child {
-    width: 174px;
-    position: absolute;
-    margin: 0 !important;
-    top: calc(50% - 248.5px);
-    left: calc(50% - 87.5px);
-    border-radius: 10px;
-    background-color: #3f3f48;
-    height: 498px;
-    z-index: 0;
-}
-.tipo {
-    position: relative;
-}
-.contenido {
-    border-radius: 10px;
-    background-color: #3f3f48;
-    height: 63px;
-    overflow: hidden;
-    flex-shrink: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 1px 22px;
-    box-sizing: border-box;
-    z-index: 1;
-}
-.contenido1 {
-    border-radius: 10px;
-    background-color: #3f3f48;
-    height: 63px;
-    overflow: hidden;
-    flex-shrink: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 1px 22px;
-    box-sizing: border-box;
-    z-index: 2;
-}
-.contenido2 {
-    border-radius: 10px;
-    background-color: #3f3f48;
-    height: 63px;
-    overflow: hidden;
-    flex-shrink: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 1px 22px;
-    box-sizing: border-box;
-    z-index: 3;
-}
-.contenido3 {
-    border-radius: 10px;
-    background-color: #3f3f48;
-    height: 63px;
-    overflow: hidden;
-    flex-shrink: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 1px 22px;
-    box-sizing: border-box;
-    z-index: 4;
-}
-.tipos-de-documentos {
-    width: 100%;
-    position: relative;
-    border-radius: 10px;
-    height: 498px;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    padding: 10px 11px;
-    text-align: left;
-    font-size: 32px;
-    color: #fff;
-    font-family: Abel;
-}
-
-/*---------------------------------LISTA 2 / CIUDADES-----------------------------------*/
-
-.ciudades-child {
-    width: 174px;
-    position: absolute;
-    margin: 0 !important;
-    top: calc(50% - 248.5px);
-    left: calc(50% - 87px);
-    border-radius: 10px;
-    background-color: #3f3f48;
-    height: 498px;
-    z-index: 0;
-}
-
-.C_contenido {
-    border-radius: 10px;
-    background-color: #3f3f48;
-    height: 63px;
-    overflow: hidden;
-    flex-shrink: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 1px 22px;
-    box-sizing: border-box;
-    z-index: 1;
-}
-.C_contenido1 {
-    border-radius: 10px;
-    background-color: #3f3f48;
-    height: 63px;
-    overflow: hidden;
-    flex-shrink: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 1px 22px;
-    box-sizing: border-box;
-    z-index: 2;
-}
-.C_contenido2 {
-    border-radius: 10px;
-    background-color: #3f3f48;
-    height: 63px;
-    overflow: hidden;
-    flex-shrink: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 1px 22px;
-    box-sizing: border-box;
-    z-index: 3;
-}
-.C_contenido3 {
-    border-radius: 10px;
-    background-color: #3f3f48;
-    height: 63px;
-    overflow: hidden;
-    flex-shrink: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 1px 22px;
-    box-sizing: border-box;
-    z-index: 4;
-}
-.C_contenido4 {
-    border-radius: 10px;
-    background-color: #3f3f48;
-    height: 63px;
-    overflow: hidden;
-    flex-shrink: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 1px 22px;
-    box-sizing: border-box;
-    z-index: 5;
-}
-.C_contenido5 {
-    border-radius: 10px;
-    background-color: #3f3f48;
-    height: 63px;
-    overflow: hidden;
-    flex-shrink: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 1px 22px;
-    box-sizing: border-box;
-    z-index: 6;
-}
-.ciudades {
-    position: relative;
-    border-radius: 10px;
-    width: 100%;
-    height: 498px;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    padding: 10px 11px;
-    box-sizing: border-box;
-    text-align: left;
-    font-size: 32px;
-    color: #fff;
-    font-family: Abel;
-}
-
-/*---------------------------------LISTA 3 / ROLES-----------------------------------*/
-
-.desplegable-rol-child {
-    width: 174px;
-    position: absolute;
-    margin: 0 !important;
-    top: calc(50% - 248px);
-    left: calc(50% - 87.5px);
-    border-radius: 10px;
-    background-color: #3f3f48;
-    height: 498px;
-    z-index: 0;
-}
-.tipo {
-    position: relative;
-}
-.R_contenido {
-    border-radius: 10px;
-    background-color: #3f3f48;
-    height: 63px;
-    overflow: hidden;
-    flex-shrink: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 1px 22px;
-    box-sizing: border-box;
-    z-index: 1;
-}
-.R_contenido1 {
-    border-radius: 10px;
-    background-color: #3f3f48;
-    height: 63px;
-    overflow: hidden;
-    flex-shrink: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 1px 22px;
-    box-sizing: border-box;
-    z-index: 2;
-}
-.desplegable-rol {
-    width: 100%;
-    position: relative;
-    border-radius: 10px;
-    height: 149px;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    padding: 10px 11px;
-    box-sizing: border-box;
-    gap: 20px;
-    text-align: left;
-    font-size: 32px;
-    color: #fff;
-    font-family: Abel;
-}

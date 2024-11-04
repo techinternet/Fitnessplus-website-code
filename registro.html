@@ -1,150 +1,103 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
-  	<meta charset="utf-8">
-  	<meta name="viewport" content="initial-scale=1, width=device-width">
-  	
-  	<link rel="stylesheet"  href="./registro.css" />
-  	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=League Gothic:wght@400&display=swap" />
-  	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Abel:wght@400&display=swap" />
-  	
-  	<title>FitnessPlus - Registro</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FitnessPlus - Registro</title>
+    
+    <!-- Estilos externos -->
+    <link rel="stylesheet" href="./registro.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=League+Gothic:wght@400&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Abel:wght@400&display=swap">
 </head>
 <body>
-  	
-  	<header>
-    		<img class="logo-icon" alt="" src="img/Logo.svg">
-    		
-    		<div class="botones-header">
-                <a href="iniciar_sesión.html">
-                    <div class="botn-sencillo-iniciar-sesi">
-        				<div class="iniciar-sesin">Iniciar Sesión</div>
-      			    </div>
-                </a>
-      			<div class="botn-sencillo-registrar">
-        				<div class="iniciar-sesin">Registrar</div>
-      			</div>
-    		</div>
+    
+    <!-- Encabezado con logo y botones de navegación -->
+    <header>
+        <img class="logo-icon" src="img/Logo.svg" alt="Logo de FitnessPlus">
+        
+        <div class="botones-header">
+            <a href="iniciar_sesión.html" class="botn-sencillo-iniciar-sesi">
+                <div class="iniciar-sesion">Iniciar Sesión</div>
+            </a>
+            <a href="registro.html" class="botn-sencillo-registrar">
+                <div class="iniciar-sesion">Registrar</div>
+            </a>
+        </div>
     </header>
-  	
-  	
+    
+    <!-- Sección de creación de cuenta -->
     <div class="lista-de-datos">
         <div class="crear-cuenta">
             <a href="index.html">
-                <img class="vector-icon" alt="" src="img/Atras.svg">
+                <img class="vector-icon" src="img/Atras.svg" alt="Regresar">
             </a>
-            <div class="fecha-de-nacimineto">CREAR CUENTA</div>
+            <div class="titulo-seccion">CREAR CUENTA</div>
         </div>
-        <div class="lista-de-contendido-datos">
-            <div class="nombre">Nombre</div>
-            <div class="nombre2">Apellido</div>
-            <div class="nombre3">Fecha de nacimineto</div>
-            <div class="datos-documento"> 
-                <select class="desplegable" name="" id="">
-                    <option value="disable">Tipo</option>
-                    <option value="Cédula de Ciudadanía">CC</option>
-                    <option value="Tarjeta de Identidad">TI</option>
-                    <option value="Registro Civil">RC</option>
-                    <option value="Cédula de Extranjería">CE</option>
-                </select>
-                <div class="casilla-datos">
-                        <span class="docs">N° Documento </span>
-                        <span class="jjsjsjsjsjs">jjsjsjsjsjs</span>
-                </div>
-            </div>
-            <div class="nombre4">Teléfono</div>
-            <div class="ciudad">
+        
+        <form class="lista-de-contenido-datos" action="aviso_registro_exitoso.html" method="post">
+            <label class="campo">
+                <input type="text" name="nombre" placeholder="Nombre" required>
+            </label>
+            
+            <label class="campo">
+                <input type="text" name="apellido" placeholder="Apellido" required>
+            </label>
+            
+            <label class="campo">
+                <input type="date" name="fecha_nacimiento" placeholder="Fecha de Nacimiento" required>
+            </label>
+            
+            <label class="ciudad">
                 <select class="desplegable">
-                    <option value="disable">Ciudad</option>
-                    <option value="Ciudad">Ciudad X</option>
-                    <option value="Ciudad">Ciudad X</option>
-                    <option value="Ciudad">Ciudad X</option>
-                    <option value="Ciudad">Ciudad X</option>
-                    <option value="Ciudad">Ciudad X</option>
+                    <option value="" disabled selected>Tipo de Documento</option>
+                    <option value="CC">Cédula de Ciudadanía (CC)</option>
+                    <option value="TI">Tarjeta de Identidad (TI)</option>
+                    <option value="RC">Registro Civil (RC)</option>
+                    <option value="CE">Cédula de Extranjería (CE)</option>
                 </select>
-            </div>
-            <div class="nombre5">Dirección</div>
-            <div class="nombre6">Correo</div>
-            <div class="nombre7">Contraseña</div>
-            <div class="ciudad">
+            </label>
+            
+            <label class="campo">
+                <input type="text" name="numero_documento" placeholder="Número de Documento" required>
+            </label>
+            
+            <label class="campo">
+                <input type="tel" name="telefono" placeholder="Teléfono" required>
+            </label>
+            
+            <label class="ciudad">
                 <select class="desplegable">
-                    <option value="disable">Rol</option>
-                    <option value="Ciudad">Usuario</option>
+                    <option value="" disabled selected>Ciudad</option>
+                    <option value="Ciudad X">Ciudad X</option>
+                    <option value="Ciudad Y">Ciudad Y</option>
+                    <!-- Añadir más opciones de ciudad según sea necesario -->
                 </select>
-            </div>
-        </div>
-        <a href="aviso_registro_exitoso.html">
-            <div class="botn-sencillo">
-                <div class="fecha-de-nacimineto">Registrarse</div>
-            </div>
-        </a>
-
+            </label>
+            
+            <label class="campo">
+                <input type="text" name="direccion" placeholder="Dirección" required>
+            </label>
+            
+            <label class="campo">
+                <input type="email" name="correo" placeholder="Correo" required>
+            </label>
+            
+            <label class="campo">
+                <input type="password" name="contrasena" placeholder="Contraseña" required>
+            </label>
+            
+            <label class="ciudad">
+                <select class="desplegable">
+                    <option value="" disabled selected>Rol</option>
+                    <option value="Usuario">Usuario</option>
+                    <option value="Usuario">Entrenador</option>
+                    <!-- Si hay más roles, agregar aquí -->
+                </select>
+            </label>
+            <button type="submit" class="botn-sencillo" onclick="location.href='iniciar_sesión_true.html'">Registrarse</button>
+        </form>
     </div>
 
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-          // Selecciona todos los elementos con la clase 'nombre'
-          const nombre = document.querySelectorAll('.nombre');
-          const nombre1 = document.querySelectorAll('.nombre1');
-          const nombre2 = document.querySelectorAll('.nombre2');
-          const nombre3 = document.querySelectorAll('.nombre3');
-          const nombre4 = document.querySelectorAll('.nombre4');
-          const nombre5 = document.querySelectorAll('.nombre5');
-          const nombre6 = document.querySelectorAll('.nombre6');
-          const nombre7 = document.querySelectorAll('.nombre7');
-          const Doki = document.querySelectorAll('.docs');
-          
-          // Agrega un event listener a cada uno
-          nombre.forEach(nombre => {
-            nombre.addEventListener('click', function() {
-              // Cambia el texto al hacer clic
-              this.textContent = "John"; // Cambia "Texto cambiado" por lo que quieras que se muestre
-            });
-          });
-          nombre2.forEach(nombre2 => {
-            nombre2.addEventListener('click', function() {
-              // Cambia el texto al hacer clic
-              this.textContent = "Doe"; // Cambia "Texto cambiado" por lo que quieras que se muestre
-            });
-          });
-          nombre3.forEach(nombre3 => {
-            nombre3.addEventListener('click', function() {
-              // Cambia el texto al hacer clic
-              this.textContent = "22/09/2000"; // Cambia "Texto cambiado" por lo que quieras que se muestre
-            });
-          });
-          nombre4.forEach(nombre4 => {
-            nombre4.addEventListener('click', function() {
-              // Cambia el texto al hacer clic
-              this.textContent = "3408093229"; // Cambia "Texto cambiado" por lo que quieras que se muestre
-            });
-          });
-          nombre5.forEach(nombre5 => {
-            nombre5.addEventListener('click', function() {
-              // Cambia el texto al hacer clic
-              this.textContent = "Dirección X :D"; // Cambia "Texto cambiado" por lo que quieras que se muestre
-            });
-          });
-          nombre6.forEach(nombre6 => {
-            nombre6.addEventListener('click', function() {
-              // Cambia el texto al hacer clic
-              this.textContent = "JohnDoe@gmail.com"; // Cambia "Texto cambiado" por lo que quieras que se muestre
-            });
-          });
-          nombre7.forEach(nombre7 => {
-            nombre7.addEventListener('click', function() {
-              // Cambia el texto al hacer clic
-              this.textContent = "*************"; // Cambia "Texto cambiado" por lo que quieras que se muestre
-            });
-          });
-          Doki.forEach(Doki => {
-            Doki.addEventListener('click', function() {
-              // Cambia el texto al hacer clic
-              this.textContent = "0123456789"; // Cambia "Texto cambiado" por lo que quieras que se muestre
-            });
-          });
-        });
-      </script>
-  	
 </body>
 </html>
