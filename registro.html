@@ -9,6 +9,19 @@
     <link rel="stylesheet" href="./registro.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=League+Gothic:wght@400&display=swap">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Abel:wght@400&display=swap">
+    <script language="javascript" type="text/javascript">
+        window.onload = function() {
+        const form = document.querySelector("form#registro")
+        form.onsubmit = (event) => {
+            event.preventDefault()
+            const formdata = new FormData(form)
+            const json = JSON.stringify(Object.fromEntries(formdata))
+            fetch("http://localhost/Fitnessplus-website-code/php/registro.php",{
+                method:"POST", body:json
+            } )
+        }
+    }
+    </script>
 </head>
 <body>
     
@@ -35,7 +48,7 @@
             <div class="titulo-seccion">CREAR CUENTA</div>
         </div>
         
-        <form class="lista-de-contenido-datos" action="aviso_registro_exitoso.html" method="post">
+        <form class="lista-de-contenido-datos"  id="registro">
             <label class="campo">
                 <input type="text" name="nombre" placeholder="Nombre" required>
             </label>
@@ -95,7 +108,7 @@
                     <!-- Si hay más roles, agregar aquí -->
                 </select>
             </label>
-            <button type="submit" class="botn-sencillo" onclick="location.href='iniciar_sesión_true.html'">Registrarse</button>
+            <button type="submit" class="botn-sencillo" >Registrarse</button>
         </form>
     </div>
 
