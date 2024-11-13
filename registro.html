@@ -12,13 +12,18 @@
     <script language="javascript" type="text/javascript">
         window.onload = function() {
         const form = document.querySelector("form#registro")
-        form.onsubmit = (event) => {
+        form.onsubmit = async (event) => {
             event.preventDefault()
             const formdata = new FormData(form)
             const json = JSON.stringify(Object.fromEntries(formdata))
-            fetch("http://localhost/Fitnessplus-website-code/php/registro.php",{
+            const req = await fetch("http://paginagym.fwh.is/Fitnessplus-website-code/php/registro.php",{
                 method:"POST", body:json
-            } )
+             } )
+             const res = await req.json()
+             console.log(res)
+             if(res.success){ 
+                navigation.navigate("/Fitnessplus-website-code/aviso_registro_exitoso.html")
+             }
         }
     }
     </script>
@@ -62,7 +67,7 @@
             </label>
             
             <label class="ciudad">
-                <select class="desplegable">
+                <select class="desplegable" name="tipodocumento"> 
                     <option value="" disabled selected>Tipo de Documento</option>
                     <option value="CC">Cédula de Ciudadanía (CC)</option>
                     <option value="TI">Tarjeta de Identidad (TI)</option>
@@ -80,7 +85,7 @@
             </label>
             
             <label class="ciudad">
-                <select class="desplegable">
+                <select class="desplegable" name="ciudad">
                     <option value="" disabled selected>Ciudad</option>
                     <option value="Ciudad X">Ciudad X</option>
                     <option value="Ciudad Y">Ciudad Y</option>
@@ -101,10 +106,10 @@
             </label>
             
             <label class="ciudad">
-                <select class="desplegable">
+                <select class="desplegable" name="rol">
                     <option value="" disabled selected>Rol</option>
                     <option value="Usuario">Usuario</option>
-                    <option value="Usuario">Entrenador</option>
+                    <option value="Entrenador">Entrenador</option>
                     <!-- Si hay más roles, agregar aquí -->
                 </select>
             </label>

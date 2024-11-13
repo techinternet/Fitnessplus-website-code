@@ -1,13 +1,31 @@
 <!DOCTYPE html>
 <html>
 <head>
+
   	<meta charset="utf-8">
   	<meta name="viewport" content="initial-scale=1, width=device-width">
   	
   	<link rel="stylesheet"  href="./iniciar_sesión.css" />
   	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=League Gothic:wght@400&display=swap" />
   	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Abel:wght@400&display=swap" />
-  	
+  	<script language="javascript" type="text/javascript">
+        window.onload = function() {
+        const form = document.querySelector("form#formulario")
+        form.onsubmit = async (event) => {
+            event.preventDefault()
+            const formdata = new FormData(form)
+            const json = JSON.stringify(Object.fromEntries(formdata))
+            const req = await fetch("http://paginagym.fwh.is/Fitnessplus-website-code/php/login.php",{
+                method:"POST", body:json
+             } )
+             const res = await req.json()
+             console.log(res)
+             if(res.success){ 
+                navigation.navigate("/Fitnessplus-website-code/aviso_inicio_sesión.html")
+             }
+        }
+    }
+    </script>
   	<title>FitnessPlus - Inicio de Sesión</title>
 </head>
 <body>
@@ -43,39 +61,20 @@
                 </div>
             </div>
         </div>
-        <div class="conjunto-abajo">
-            <div class="nombre">Correo</div>
-            <div class="nombre2">Contraseña</div>
-            <a href="aviso_inicio_sesión.html">
-                <div class="botn-sencillo">
-                    <div class="iniciar-sesin">Iniciar Sesión</div>
-                </div>
-            </a>
-        </div>
+        <form class="conjunto-abajo" id = "formulario">
+            <label class="campo">
+                <input type="email" name="correo" placeholder="Correo" required>
+            </label>
+            
+            <label class="campo">
+                <input type="password" name="contrasena" placeholder="Contraseña" required>
+            </label>
+            <button type="submit" class="botn-sencillo" >Iniciar Sesión</button>
+                
+        </form>
 
     </div>
 
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-          // Selecciona todos los elementos con la clase 'nombre'
-          const nombre = document.querySelectorAll('.nombre');
-          const nombre2 = document.querySelectorAll('.nombre2');
-          
-          // Agrega un event listener a cada uno
-          nombre.forEach(nombre => {
-            nombre.addEventListener('click', function() {
-              // Cambia el texto al hacer clic
-              this.textContent = "JohnDoe@gmail.com"; // Cambia "Texto cambiado" por lo que quieras que se muestre
-            });
-          });
-          nombre2.forEach(nombre2 => {
-            nombre2.addEventListener('click', function() {
-              // Cambia el texto al hacer clic
-              this.textContent = "*************"; // Cambia "Texto cambiado" por lo que quieras que se muestre
-            });
-          });
-        });
-      </script>
   	
 </body>
 </html>
