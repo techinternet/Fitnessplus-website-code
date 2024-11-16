@@ -9,6 +9,44 @@
   	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=League Gothic:wght@400&display=swap" />
   	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Abel:wght@400&display=swap" />
   	<script language="javascript" type="text/javascript">
+        /* Actualiza el script para redirigir a la página adecuada según el rol del usuario. PODRÍA SERVIR,
+        PERO NO ESTOY SEGURA :,,,DDDD LO HIZO CHATGPT :,,p
+        window.onload = function() {
+            const form = document.querySelector("form#formulario");
+            form.onsubmit = async (event) => {
+                event.preventDefault();
+                const formdata = new FormData(form);
+                const json = JSON.stringify(Object.fromEntries(formdata));
+
+                try {
+                const req = await fetch("http://paginagym.fwh.is/Fitnessplus-website-code/php/login.php", {
+                method: "POST",
+                body: json,
+                headers: { "Content-Type": "application/json" }
+                });
+            const res = await req.json();
+            console.log(res);
+
+            if (res.success) {
+                // Redirige según el rol del usuario
+                if (res.role === "estudiante") {
+                    window.location.href = "/Fitnessplus-website-code/main_estudiante.html";
+                } else if (res.role === "entrenador") {
+                    window.location.href = "/Fitnessplus-website-code/main_entrenador.html";
+                } else {
+                    alert("Rol desconocido, contacte al administrador.");
+                }
+            } else {
+                alert("Inicio de sesión fallido. Verifique sus credenciales.");
+            }
+        } catch (error) {
+            console.error("Error al iniciar sesión:", error);
+            alert("Hubo un problema al iniciar sesión. Inténtelo nuevamente más tarde.");
+        }
+        };
+        };
+
+        */
         window.onload = function() {
         const form = document.querySelector("form#formulario")
         form.onsubmit = async (event) => {
@@ -71,10 +109,7 @@
             <label class="campo">
                 <input type="password" name="contrasena" placeholder="Contraseña" required>
             </label>
-            <a href="main_estudiante.html">
                 <button type="submit" class="botn-sencillo" >Iniciar Sesión</button>
-            </a>
-            
         </form>
 
     </div>
