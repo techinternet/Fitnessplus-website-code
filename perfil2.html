@@ -42,10 +42,10 @@
 
         <div class="content">
             <div class="part_1">
-                <a href="main_estudiante.html">
+                <a href="perfil.html">
                     <img class="atras-icon" alt="" src="img/Atras.svg">
                 </a>
-                <div class="headernosotros_2">Perfil</div>
+                <div class="headernosotros_2">Editar Perfil</div>
             </div>
             <div class="division">
                 <div class="part_2">
@@ -56,34 +56,35 @@
                         </div>
                     </a>
                 </div>
-                <div class="part_3">
-                    <div class="casilla-datos">
-                        <div class="nombre">Nombre</div>
-                    </div>
-                    <div class="casilla-datos">
-                        <div class="nombre">Cédula</div>
-                    </div>
-                    <div class="casilla-datos">
-                        <div class="nombre">Telefono</div>
-                    </div>
-                    <div class="casilla-datos">
-                        <div class="nombre">Correo</div>
-                    </div>
-                    <div class="casilla-datos">
-                        <div class="nombre">Dirrección</div>
-                    </div>
-                    <div class="casilla-datos">
-                        <div class="nombre">Fecha de Nacimento</div>
-                    </div>
-                    <div class="casilla-datos">
-                        <div class="nombre">Contraseña</div>
-                    </div>
-                    <a href = "perfil.html">
-                        <div class="boton_2">
-                            <div class="headernosotros_4">Guardar</div>
-                        </div>
-                    </a>
-                </div>
+
+                    <form class="part_3" method="post">
+                        <label class="casilla-datos">
+                            <input type="text" id="nombre" name="nombre" placeholder="Nombre">
+                        </label>
+                        <label class="casilla-datos">
+                            <input type="text" id="cedula" name="cedula" placeholder="Cédula">
+                        </label>
+                        <label class="casilla-datos">
+                            <input type="tel" id="telefono" name="telefono" placeholder="Teléfono">
+                        </label>
+                        <label class="casilla-datos">
+                            <input type="email" id="correo" name="correo" placeholder="Correo">
+                        </label>
+                        <label class="casilla-datos">
+                            <input type="text" id="direccion" name="direccion" placeholder="Dirección">
+                        </label>
+                        <label class="casilla-datos">
+                            <input type="date" id="fecha-nacimiento" name="fecha-nacimiento" placeholder="Fecha de Nacimiento">
+                        </label>
+                        <label class="casilla-datos">
+                            <input type="password" id="contrasena" name="contrasena" placeholder="Contraseña">
+                        </label>
+                        <a href="perfil.html">
+                            <button type="submit" class="botn-sencillo">Guardar</button>
+                        </a>
+                    </form>
+                
+                
             </div>
         
         </div>
