@@ -9,9 +9,8 @@
   	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=League Gothic:wght@400&display=swap" />
   	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Abel:wght@400&display=swap" />
   	<script language="javascript" type="text/javascript">
-        /* Actualiza el script para redirigir a la página adecuada según el rol del usuario. PODRÍA SERVIR,
-        PERO NO ESTOY SEGURA :,,,DDDD LO HIZO CHATGPT :,,p
-        window.onload = function() {
+       
+       window.onload = function() {
             const form = document.querySelector("form#formulario");
             form.onsubmit = async (event) => {
                 event.preventDefault();
@@ -28,11 +27,12 @@
             console.log(res);
 
             if (res.success) {
+                localStorage.setItem("user_data", JSON.stringify(res.user_data) )
                 // Redirige según el rol del usuario
-                if (res.role === "estudiante") {
+                if (res.user_data.ROL === "Usuario") {
                     window.location.href = "/Fitnessplus-website-code/main_estudiante.html";
-                } else if (res.role === "entrenador") {
-                    window.location.href = "/Fitnessplus-website-code/main_entrenador.html";
+                } else if (res.user_data.ROL === "Entrenador") {
+                    window.location.href = "/Fitnessplus-website-code/entrenador/main_entrenador.html";
                 } else {
                     alert("Rol desconocido, contacte al administrador.");
                 }
@@ -46,23 +46,7 @@
         };
         };
 
-        */
-        window.onload = function() {
-        const form = document.querySelector("form#formulario")
-        form.onsubmit = async (event) => {
-            event.preventDefault()
-            const formdata = new FormData(form)
-            const json = JSON.stringify(Object.fromEntries(formdata))
-            const req = await fetch("http://paginagym.fwh.is/Fitnessplus-website-code/php/login.php",{
-                method:"POST", body:json
-             } )
-             const res = await req.json()
-             console.log(res)
-             if(res.success){ 
-                navigation.navigate("/Fitnessplus-website-code/aviso_inicio_sesión.html")
-             }
-        }
-    }
+     
     </script>
   	<title>FitnessPlus - Inicio de Sesión</title>
 </head>
