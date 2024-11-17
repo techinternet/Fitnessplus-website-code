@@ -113,9 +113,8 @@ nav {
 }
 .atras-icon {
     width: 30px;
-    height: 30px;
-    overflow: hidden;
-    flex-shrink: 0;
+    position: relative;
+    height: 51px;
     transition: 500ms ease-in-out;
 }
 
@@ -129,7 +128,7 @@ nav {
 }
 
 .headernosotros_2 {
-    font-size: 38px;
+    font-size: 48px;
 }
     
 .division {
@@ -165,7 +164,7 @@ nav {
     font-size: 32px;
     font-family: Abel;
 }
-.part_3 {
+form.part_3 {
     color: #f4ebeb;
     display: flex;
     flex-direction: column;
@@ -180,7 +179,7 @@ nav {
     align-self: stretch;
 }
 
-.boton, .boton_2  {
+.boton{
     color: #f4ebeb;
     display: inline-flex; /* Permite que el botón se ajuste al tamaño del contenido (texto) */
     padding: 5px 10px; /* Ajusta el espacio alrededor del texto, pero mantiene el botón compacto */
@@ -195,28 +194,69 @@ nav {
 .boton:hover {
     background-color: #1E1E36;
 }
-.boton_2{
-    background-color: #aac432;
-}
-.boton_2 :hover{
-    color: #0E0E19;
-}
-.casilla-datos:hover{
-    background-color: #aac432;
-}
 
-.casilla-datos {
-    width: 80%; /* Ajusta el ancho para que se adapte al contenedor */
+button {
+    width: 400px;
+    height: 40px;
+    border-radius: 5px;
+    background-color: #0E0E19;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 9px 20px;
+    font-size: 32px;
+    color: #f4ebeb;
+    border: none; /* Remueve el borde predeterminado del botón */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+    transition: background-color 0.3s ease; /* Añade una transición de color suave */
+    font-family: 'League Gothic';
+}
+button:hover {
+    background-color: #aac432; /* Cambia el color al pasar el cursor */
+}
+/* Aplica este estilo a todos los campos de tipo input */
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+input[type="password"],
+input[type="date"] {
+    width: 500px;
     border-radius: 10px;
     background-color: #51515b;
-    height: 30px;
+    height: 40px;
+    overflow: hidden;
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    padding: 0px 29px;
+    padding: 0 29px;
     box-sizing: border-box;
+    border: none;
+    color: #ffffff; /* Texto en blanco */
+    font-size: 32px;
+    font-family: Abel;
+    transition: background-color 500ms ease;
 }
 
-.headernosotros_4{
-    font-size: 40px;
+/* Cambia el color de fondo al hacer hover */
+input[type="text"]:hover,
+input[type="tel"]:hover,
+input[type="email"]:hover,
+input[type="password"]:hover,
+input[type="date"]:hover {
+    background-color: #3d3d44;
+}
+
+/* Cambia el color de fondo cuando el campo está enfocado */
+input[type="text"]:focus,
+input[type="tel"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+input[type="date"]:focus {
+    background-color: #3a3a42;
+    outline: none; /* Quita el contorno predeterminado */
+}
+input::placeholder {
+    color: #f4ebeb;
 }
