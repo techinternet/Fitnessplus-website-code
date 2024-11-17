@@ -177,15 +177,24 @@ h2 {
     margin-bottom: 10px; /* Espacio entre la línea y la lista */
 }
 
-h3 {
+button {
     color: #FFF;
     font-family: Abel;
-    font-size: 20px; /* Ajusta el tamaño de la fuente para parecer más a una lista */
+    font-size: 20px;
     font-weight: 400;
-    margin: 2px 0; /* Reduce el espacio vertical entre los elementos */
-    line-height: 1.2; /* Controla la altura de línea para reducir el espacio */
+    margin: 2px 0;
+    line-height: 1.2;
     text-transform: capitalize;
+    background: none; /* Elimina el fondo por defecto de los botones */
+    border: none; /* Elimina los bordes por defecto */
+    cursor: pointer; /* Cambia el cursor a mano al pasar por el botón */
+    text-align: left; /* Mantiene el texto alineado a la izquierda */
 }
+
+button:hover {
+    color: #D1DE83; /* Cambia de color al pasar el mouse */
+}
+
 
 .nombre {
     position: left;
