@@ -7,15 +7,31 @@
         <link rel="stylesheet" href="./perfil-entrenador.css" />
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=League Gothic:wght@400&display=swap" />
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Abel:wght@400&display=swap" />
+        <script language="javascript" type="text/javascript">
+       
+            window.onload = function() {
+            const user_data = JSON.parse(localStorage.getItem("user_data")) 
+            Object.keys(user_data).forEach((k)=>{
+            const element = document.getElementById(k)
+            if(element) {
+                element.textContent = user_data[k]
+            }
+            })
+            };
+
+     
+</script>
+
+         
     </head>
     <body>
         <nav>
             <div class="arriba">
-                <a href="main_estudiante.html">
+                <a href="main_entrenador.html">
                     <img class="logo-icon" alt="" src="../img/Logo.svg">
                 </a>
                 <div class="perfil_1">
-                    <div class="headernosotros_1">Nombre</div>
+                    <div class="headernosotros_1">Cuenta</div>
                     <img class="logo-icon-1" alt="" src="../img/perfil.svg">
                 </div>
                 
@@ -23,9 +39,6 @@
             <div class="abajo">
                 <a href="main_entrenador.html">
                     <div class="headernosotros">Estudiantes</div>
-                </a>
-                <a href=""> <!--Cambiar-->
-                    <div class="headernosotros">Clases</div>
                 </a>
                 <a href = "contacto_entrenador.html">
                     <div class="headernosotros">Contacto</div>
@@ -46,26 +59,26 @@
             <div class="perfil-parent">
                 <img class="perfil-icon" alt="" src="../img/perfil.svg">
                 <div class="nombre-y-slogen">
-                    <div class="fitnessplus">Nombre</div>
-                    <div class="slogan">Cédula</div>
+                    <div id="NOMBRE" class="fitnessplus">Nombre</div>
+                    <div id="DOCUMENTO" class="slogan"> 
+                       
+                    </div>
                 </div>
             </div>
             <div class="casilla-datos-parent">
                 <div class="casilla-datos">
-                    <div class="nombre">Telefono</div>
+                    <div id="TELEFONO" class="nombre">Telefono</div>
                 </div>
                 <div class="casilla-datos">
-                    <div class="nombre">Correo</div>
+                    <div id="DIRECCION" class="nombre">Dirección</div>
                 </div>
                 <div class="casilla-datos">
-                    <div class="nombre">Dirección</div>
+                    <div id="NACIMIENTO" class="nombre">Fecha de Nacimento</div>
                 </div>
                 <div class="casilla-datos">
-                    <div class="nombre">Fecha de Nacimento</div>
+                    <div  class="nombre">******</div>
                 </div>
-                <div class="casilla-datos">
-                    <div class="nombre">Contraseña</div>
-                </div>
+                
                 <a href="perfil2-entrenador.html">
                     <div class="botn-sencillo">
                         <div class="nombre">Editar Información</div>

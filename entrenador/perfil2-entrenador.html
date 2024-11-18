@@ -7,31 +7,56 @@
         <link rel="stylesheet" href="./perfil2-entrenador.css" />
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=League Gothic:wght@400&display=swap" />
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Abel:wght@400&display=swap" />
+        <script language="javascript" type="text/javascript">
+            // Función para cargar los datos desde localStorage
+            window.onload = function() {
+                const user_data = JSON.parse(localStorage.getItem("user_data")); 
+                if(user_data) {
+                    Object.keys(user_data).forEach((k) => {
+                        const element = document.getElementById(k);
+                        if(element) {
+                            element.value = user_data[k]; // Usamos `value` para cargar datos en los inputs
+                        }
+                    });
+                }
+            };
+
+            // Función para guardar los datos cuando se envíe el formulario
+            function saveProfileData(event) {
+                event.preventDefault(); // Prevenir el envío normal del formulario
+                const user_data = {
+                    NOMBRE: document.getElementById("NOMBRE").value,
+                    DOCUMENTO: document.getElementById("DOCUMENTO").value,
+                    TELEFONO: document.getElementById("TELEFONO").value,
+                     DIRECCION: document.getElementById("DIRECCION").value,
+                    NACIMIENTO: document.getElementById("NACIMIENTO").value,
+                    CONTRASENA: document.getElementById("CONTRASENA").value
+                };
+                localStorage.setItem("user_data", JSON.stringify(user_data)); // Guardar en localStorage
+                alert("Datos guardados exitosamente!");
+            }
+        </script>
     </head>
     <body>
         <nav>
             <div class="arriba">
-                <a href="main_estudiante.html">
+                <a href="main_entrenador.html">
                     <img class="logo-icon" alt="" src="../img/Logo.svg">
                 </a>
                 <div class="perfil_1">
                     <a href="perfil-entrenador.html">
-                        <div class="headernosotros_1">Nombre</div>
+                        <div class="headernosotros_1">Cuenta</div>
                     </a>
                     <a href="perfil-entrenador.html">
-                        <img class="logo-icon-1" alt="" src="../img/perfil.svg">
+                        <img class="logo-icon-1" alt="" src="../img/Imagen perfil_Default.png">
                     </a>
                 </div>
-                
             </div>
-            <div class="abajo">
+           <div class="abajo">
                 <a href="main_entrenador.html">
                     <div class="headernosotros">Estudiantes</div>
                 </a>
-                <a href=""> <!--Esto-->
-                    <div class="headernosotros">Clases</div>
-                </a>
-                <a href="contacto_entrenador.html">
+                <a href = "contacto_entrenador.html">
                     <div class="headernosotros">Contacto</div>
                 </a>
             </div>
@@ -39,52 +64,53 @@
 
         <div class="content">
             <div class="part_1">
-                <a href="./perfil-entrenador.html">
+                <a href="perfil-entrenador.html">
                     <img class="atras-icon" alt="" src="../img/Atras.svg">
                 </a>
-                <div class="headernosotros_2">Perfil</div>
+                <div class="headernosotros_2">Editar Perfil</div>
             </div>
+
+        
+
             <div class="division">
                 <div class="part_2">
                     <img class="perfil_image" alt="" src="../img/perfil.svg">
-                    <a href = ""> <!-- Falta arreglar este enlace -->
+                    <a href = "perfil-entrenador.html"> <!-- Falta arreglar este enlace -->
                         <div class="boton">
                             <div class="headernosotros">Cambiar Foto de Perfil</div>
                         </div>
                     </a>
                 </div>
-                <div class="part_3">
-                    <div class="casilla-datos">
-                        <div class="nombre">Nombre</div>
-                    </div>
-                    <div class="casilla-datos">
-                        <div class="nombre">Cédula</div>
-                    </div>
-                    <div class="casilla-datos">
-                        <div class="nombre">Telefono</div>
-                    </div>
-                    <div class="casilla-datos">
-                        <div class="nombre">Correo</div>
-                    </div>
-                    <div class="casilla-datos">
-                        <div class="nombre">Dirrección</div>
-                    </div>
-                    <div class="casilla-datos">
-                        <div class="nombre">Fecha de Nacimento</div>
-                    </div>
-                    <div class="casilla-datos">
-                        <div class="nombre">Contraseña</div>
-                    </div>
-                    <a href = "perfil-entrenador.html">
-                        <div class="boton_2">
-                            <div class="headernosotros_4">Guardar</div>
-                        </div>
-                    </a>
-                </div>
+
+                <form class="part_3" method="post" enctype="multipart/form-data" onsubmit="saveProfileData(event)">
+                    <label class="casilla-datos">
+                        <input type="text" id="NOMBRE" name="nombre" placeholder="Nombre">
+                    </label>
+                    
+                    <label class="casilla-datos">
+                        <input type="text" id="DOCUMENTO" name="cedula" placeholder="Cédula">
+                    </label>
+                    <label class="casilla-datos">
+                        <input type="tel" id="TELEFONO" name="telefono" placeholder="Teléfono">
+                    </label>
+                    <label class="casilla-datos">
+                        <input type="text" id="DIRECCION" name="direccion" placeholder="Dirección">
+                    </label>
+                    <label class="casilla-datos">
+                        <input type="date" id="NACIMIENTO" name="fecha-nacimiento" placeholder="Fecha de Nacimiento">
+                    </label>
+                    <label class="casilla-datos">
+                        <input type="password" id="CONTRASENA" name="contrasena" placeholder="**********">
+                    </label>
+                        <label class="casilla-datos">
+                        <input type="file" id="FOTO" name="foto">
+                    </label>
+
+                    <button type="submit" class="botn-sencillo">Guardar</button>
+                </form>
+                   
+
             </div>
-        
         </div>
-        
     </body>
 </html>
-

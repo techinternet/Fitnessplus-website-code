@@ -14,7 +14,7 @@
                 <img class="logo-icon" alt="" src="../img/Logo.svg">
                 <div class="perfil_1">
                     <a href="perfil-entrenador.html">
-                        <div class="headernosotros">Nombre</div>
+                        <div class="headernosotros">Cuenta</div>
                     </a>
                     <a href="perfil2-entrenador.css">
                         <img class="logo-icon-1" alt="" src="../img/perfil.svg">
@@ -24,9 +24,6 @@
             </div>
             <div class="abajo">
                     <div class="headernosotros_1">Estudiantes</div>
-                <a href=""> <!--Qué le haz hecho a Dilo??-->
-                    <div class="headernosotros">Clases</div>
-                </a>
                 <a href="contacto_entrenador.html">
                     <div class="headernosotros">Contacto</div>
                 </a>
@@ -45,22 +42,16 @@
             </div>
             <div class="contenido-group">
                 <div class="contenido2">
-                    <div class="tipo">Tipo</div>
+                    <div class="tipo">Resistencia</div>
                 </div>
                 <div class="contenido2">
-                    <div class="tipo">Tipo</div>
+                    <div class="tipo">Fortalecimiento</div>
                 </div>
                 <div class="contenido2">
-                    <div class="tipo">Tipo</div>
+                    <div class="tipo">Equilibrio</div>
                 </div>
                 <div class="contenido2">
-                    <div class="tipo">Tipo</div>
-                </div>
-                <div class="contenido2">
-                    <div class="tipo">Tipo</div>
-                </div>
-                <div class="contenido2">
-                    <div class="tipo">Tipo</div>
+                    <div class="tipo">Flexibilidad</div>
                 </div>
             </div>
             <div class="contenido1">
@@ -68,30 +59,42 @@
             </div>
             <div class="contenido-container">
                 <div class="contenido">
-                    <div class="tipo">Series</div>
+                    <div class="tipo">Ejercicios</div>
                 </div>
                 <div class="contenido-container1">
                     <div class="contenido">
                         <div class="tipo">Repeticion</div>
                     </div>
                     <div class="contenido">
-                        <div class="tipo">Ejercicios </div>
+                        <div class="tipo">Series</div>
                     </div>
                 </div>
             </div>
             <div class="frame-parent">
                 <div class="frame-div">
                     <div class="contenido11">
-                        <div class="tipo">Sentadillas </div>
+                        <select class="ejercicios" name="sentadillas">
+                            <option value="" disabled selected>Sentadillas</option>
+                            <option value="opcion1">Ejercicio 1</option>
+                            <option value="opcion2">Ejercicio 2</option>
+                            <option value="opcion3">Ejercicio 3</option>
+                        </select>
                     </div>
                     <div class="contenido11">
-                        <div class="tipo">Peso muerto</div>
+                        <select class="ejercicios" name="peso_muerto">
+                            <option value="" disabled selected>Peso Muerto</option>
+                            <option value="opcion1">Ejercicio 1</option>
+                            <option value="opcion2">Ejercicio 2</option>
+                            <option value="opcion3">Ejercicio 3</option>
+                        </select>
                     </div>
                     <div class="contenido11">
-                        <div class="tipo">Aislamiento de cuádriceps</div>
-                    </div>
-                    <div class="contenido11">
-                        <div class="tipo">Aislamiento de femoral</div>
+                        <select class="ejercicios" name="aislamiento_quadriceps">
+                            <option value="" disabled selected>Aislamiento de cuádriceps</option>
+                            <option value="opcion1">Ejercicio 1</option>
+                            <option value="opcion2">Ejercicio 2</option>
+                            <option value="opcion3">Ejercicio 3</option>
+                        </select>
                     </div>
                 </div>
                 <div class="cosas-1-parent">
@@ -101,18 +104,32 @@
                     <img class="cosas-1-icon" alt="" src="../img/Cosas.png">
                     
                 </div>
+    
             </div>
-            <a href="estudiante2.html">
-                <div class="botn-sencillo-wrapper">
-                    <div class="botn-sencillo">
-                        <div class="tipo">Poner Rutina</div>
-                    </div>
-                </div>
+            <a href="main_entrenador.html">
+                <button type="submit" class="botn-sencillo">Poner Rutina</button>
             </a>
 
         </div>
             
+        <script>
+            const elementosContenido2 = document.querySelectorAll('.contenido2'); // Selecciona todos los elementos con la clase contenido2
+            const colorNormal = '#3f3f48';
+            const colorOscuro = '#0E0E19';
+    
+            elementosContenido2.forEach(elemento => {
+                elemento.addEventListener('click', () => {
+                    const colorActual = window.getComputedStyle(elemento).backgroundColor;
+    
+                    // Alternar entre colores
+                    if (colorActual === 'rgb(63, 63, 72)') { // '#3f3f48' en formato rgb
+                        elemento.style.backgroundColor = colorOscuro;
+                    } else {
+                        elemento.style.backgroundColor = colorNormal;
+                    }
+                });
+            });
+        </script>
 
     </body>
 </html>
-
