@@ -115,7 +115,11 @@ nav {
     width: 30px;
     position: relative;
     height: 51px;
+<<<<<<< HEAD
     transition: 3s ease-in-out;
+=======
+    transition: 500ms ease-in-out;
+>>>>>>> f24a188a01756c82f1ea2331973c7b47f16841ec
 }
 
 .part_1{
