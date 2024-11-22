@@ -174,8 +174,10 @@ nav {
 }
 
 .img-estudiante {
-    max-width: 100%; /* Asegura que la imagen no se salga del contenedor */
-    height: auto;
+    width: 100%; /* Asegura que la imagen no se salga del contenedor */
+    height: 250px;
+    aspect-ratio: 1/1;
+
 }
 
 h6 {

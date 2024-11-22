@@ -7,6 +7,43 @@
         <link rel="stylesheet" href="./main_entrenador.css" />
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=League Gothic:wght@400&display=swap" />
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Abel:wght@400&display=swap" />
+        <script language="javascript" type="text/javascript">
+        window.onload = async function() {
+            const req = await fetch("http://paginagym.fwh.is/Fitnessplus-website-code/php/obtener_usuarios.php",{
+                method:"POST"
+             } )
+             const res = await req.json()
+             console.log(res)
+             if(res.success){
+                 let html = " "
+                 res.usuarios.forEach((user)=>{
+                 html += `
+                    <div class="logro">
+                    <img class="img-estudiante" alt="" src="../php/${user?.FOTO}">
+                    <h6>${user?.NOMBRE}</h6>
+                    <h6>${user?.APELLIDO}</h6>
+                    <h6>${user?.CORREO}</h6>
+                    <button class="boton_2" >
+                            <div class="headernosotros_3">Enlazar estudiante</div> 
+                    </button>
+                </div>
+                 `
+                 })
+                 document.getElementById("container").innerHTML = html
+                 setTimeout(()=>{
+                 const botones = document.getElementsByClassName("boton_2")
+                 botones.forEach((boton)=>{
+                  boton.onclick = ()=>{
+                      alert("hola")
+                  }
+                 })
+
+                 },1500)
+
+             }
+        
+    }
+    </script>
     </head>
     <body>
         <nav>
@@ -35,43 +72,8 @@
                     <div class="headernosotros">Nuevo Estudiante +</div>
                 </div>
             </a>
-            <div class="part_2">
-                <div class="logro">
-                    <img class="img-estudiante" alt="" src="../img/Estudiante-1.png">
-                    <h6>Andrea paz</h6>
-                    <a href = "estudiante2.html">
-                        <div class="boton_2"> 
-                            <div class="headernosotros_3">Configurar Rutina</div>
-                        </div>
-                    </a>
-                </div>
-                <div class="logro">
-                    <img class="img-estudiante" alt="" src="../img/Estudiante-2.png">
-                    <h6>jesus adrian</h6>
-                    <a href = "estudiante2.html">
-                        <div class="boton_2"> 
-                            <div class="headernosotros_3">Configurar Rutina</div>
-                        </div>
-                    </a>
-                </div>
-                <div class="logro">
-                    <img class="img-estudiante" alt="" src="../img/Estudiante-3.png"> 
-                    <h6>carlos antonio</h6>
-                    <a href = "estudiante2.html">
-                        <div class="boton_2"> 
-                            <div class="headernosotros_3">Configurar Rutina</div>
-                        </div>
-                    </a>
-                </div>
-                <div class="logro">
-                    <img class="img-estudiante" alt="" src="../img/Estudiante-4.png">
-                    <h6>Karolina h</h6>
-                    <a href = "estudiante2.html">
-                        <div class="boton_2"> 
-                            <div class="headernosotros_3">Configurar Rutina</div>
-                        </div>
-                    </a>
-                </div>
+            <div id="container" class="part_2">
+               
             </div>
         </div>
     </body>

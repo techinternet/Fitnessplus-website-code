@@ -47,7 +47,7 @@ nav {
 }
 
 .logo-icon:hover{
-    content: url(../img/Logo\ Hover.svg);
+    opacity: 0.5;
 }
 
 .logo-icon {
@@ -59,7 +59,7 @@ nav {
 }
 
 .logo-icon-1:hover{
-    content: url(../img/Imagen\ Perfil_Variante\ Hover.png);
+    opacity: 0.5;
 }
 .logo-icon-1 {
     width: 60px;
@@ -115,7 +115,7 @@ nav {
     width: 30px;
     position: relative;
     height: 51px;
-    transition: 500ms ease-in-out;
+    transition: 3s ease-in-out;
 }
 
 .part_1{
@@ -136,9 +136,9 @@ nav {
     align-content: flex-start;
     justify-content: space-between; /* Distribuye el espacio entre los elementos */
     width: 100%; /* Ocupa todo el ancho */
+    height: 80%;
     gap: 20px; /* Espacio entre las cajas */
     padding: 0px 30px;
-
     margin-bottom: 10%;
 }
 
@@ -165,6 +165,7 @@ nav {
     font-family: Abel;
 }
 form.part_3 {
+    height: 100%;
     color: #f4ebeb;
     display: flex;
     flex-direction: column;
@@ -190,7 +191,6 @@ form.part_3 {
     background-color: #0E0E19;
     transition: background-color 500ms ease;
 }
-
 .boton:hover {
     background-color: #1E1E36;
 }
@@ -216,6 +216,9 @@ button {
 button:hover {
     background-color: #aac432; /* Cambia el color al pasar el cursor */
 }
+
+
+
 /* Aplica este estilo a todos los campos de tipo input */
 input[type="text"],
 input[type="tel"],

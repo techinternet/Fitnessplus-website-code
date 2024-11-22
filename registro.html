@@ -11,22 +11,36 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Abel:wght@400&display=swap">
     <script language="javascript" type="text/javascript">
         window.onload = function() {
-        const form = document.querySelector("form#registro")
-        form.onsubmit = async (event) => {
-            event.preventDefault()
-            const formdata = new FormData(form)
-            const json = JSON.stringify(Object.fromEntries(formdata))
-            const req = await fetch("http://paginagym.fwh.is/Fitnessplus-website-code/php/registro.php",{
-                method:"POST", body:json
-             } )
-             const res = await req.json()
-             console.log(res)
-             if(res.success){ 
-                navigation.navigate("/Fitnessplus-website-code/aviso_registro_exitoso.html")
-             }
+    const form = document.querySelector("form#registro");
+    form.onsubmit = async (event) => {
+        event.preventDefault();
+
+        // Crear el FormData del formulario
+        const formdata = new FormData(form);
+
+        // Realizar la solicitud al servidor
+        try {
+            const req = await fetch("http://paginagym.fwh.is/Fitnessplus-website-code/php/registro.php", {
+                method: "POST",
+                body: formdata // Envía el FormData en lugar de JSON
+            });
+            
+            const res = await req.json(); // Interpretar la respuesta como JSON
+            console.log(res);
+
+            if (res.success) { 
+                window.location.href = "/Fitnessplus-website-code/aviso_registro_exitoso.html";
+            } else {
+                alert("Error: " + (res.message || "No se pudo completar el registro."));
+            }
+        } catch (error) {
+            console.error("Error en el envío del formulario:", error);
+            alert("Ocurrió un error al procesar el formulario.");
         }
-    }
-    </script>
+    };
+};
+</script>
+
 </head>
 <body>
     
@@ -113,6 +127,11 @@
                     <!-- Si hay más roles, agregar aquí -->
                 </select>
             </label>
+            
+                <label class="casilla-datos">
+                    <input type="file" id="FOTO" name="foto">
+                </label>
+
             <button type="submit" class="botn-sencillo" >Registrarse</button>
         </form>
     </div>

@@ -13,9 +13,14 @@
             const user_data = JSON.parse(localStorage.getItem("user_data")) 
             Object.keys(user_data).forEach((k)=>{
             const element = document.getElementById(k)
-            if(element) {
-                element.textContent = user_data[k]
+            if(element &&  element.tagName === 'IMG') {
+                element.src = "php/"+user_data[k]
+                return
             }
+            if(element){
+                element.textContent = user_data[k]
+                return
+                }
             })
             };
 
@@ -38,15 +43,9 @@
             </div>
             <div class="abajo">
                 <a href="main_estudiante.html">
-                    <div class="headernosotros">Inicio</div>
+                    <div class="headernosotros">Estudiantes</div>
                 </a>
-                <a href="rutina.html">
-                    <div class="headernosotros">Rutina</div>
-                </a>
-                <a href = "racha.html">
-                    <div class="headernosotros">Racha</div>
-                </a>
-                <a href = "contact.html">
+                <a href = "contacto_entrenador.html">
                     <div class="headernosotros">Contacto</div>
                 </a>
             </div>
@@ -60,10 +59,10 @@
                 <a href="main_estudiante.html">
                     <img class="vector-icon" alt="" src="img/Atras.svg">
                 </a>
-                <div class="nombre">Perfil</div>
+                <div class="nombre">PERFIL</div>
             </div>
             <div class="perfil-parent">
-                <img class="perfil-icon" alt="" src="img/perfil.svg">
+                <img id="FOTO" class="perfil-icon" alt="" src="img/perfil.svg">
                 <div class="nombre-y-slogen">
                     <div id="NOMBRE" class="fitnessplus">Nombre</div>
                     <div id="DOCUMENTO" class="slogan"> 

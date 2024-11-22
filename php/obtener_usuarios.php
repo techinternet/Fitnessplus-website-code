@@ -28,7 +28,7 @@ $conn->set_charset("utf8mb4");
 $response = array('success' => false);
 
 // Preparar la consulta para obtener todos los usuarios con rol 'Usuario'
-$stmt = $conn->prepare("SELECT NOMBRE, TELEFONO FROM personas WHERE ROL = 'Usuario'");
+$stmt = $conn->prepare("SELECT * FROM personas WHERE ROL = 'Usuario'");
 if ($stmt === false) {
     die("Error en la preparación de la consulta: " . $conn->error);
 }

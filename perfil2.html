@@ -1,153 +1,139 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Editar Perfil</title>
-        <meta charset="utf-8">
-        <meta name="viewport" content="initial-scale=1, width=device-width">
-        <link rel="stylesheet" href="./perfil2.css" />
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=League Gothic:wght@400&display=swap" />
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Abel:wght@400&display=swap" />
-        <script language="javascript" type="text/javascript">
-            // Función para cargar los datos desde localStorage
-            window.onload = function() {
-                const user_data = JSON.parse(localStorage.getItem("user_data")); 
-                if(user_data) {
-                    Object.keys(user_data).forEach((k) => {
-                        const element = document.getElementById(k);
-                        if(element) {
-                            element.value = user_data[k]; // Usamos `value` para cargar datos en los inputs
-                        }
-                    });
-                }
-            };
 
-            // Función para guardar los datos cuando se envíe el formulario
-            function saveProfileData(event) {
-                event.preventDefault(); // Prevenir el envío normal del formulario
-                const user_data = {
-                    NOMBRE: document.getElementById("NOMBRE").value,
-                    DOCUMENTO: document.getElementById("DOCUMENTO").value,
-                    TELEFONO: document.getElementById("TELEFONO").value,
-                     DIRECCION: document.getElementById("DIRECCION").value,
-                    NACIMIENTO: document.getElementById("NACIMIENTO").value,
-                    CONTRASENA: document.getElementById("CONTRASENA").value
-                };
-                localStorage.setItem("user_data", JSON.stringify(user_data)); // Guardar en localStorage
-                alert("Datos guardados exitosamente!");
+<head>
+    <title>Editar Perfil</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, width=device-width">
+    <link rel="stylesheet" href="./perfil2.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=League Gothic:wght@400&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Abel:wght@400&display=swap" />
+    <script language="javascript" type="text/javascript">
+        // Función para cargar los datos desde localStorage
+        window.onload = function () {
+            const user_data = JSON.parse(localStorage.getItem("user_data"));
+            if (user_data) {
+                Object.keys(user_data).forEach((k) => {
+                    const element = document.getElementById(k);
+                    if (element && element.tagName === 'IMG') {
+                        element.src = "php/" + user_data[k]
+                        return
+                    }
+                    if (element) {
+                        element.value = user_data[k]
+                        return
+                    }
+                });
             }
-        </script>
-    </head>
-    <body>
-        <nav>
-            <div class="arriba">
-                <a href="main_estudiante.html">
-                    <img class="logo-icon" alt="" src="img/Logo.svg">
-                </a>
-                <div class="perfil_1">
-                    <a href="perfil.html">
-                        <div class="headernosotros_1">Cuenta</div>
-                    </a>
-                    <a href="perfil.html">
-                        <img class="logo-icon-1" alt="" src="img/Imagen perfil_Default.png">
-                    </a>
-                </div>
-            </div>
-            <div class="abajo">
-                <a href="main_estudiante.html">
-                    <div class="headernosotros">Inicio</div>
-                </a>
-                <a href="rutina.html">
-                    <div class="headernosotros">Rutina</div>
-                </a>
-                <a href="racha.html">
-                    <div class="headernosotros">Racha</div>
-                </a>
-                <a href="contact.html">
-                    <div class="headernosotros">Contacto</div>
-                </a>
-            </div>
-        </nav>
+        const form = document.querySelector("form")
+        form.onsubmit = async (event) => {
+            event.preventDefault()
+            const formdata = new FormData(form)
+            const json = Object.fromEntries(formdata)
+            console.log(json)
+            const req = await fetch("http://paginagym.fwh.is/Fitnessplus-website-code/php/Actualizarperfil.php", {
+                method: "POST", body: formdata
+            })
+            const res = await req.json()
+            console.log(res)
+            if (res.success) {
+                const inpimg = document.getElementById("CARGARFOTO")
+                if(inpimg && Array.isArray(inpimg.files) && inpimg.files.length > 0){
+                    json.FOTO = "img/"+inpimg.files[0].name  
+                 }else {
+                     delete json.FOTO
+                 }
+                localStorage.setItem("user_data", JSON.stringify({...user_data,...json})); // Guardar en localStorage
+                alert("Datos guardados exitosamente!");
+                navigation.navigate("/Fitnessplus-website-code/iniciar_sesión.html")
+            }
+        }
 
-        <div class="content">
-            <div class="part_1">
+     };
+
+    </script>
+</head>
+
+<body>
+    <nav>
+        <div class="arriba">
+            <a href="main_estudiante.html">
+                <img class="logo-icon" alt="" src="img/Logo.svg">
+            </a>
+            <div class="perfil_1">
                 <a href="perfil.html">
-                    <img class="atras-icon" alt="" src="img/Atras.svg">
+                    <div class="headernosotros_1">Cuenta</div>
                 </a>
-                <div class="headernosotros_2">Editar Perfil</div>
-            </div>
-
-        
-
-            <div class="division">
-                <div class="part_2">
-                    <img class="perfil_image" alt="" src="img/perfil.svg">
-                    <a href = "Perfil.html"> <!-- Falta arreglar este enlace -->
-                        <div class="boton">
-                            <div class="headernosotros">Cambiar Foto de Perfil</div>
-                        </div>
-                    </a>
-                </div>
-
-<<<<<<< HEAD
-                <form class="part_3" method="post" enctype="multipart/form-data" onsubmit="saveProfileData(event)">
-                    <label class="casilla-datos">
-                        <input type="text" id="NOMBRE" name="nombre" placeholder="Nombre">
-                    </label>
-                    
-                    <label class="casilla-datos">
-                        <input type="text" id="DOCUMENTO" name="cedula" placeholder="Cédula">
-                    </label>
-                    <label class="casilla-datos">
-                        <input type="tel" id="TELEFONO" name="telefono" placeholder="Teléfono">
-                    </label>
-                    <label class="casilla-datos">
-                        <input type="text" id="DIRECCION" name="direccion" placeholder="Dirección">
-                    </label>
-                    <label class="casilla-datos">
-                        <input type="date" id="NACIMIENTO" name="fecha-nacimiento" placeholder="Fecha de Nacimiento">
-                    </label>
-                    <label class="casilla-datos">
-                        <input type="password" id="CONTRASENA" name="contrasena" placeholder="**********">
-                    </label>
-                        <label class="casilla-datos">
-                        <input type="file" id="FOTO" name="foto">
-                    </label>
-
-                    <button type="submit" class="botn-sencillo">Guardar</button>
-                </form>
-                   
-
-=======
-                    <form class="part_3" method="post">
-                        <label class="casilla-datos">
-                            <input type="text" id="nombre" name="nombre" placeholder="Nombre">
-                        </label>
-                        <label class="casilla-datos">
-                            <input type="text" id="cedula" name="cedula" placeholder="Cédula">
-                        </label>
-                        <label class="casilla-datos">
-                            <input type="tel" id="telefono" name="telefono" placeholder="Teléfono">
-                        </label>
-                        <label class="casilla-datos">
-                            <input type="email" id="correo" name="correo" placeholder="Correo">
-                        </label>
-                        <label class="casilla-datos">
-                            <input type="text" id="direccion" name="direccion" placeholder="Dirección">
-                        </label>
-                        <label class="casilla-datos">
-                            <input type="date" id="fecha-nacimiento" name="fecha-nacimiento" placeholder="Fecha de Nacimiento">
-                        </label>
-                        <label class="casilla-datos">
-                            <input type="password" id="contrasena" name="contrasena" placeholder="Contraseña">
-                        </label>
-                        <a href="perfil.html">
-                            <button type="submit" class="botn-sencillo">Guardar</button>
-                        </a>
-                    </form>
-                
-                
->>>>>>> f24a188a01756c82f1ea2331973c7b47f16841ec
+                <a href="perfil.html">
+                    <img class="logo-icon-1" alt="" src="img/Imagen perfil_Default.png">
+                </a>
             </div>
         </div>
-    </body>
+        <div class="abajo">
+            <a href="main_estudiante.html">
+                <div class="headernosotros">Inicio</div>
+            </a>
+            <a href="rutina.html">
+                <div class="headernosotros">Rutina</div>
+            </a>
+            <a href="racha.html">
+                <div class="headernosotros">Racha</div>
+            </a>
+            <a href="contact.html">
+                <div class="headernosotros">Contacto</div>
+            </a>
+        </div>
+    </nav>
+
+    <div class="content">
+        <div class="part_1">
+            <a href="perfil.html">
+                <img class="atras-icon" alt="" src="img/Atras.svg">
+            </a>
+            <div class="headernosotros_2">Editar Perfil</div>
+        </div>
+
+
+
+        <div class="division">
+            <div class="part_2">
+                <img id="FOTO" class="perfil_image" alt="" src="img/perfil.svg">
+                <a href="Perfil.html"> <!-- Falta arreglar este enlace -->
+                    <div class="boton">
+                        <div class="headernosotros">Cambiar Foto de Perfil</div>
+                    </div>
+                </a>
+            </div>
+
+            <form class="part_3" method="post" enctype="multipart/form-data">
+                <label class="casilla-datos">
+                    <input type="text" id="NOMBRE" name="NOMBRE" placeholder="Nombre">
+                </label>
+                
+                    <input type="hidden" id="CORREO" name="CORREO" >
+                
+                <label class="casilla-datos">
+                    <input type="tel" id="TELEFONO" name="TELEFONO" placeholder="Teléfono">
+                </label>
+                <label class="casilla-datos">
+                    <input type="text" id="DIRECCION" name="DIRECCION" placeholder="Dirección">
+                </label>
+                <label class="casilla-datos">
+                    <input type="date" id="NACIMIENTO" name="NACIMIENTO" placeholder="Fecha de Nacimiento">
+                </label>
+                <label class="casilla-datos">
+                    <input type="password"  name="CONTRASENA" placeholder="**********">
+                </label>
+                <label class="casilla-datos">
+                    <input type="file" id="CARGARFOTO" name="foto">
+                </label>
+
+                <button type="submit" class="botn-sencillo">Guardar</button>
+            </form>
+
+
+        </div>
+    </div>
+</body>
+
 </html>
