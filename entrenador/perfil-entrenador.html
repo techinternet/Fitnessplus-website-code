@@ -4,7 +4,7 @@
         <title>Perfil</title>
         <meta charset="utf-8">
         <meta name="viewport" content="initial-scale=1, width=device-width">
-        <link rel="stylesheet" href="./perfil-entrenador.css" />
+        <link rel="stylesheet" href="perfil-entrenador.css" />
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=League Gothic:wght@400&display=swap" />
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Abel:wght@400&display=swap" />
         <script language="javascript" type="text/javascript">
@@ -13,9 +13,14 @@
             const user_data = JSON.parse(localStorage.getItem("user_data")) 
             Object.keys(user_data).forEach((k)=>{
             const element = document.getElementById(k)
-            if(element) {
-                element.textContent = user_data[k]
+            if(element &&  element.tagName === 'IMG') {
+                element.src = "../php/"+user_data[k]
+                return
             }
+            if(element){
+                element.textContent = user_data[k]
+                return
+                }
             })
             };
 
@@ -57,7 +62,7 @@
                 <div class="nombre">PERFIL</div>
             </div>
             <div class="perfil-parent">
-                <img class="perfil-icon" alt="" src="../img/perfil.svg">
+                <img id="FOTO" class="perfil-icon" alt="" src="../img/perfil.svg">
                 <div class="nombre-y-slogen">
                     <div id="NOMBRE" class="fitnessplus">Nombre</div>
                     <div id="DOCUMENTO" class="slogan"> 
