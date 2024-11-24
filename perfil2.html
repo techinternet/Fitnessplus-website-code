@@ -1,139 +1,117 @@
 <!DOCTYPE html>
 <html>
+    <head>
+        <title>Racha</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="initial-scale=1, width=device-width">
+        <link rel="stylesheet" href="./racha.css" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=League Gothic:wght@400&display=swap" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Abel:wght@400&display=swap" />
+        <script>
+    window.onload = function() {
+        // Intenta obtener los datos del usuario desde localStorage
+        const user_data = JSON.parse(localStorage.getItem("user_data"));
 
-<head>
-    <title>Editar Perfil</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="initial-scale=1, width=device-width">
-    <link rel="stylesheet" href="./perfil2.css" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=League Gothic:wght@400&display=swap" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Abel:wght@400&display=swap" />
-    <script language="javascript" type="text/javascript">
-        // Función para cargar los datos desde localStorage
-        window.onload = function () {
-            const user_data = JSON.parse(localStorage.getItem("user_data"));
-            if (user_data) {
-                Object.keys(user_data).forEach((k) => {
-                    const element = document.getElementById(k);
-                    if (element && element.tagName === 'IMG') {
-                        element.src = "php/" + user_data[k]
-                        return
-                    }
-                    if (element) {
-                        element.value = user_data[k]
-                        return
-                    }
-                });
-            }
-        const form = document.querySelector("form")
-        form.onsubmit = async (event) => {
-            event.preventDefault()
-            const formdata = new FormData(form)
-            const json = Object.fromEntries(formdata)
-            console.log(json)
-            const req = await fetch("http://paginagym.fwh.is/Fitnessplus-website-code/php/Actualizarperfil.php", {
-                method: "POST", body: formdata
-            })
-            const res = await req.json()
-            console.log(res)
-            if (res.success) {
-                const inpimg = document.getElementById("CARGARFOTO")
-                if(inpimg && Array.isArray(inpimg.files) && inpimg.files.length > 0){
-                    json.FOTO = "img/"+inpimg.files[0].name  
-                 }else {
-                     delete json.FOTO
-                 }
-                localStorage.setItem("user_data", JSON.stringify({...user_data,...json})); // Guardar en localStorage
-                alert("Datos guardados exitosamente!");
-                navigation.navigate("/Fitnessplus-website-code/iniciar_sesión.html")
-            }
+        // Verifica si los datos del usuario están disponibles
+        if (user_data && user_data.RACHA) {
+            // Actualiza el texto del elemento con el ID "racha-numero" con el valor de la racha
+            document.getElementById("racha-numero").textContent = user_data.RACHA;
+        } else {
+            // Si no hay datos de la racha, muestra un mensaje de error
+            document.getElementById("racha-numero").textContent = "No disponible";
+            console.error("Racha no encontrada en localStorage.");
         }
+    };
+</script>
 
-     };
-
-    </script>
-</head>
-
-<body>
-    <nav>
-        <div class="arriba">
-            <a href="main_estudiante.html">
-                <img class="logo-icon" alt="" src="img/Logo.svg">
-            </a>
-            <div class="perfil_1">
-                <a href="perfil.html">
-                    <div class="headernosotros_1">Cuenta</div>
+    </head>
+    <body>
+        <nav>
+            <div class="arriba">
+                <a href="main_estudiante.html">
+                    <img class="logo-icon" alt="" src="img/Logo.svg">
                 </a>
-                <a href="perfil.html">
-                    <img class="logo-icon-1" alt="" src="img/Imagen perfil_Default.png">
+                <div class="perfil_1">
+                    <a href="perfil.html">
+                        <div class="headernosotros">Cuenta</div>
+                    </a>
+                    <a href="perfil.html">
+                        <img class="logo-icon-1" alt="" src="img/perfil.svg">
+                    </a>
+                </div>
+            </div>
+            <div class="abajo">
+                <a href="main_estudiante.html">
+                    <div class="headernosotros">Inicio</div>
+                </a>
+                <a href="rutina2.html">
+                    <div class="headernosotros">Rutina</div>
+                </a>
+                <div class="headernosotros_1">Racha</div>
+                <a href="contact.html">
+                    <div class="headernosotros">Contacto</div>
                 </a>
             </div>
-        </div>
-        <div class="abajo">
-            <a href="main_estudiante.html">
-                <div class="headernosotros">Inicio</div>
-            </a>
-            <a href="rutina.html">
-                <div class="headernosotros">Rutina</div>
-            </a>
-            <a href="racha.html">
-                <div class="headernosotros">Racha</div>
-            </a>
-            <a href="contact.html">
-                <div class="headernosotros">Contacto</div>
-            </a>
-        </div>
-    </nav>
-
-    <div class="content">
-        <div class="part_1">
-            <a href="perfil.html">
-                <img class="atras-icon" alt="" src="img/Atras.svg">
-            </a>
-            <div class="headernosotros_2">Editar Perfil</div>
-        </div>
+        </nav>
 
 
-
-        <div class="division">
+        
+        <div class="content">
+            <div class="part_1">
+                <a href="main_estudiante.html">
+                    <img class="atras-icon" alt="" src="img/Atras.svg">
+                </a>
+                <div class="headernosotros_2">Racha</div>
+            </div>
             <div class="part_2">
-                <img id="FOTO" class="perfil_image" alt="" src="img/perfil.svg">
-                <a href="Perfil.html"> <!-- Falta arreglar este enlace -->
-                    <div class="boton">
-                        <div class="headernosotros">Cambiar Foto de Perfil</div>
-                    </div>
-                </a>
+                <div class="dias">
+                    <div class="headernosotros_2">L</div>
+                    <div class="headernosotros_2">M</div>
+                    <div class="headernosotros_2">Mi</div>
+                    <div class="headernosotros_2">J</div>
+                    <div class="headernosotros_2">V</div>
+                    <div class="headernosotros_2">S</div>
+                    <div class="headernosotros_2">D</div>
+                </div>
+                <div class="dias">
+                    <img class="atras-icon-1" alt="" src="img/Circulo verde 1.png">
+                    <img class="atras-icon-1" alt="" src="img/Circulo verde 1.png">
+                    <img class="atras-icon-1" alt="" src="img/Circulo verde 1.png">
+                    <img class="atras-icon-1" alt="" src="img/Circulo verde 1.png">
+                    <img class="atras-icon-1" alt="" src="img/Circulo verde 2.png">
+                    <img class="atras-icon-1" alt="" src="img/Circulo verde 2.png">
+                    <img class="atras-icon-1" alt="" src="img/Circulo verde 2.png">
+                </div>
             </div>
+            <div class="part_3">
+                      <img class="fuego-racha" alt="" src="img/Fuego de Racha.svg">
+                      <div class="headernosotros_2">
+                                 tu racha: <span id="racha-numero">Cargando...</span>
+                      </div>
+                        </div>
 
-            <form class="part_3" method="post" enctype="multipart/form-data">
-                <label class="casilla-datos">
-                    <input type="text" id="NOMBRE" name="NOMBRE" placeholder="Nombre">
-                </label>
-                
-                    <input type="hidden" id="CORREO" name="CORREO" >
-                
-                <label class="casilla-datos">
-                    <input type="tel" id="TELEFONO" name="TELEFONO" placeholder="Teléfono">
-                </label>
-                <label class="casilla-datos">
-                    <input type="text" id="DIRECCION" name="DIRECCION" placeholder="Dirección">
-                </label>
-                <label class="casilla-datos">
-                    <input type="date" id="NACIMIENTO" name="NACIMIENTO" placeholder="Fecha de Nacimiento">
-                </label>
-                <label class="casilla-datos">
-                    <input type="password"  name="CONTRASENA" placeholder="**********">
-                </label>
-                <label class="casilla-datos">
-                    <input type="file" id="CARGARFOTO" name="foto">
-                </label>
-
-                <button type="submit" class="botn-sencillo">Guardar</button>
-            </form>
-
-
+            <div class="part_4">
+                <div class="headernosotros_2">Logros</div>
+            </div>
+            <div class="part_5">
+                <div class="logro">
+                    <div class="headernosotros_3">Logro X</div>
+                    <h6>Logros por alcanzar un número de racha específico</h6>
+                </div>
+                <div class="logro">
+                    <div class="headernosotros_3">Logro X</div>
+                    <h6>Logros por alcanzar un número de racha específico</h6>
+                </div>
+                <div class="logro">
+                    <div class="headernosotros_3">Logro X</div>
+                    <h6>Logros por alcanzar un número de racha específico</h6>
+                </div>
+                <div class="logro">
+                    <div class="headernosotros_3">Logro X</div>
+                    <h6>Logros por alcanzar un número de racha específico</h6>
+                </div>
+            </div>
         </div>
-    </div>
-</body>
-
+    </body>
 </html>
+

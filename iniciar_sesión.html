@@ -1,57 +1,64 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, width=device-width">
+    <link rel="stylesheet" href="./iniciar_sesión.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=League+Gothic:wght@400&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Abel:wght@400&display=swap" />
 
-  	<meta charset="utf-8">
-  	<meta name="viewport" content="initial-scale=1, width=device-width">
-  	
-  	<link rel="stylesheet"  href="./iniciar_sesión.css" />
-  	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=League Gothic:wght@400&display=swap" />
-  	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Abel:wght@400&display=swap" />
-  	<script language="javascript" type="text/javascript">
-       
-       window.onload = function() {
+    <title>FitnessPlus - Inicio de Sesión</title>
+
+    <script>
+        window.onload = function() {
             const form = document.querySelector("form#formulario");
+
             form.onsubmit = async (event) => {
-                event.preventDefault();
-                const formdata = new FormData(form);
-                const json = JSON.stringify(Object.fromEntries(formdata));
+                event.preventDefault(); // Evita que el formulario recargue la página.
+
+                // Obtiene los datos del formulario
+                const formData = new FormData(form);
+                const jsonData = JSON.stringify(Object.fromEntries(formData));
 
                 try {
-                const req = await fetch("http://paginagym.fwh.is/Fitnessplus-website-code/php/login.php", {
-                method: "POST",
-                body: json,
-                headers: { "Content-Type": "application/json" }
-                });
-            const res = await req.json();
-            console.log(res);
+                    // Enviar datos al servidor
+                    const response = await fetch("http://paginagym.fwh.is/Fitnessplus-website-code/php/login.php", {
+                        method: "POST",
+                        headers: { "Content-Type": "application/json" },
+                        body: jsonData
+                    });
 
-            if (res.success) {
-                localStorage.setItem("user_data", JSON.stringify(res.user_data) )
-                // Redirige según el rol del usuario
-                if (res.user_data.ROL === "Usuario") {
-                    window.location.href = "/Fitnessplus-website-code/main_estudiante.html";
-                } else if (res.user_data.ROL === "Entrenador") {
-                    window.location.href = "/Fitnessplus-website-code/entrenador/main_entrenador.html";
-                } else {
-                    alert("Rol desconocido, contacte al administrador.");
+                    const result = await response.json(); // Decodifica la respuesta JSON
+
+                    if (result.success) {
+                        // Guarda los datos del usuario en localStorage
+                        localStorage.setItem("user_data", JSON.stringify(result.user_data));
+
+                        // Redirige según el rol del usuario
+                        switch (result.user_data.ROL) {
+                            case "Usuario":
+                                window.location.href = "/Fitnessplus-website-code/main_estudiante.html";
+                                break;
+                            case "Entrenador":
+                                window.location.href = "/Fitnessplus-website-code/entrenador/main_entrenador.html";
+                                break;
+                            default:
+                                alert("Rol desconocido. Contacta al administrador.");
+                                break;
+                        }
+                    } else {
+                        // Muestra un mensaje de error
+                        alert(result.message || "Inicio de sesión fallido. Verifica tus credenciales.");
+                    }
+                } catch (error) {
+                    console.error("Error al iniciar sesión:", error);
+                    alert("Hubo un problema al iniciar sesión. Intenta nuevamente más tarde.");
                 }
-            } else {
-                alert("Inicio de sesión fallido. Verifique sus credenciales.");
-            }
-        } catch (error) {
-            console.error("Error al iniciar sesión:", error);
-            alert("Hubo un problema al iniciar sesión. Inténtelo nuevamente más tarde.");
-        }
+            };
         };
-        };
-
-     
     </script>
-  	<title>FitnessPlus - Inicio de Sesión</title>
 </head>
 <body>
-  	
     <div class="header">
         <img class="logo-icon" alt="" src="img/Logo.svg">
         <div class="botones-header">
@@ -75,29 +82,24 @@
                 <div class="iniciar-sesin">INICIAR SESIÓN</div>
             </div>
             <div class="no-tens-cuenta">
-                <div class="iniciar-sesin">No tienes cuenta?</div>
-                <div class="correodelgymgmailcom">
-                    <a href="registro.html">
-                        <div class="correodelgymgmailcom1">Registrarse</div>
-                    </a>
-                </div>
+                <div class="iniciar-sesin">¿No tienes cuenta?</div>
+                <a href="registro.html">
+                    <div class="correodelgymgmailcom1">Registrarse</div>
+                </a>
             </div>
         </div>
 
-
-        <form class="conjunto-abajo" id = "formulario">
+        <form class="conjunto-abajo" id="formulario">
             <label class="campo">
                 <input type="email" name="correo" placeholder="Correo" required>
             </label>
-            
+
             <label class="campo">
                 <input type="password" name="contrasena" placeholder="Contraseña" required>
             </label>
-                <button type="submit" class="botn-sencillo" >Iniciar Sesión</button>
+
+            <button type="submit" class="botn-sencillo">Iniciar Sesión</button>
         </form>
-
     </div>
-
-  	
 </body>
 </html>

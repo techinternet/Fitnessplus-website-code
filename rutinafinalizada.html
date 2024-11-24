@@ -1,52 +1,95 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Rutina Finalizada</title>
-        <meta charset="utf-8">
-        <meta name="viewport" content="initial-scale=1, width=device-width">
-        <link rel="stylesheet" href="./rutinafinalizada.css" />
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=League Gothic:wght@400&display=swap" />
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Abel:wght@400&display=swap" />
+<head>
+    <title>Rutina Finalizada</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, width=device-width">
+    <link rel="stylesheet" href="./rutinafinalizada.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=League Gothic:wght@400&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Abel:wght@400&display=swap" />
+    
+  <script>
+    // Función para manejar el botón "Volver al Inicio"
+    function volverInicio() {
+        // Obtener la racha actual del localStorage
+        let rachaActual = parseInt(localStorage.getItem('racha') || '0');
+
+        // Aumentar la racha
+        rachaActual++;
+
+        // Guardar la nueva racha en localStorage
+        localStorage.setItem('racha', rachaActual);
+
+        // Establecer una bandera que indique que la rutina ha sido finalizada
+        localStorage.setItem('rutina_finalizada', 'true');
+
+        // Enviar el valor de la racha al servidor
+        const correoUsuario = localStorage.getItem('correo');
+        if (correoUsuario) {
+            fetch('http://paginagym.fwh.is/Fitnessplus-website-code/php/actualizar_racha.php', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ correo: correoUsuario, racha: rachaActual }),
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    console.log("Racha actualizada en la base de datos:", data.racha);
+                } else {
+                    console.error("Error al actualizar la racha en la base de datos:", data.message);
+                }
+            })
+            .catch(error => console.error("Error al conectar con el servidor:", error));
+        } else {
+            console.error("Correo del usuario no encontrado en localStorage.");
+        }
+
+        // Redirigir a la página principal
+        window.location.href = 'main_estudiante.html';
+    }
+</script>
+
+
+</head>
+
+<body>
+    <nav>
+        <div class="arriba">
+            <a href="main_estudiante.html">
+                <img class="logo-icon" alt="" src="img/Logo.svg">
+            </a>
+            <div class="perfil_1">
+                <a href="perfil.html">
+                    <div class="headernosotros">Cuenta</div>
+                </a>
+                <img class="logo-icon-1" alt="" src="img/Imagen perfil_Default.png">
+            </div>
+        </div>
+        <div class="abajo">
+            <a href="main_estudiante.html">
+                <div class="headernosotros">Inicio</div>
+            </a>
+            <a href="rutina.html">
+                <div class="headernosotros_1">Rutina</div>
+            </a>
+            <a href="racha.html">
+                <div class="headernosotros">Racha</div>
+            </a>
+            <a href="contact.html">
+                <div class="headernosotros">Contacto</div>
+            </a>
+        </div>
+    </nav>
+
+    <div class="content">
+        <div class="part_1">
+            <a href="main_estudiante.html">
+                <img class="atras-icon" alt="" src="img/Atras.svg">
+            </a>
+            <div class="headernosotros_2">Finalización de Rutina</div>
+        </div>
+
        
-    </head>
-    <body>
-        <nav>
-            <div class="arriba">
-                <a href="main_estudiante.html">
-                    <img class="logo-icon" alt="" src="img/Logo.svg">
-                </a>
-                <div class="perfil_1">
-                    <a href="perfil.html">
-                        <div class="headernosotros">Cuenta</div>
-                    </a>
-                    <img class="logo-icon-1" alt="" src="img/Imagen perfil_Default.png">
-                </div>
-                
-            </div>
-            <div class="abajo">
-                <a href="main_estudiante.html">
-                    <div class="headernosotros">Inicio</div>
-                </a>
-                <a href="rutina.html">
-                    <div class="headernosotros_1">Rutina</div>
-                </a>
-                <a href="racha.html">
-                    <div class="headernosotros">Racha</div>
-                </a>
-                <a href="contact.html">
-                    <div class="headernosotros">Contacto</div>
-                </a>
-            </div>
-        </nav>
-
-        <div class="content">
-            <div class="part_1">
-                <a href="main_estudiante.html">
-                    <img class="atras-icon" alt="" src="img/Atras.svg">
-                </a>
-                <div class="headernosotros_2">Finalización de Rutina</div>
-            </div>
-
             <div class="part_2">
                 <img class="hercules_image" alt="" src="img/Hercules_Final Rutina.png">
                 <a href = "main_estudiante.html">
@@ -56,8 +99,6 @@
                 </a>
             </div>
         
-        </div>
-        
-    </body>
+    </div>
+</body>
 </html>
-

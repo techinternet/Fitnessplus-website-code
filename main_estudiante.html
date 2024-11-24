@@ -1,59 +1,150 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>MainPage_Estudiante</title>
-        <meta charset="utf-8">
-        <meta name="viewport" content="initial-scale=1, width=device-width">
-        <link rel="stylesheet" href="./style_estudiante.css" />
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=League Gothic:wght@400&display=swap" />
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Abel:wght@400&display=swap" />
-    </head>
-    <body>
-        <nav>
-            <div class="arriba">
-                <img class="logo-icon" alt="" src="img/Logo.svg">
-                <div class="perfil_1">
-                    <a href="perfil.html">
-                        <div class="headernosotros">Cuenta</div>
-                    </a>
-                    <a href="perfil.html">
-                        <img class="logo-icon-1" alt="" src="img/perfil.svg">
-                    </a>
-                </div>    
-                
-            </div>
-            <div class="abajo">
-                    <div class="headernosotros">Inicio</div>
-                <a href="rutina2.html">
-                    <div class="headernosotros">Rutina</div>
-                </a>
-                <a href="racha.html">
-                    <div class="headernosotros">Racha</div>
-                </a>
-                <a href="contact.html">
-                    <div class="headernosotros">Contacto</div>
-                </a>
-            </div>
-        </nav>
-        <div class="content">
-            <div class="arriba_1">
-                <div class="part_1">
-                    <img class="hercules_image" alt="" src="img/Hercules_Inicio.png">
-                    <a href = "rutina2.html">
-                        <div class="boton">
-                            <div class="headernosotros">Iniciar Rutina</div>
-                        </div>
-                    </a>
-                </div>
-                <div class="part_2">
-                    <div class="headernosotros">.</div>
-                    <img class="fuego-icon" alt="" src="img/Fuego de Racha.svg">
-                </div>
-            </div>
-            <div class="part_3">
-                <div class="headernosotros">“El dolor es temporal, pero el orgullo es para siempre.”</div>
-            </div>
-        </div>
-    </body>
-</html>
+<html lang="es">
+<head>
+    <title>MainPage_Estudiante</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, width=device-width">
+    <!-- Enlace al CSS -->
+    <link rel="stylesheet" href="./style_estudiante.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=League+Gothic:wght@400&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Abel:wght@400&display=swap" />
 
+  <script>
+    window.onload = function() {
+        // Verificar si la rutina fue finalizada
+        const rutinaFinalizada = localStorage.getItem('rutina_finalizada');
+        if (rutinaFinalizada === 'true') {
+            // Incrementar la racha
+            let rachaActual = parseInt(localStorage.getItem('racha') || '0');
+            rachaActual++;
+
+            // Guardar la nueva racha en localStorage
+            localStorage.setItem('racha', rachaActual);
+
+            // Eliminar la bandera para evitar incrementar la racha al recargar
+            localStorage.removeItem('rutina_finalizada');
+
+            // Enviar el valor de la racha al servidor
+            const correoUsuario = localStorage.getItem('correo');
+            if (correoUsuario) {
+                fetch('http://paginagym.fwh.is/Fitnessplus-website-code/php/actualizar_racha.php', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ correo: correoUsuario, racha: rachaActual }),
+                })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.success) {
+                        console.log("Racha actualizada en la base de datos:", data.racha);
+                    } else {
+                        console.error("Error al actualizar la racha en la base de datos:", data.message);
+                    }
+                })
+                .catch(error => console.error("Error al conectar con el servidor:", error));
+            } else {
+                console.error("Correo del usuario no encontrado en localStorage.");
+            }
+        }
+
+        // Obtener los datos del usuario almacenados en localStorage
+        let user_data = JSON.parse(localStorage.getItem("user_data"));
+
+        // Si no existe, muestra un mensaje de error
+        if (!user_data) {
+            console.error("user_data no encontrado en localStorage.");
+            return;
+        }
+
+        // Verifica si el correo está disponible
+        const correo = user_data.CORREO;
+        if (correo) {
+            // Realiza la solicitud para obtener y actualizar la racha desde el servidor
+            fetch('http://paginagym.fwh.is/Fitnessplus-website-code/php/actualizar_racha.php', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ correo: correo })
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    // Actualiza la racha en los datos del usuario
+                    user_data.RACHA = data.racha;
+
+                    // Guarda nuevamente en localStorage
+                    localStorage.setItem("user_data", JSON.stringify(user_data));
+
+                    // Actualiza la interfaz automáticamente
+                    Object.keys(user_data).forEach((k) => {
+                        const element = document.getElementById(k);
+                        if (element && element.tagName === 'IMG') {
+                            element.src = "php/" + user_data[k];
+                            return;
+                        }
+                        if (element) {
+                            element.textContent = user_data[k];
+                            return;
+                        }
+                    });
+                } else {
+                    console.error(data.message);
+                }
+            })
+            .catch(error => console.error("Error al actualizar la racha:", error));
+        } else {
+            console.error("Correo no encontrado en user_data.");
+        }
+    };
+</script>
+
+
+
+</head>
+<body>
+    <nav>
+        <div class="arriba">
+            <img class="logo-icon" alt="" src="img/Logo.svg">
+            <div class="perfil_1">
+                <a href="perfil.html">
+                    <div class="headernosotros">Cuenta</div>
+                </a>
+                <a href="perfil.html">
+                    <img class="logo-icon-1" alt="" src="img/perfil.svg">
+                </a>
+            </div>    
+        </div>
+        <div class="abajo">
+            <div class="headernosotros">Inicio</div>
+            <a href="rutina2.html">
+                <div class="headernosotros">Rutina</div>
+            </a>
+            <a href="racha.html">
+                <div class="headernosotros">Racha</div>
+            </a>
+            <a href="contact.html">
+                <div class="headernosotros">Contacto</div>
+            </a>
+        </div>
+    </nav>
+    <div class="content">
+        <div class="arriba_1">
+            <div class="part_1">
+                <img class="hercules_image" alt="" src="img/Hercules_Inicio.png">
+                <a href="rutina2.html">
+                    <div class="boton">
+                        <div class="headernosotros">Iniciar Rutina</div>
+                    </div>
+                </a>
+            </div>
+            <div class="part_2">
+                
+                 <div id="RACHA" class="headernosotros"></div> <!-- Aquí se mostrará la racha -->
+                 <img class="fuego-icon" alt="" src="img/Fuego de Racha.svg">
+            </div>
+
+        </div>
+        <div class="part_3">
+            <div class="headernosotros">“El dolor es temporal, pero el orgullo es para siempre.”</div>
+        </div>
+    </div>
+</body>
+</html>

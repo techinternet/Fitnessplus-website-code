@@ -7,6 +7,48 @@
         <link rel="stylesheet" href="./entrenadores.css" />
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=League Gothic:wght@400&display=swap" />
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Abel:wght@400&display=swap" />
+         <script>
+            window.onload = async function() {
+                const req = await fetch("http://paginagym.fwh.is/Fitnessplus-website-code/php/obtener_entrenadores.php", {
+                    method: "POST"
+                });
+                const res = await req.json();
+                console.log(res);
+                
+                if (res.success) {
+                    let html = "";
+                    res.entrenadores.forEach((entrenador) => {
+                        html += `
+                        <div class="part_2">
+                            <div class="logro">
+                                <div class="headernosotros_3">${entrenador.NOMBRE} ${entrenador.APELLIDO}</div>
+                                <h6>Entrenador  </h6>
+                                <h6>correo:${entrenador.CORREO}</h6>
+                                <h6>telefono: ${entrenador.TELEFONO}</h6>
+                                <a href="rutinaprogramada.html">
+                                    <div class="boton">
+                                        <div class="headernosotros">Contactar al Entrenador</div>
+                                    </div>
+                                </a>
+                            </div>
+                            <img class="img_entrenador" alt="" src="php/${entrenador.FOTO}">
+                        </div>
+                        `;
+                    });
+                    document.getElementById("container").innerHTML = html;
+
+                    // Agregar eventos a los botones si es necesario
+                    setTimeout(() => {
+                        const botones = document.getElementsByClassName("boton");
+                        Array.from(botones).forEach((boton) => {
+                            boton.onclick = () => {
+                                alert("Contactando con el entrenador...");
+                            };
+                        });
+                    }, 1500);
+                }
+            };
+        </script>
     </head>
     <body>
         <nav>
@@ -37,8 +79,6 @@
             </div>
         </nav>
 
-
-        
         <div class="content">
             <div class="part_1">
                 <a href="main_estudiante.html">
@@ -46,63 +86,11 @@
                 </a>
                 <div class="headernosotros_2">Entrenadores</div>
             </div>
-            <div class="part_2">
-                <div class="logro">
-                    <div class="headernosotros_3">Pepito Peréz</div>
-                    <h6>Entrenador de: Danza</h6>
-                    <h6>pepitoperez@fitnessplus.com</h6>
-                    <h6>Clase: Zumba</h6>
-                    <a href = "rutinaprogramada.html">
-                        <div class="boton">
-                            <div class="headernosotros">Contactar al Entrenador</div>
-                        </div>
-                    </a>
-                </div>
-                <img class="img_entrenador" alt="" src="img/Foto Entrenador_Opciones Entrenador.png">
-            </div>
-            <div class="part_2">
-                <img class="img_entrenador" alt="" src="img/Foto Entrenador_Opciones Entrenador.png">
-                <div class="logro">
-                    <div class="headernosotros_3">Pepito Peréz</div>
-                    <h6>Entrenador de: Danza</h6>
-                    <h6>pepitoperez@fitnessplus.com</h6>
-                    <h6>Clase: Zumba</h6>
-                    <a href = "rutinaprogramada.html">
-                        <div class="boton">
-                            <div class="headernosotros">Contactar al Entrenador</div>
-                        </div>
-                    </a>
-                </div>   
-            </div>    
-            <div class="part_2">
-                <div class="logro">
-                    <div class="headernosotros_3">Pepito Peréz</div>
-                    <h6>Entrenador de: Danza</h6>
-                    <h6>pepitoperez@fitnessplus.com</h6>
-                    <h6>Clase: Zumba</h6>
-                    <a href = "rutinaprogramada.html">
-                        <div class="boton">
-                            <div class="headernosotros">Contactar al Entrenador</div>
-                        </div>
-                    </a>
-                </div>
-                <img class="img_entrenador" alt="" src="img/Foto Entrenador_Opciones Entrenador.png">
-            </div>
-            <div class="part_2">
-                <img class="img_entrenador" alt="" src="img/Foto Entrenador_Opciones Entrenador.png">
-                <div class="logro">
-                    <div class="headernosotros_3">Pepito Peréz</div>
-                    <h6>Entrenador de: Danza</h6>
-                    <h6>pepitoperez@fitnessplus.com</h6>
-                    <h6>Clase: Zumba</h6>
-                    <a href = "rutinaprogramada.html">
-                        <div class="boton">
-                            <div class="headernosotros">Contactar al Entrenador</div>
-                        </div>
-                    </a>
-                </div>   
-            </div>        
+            
+            <!-- Contenedor donde se mostrarán los entrenadores -->
+            <div id="container"></div>
         </div>
+
+       
     </body>
 </html>
-
